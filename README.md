@@ -1,3 +1,8 @@
+<pre>
 # Full-Stack-Developer-Portfolio
 Full Stack Developer Portfolio: Showcasing My Skills and Projects
-Since 2023/03/31 This is my first portfolio to be a full stack developer. It is still progressing.
+From 31 March 2023 to 14 April 2023
+This is my first portfolio to be a full stack developer.
+</pre>
+Section: Introduction
+![image](https://user-images.githubusercontent.com/124529023/231867225-c15779a5-9895-4ff2-a4a2-64c43113f711.png)
