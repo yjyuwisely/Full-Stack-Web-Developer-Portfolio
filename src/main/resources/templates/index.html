@@ -18,6 +18,7 @@
         <link href="/css/styles.css" rel="stylesheet" />
         <!-- Retro style window 레트로 윈도우 창 효과 CSS -->
         <link href="/css/window.css" rel="stylesheet" />
+        <link href="/css/slides.css" rel="stylesheet" />
         
          <!--탑버튼 Top button -->
 		<script type="text/javascript">
@@ -154,7 +155,7 @@
 												alt="프로필" height=200px width=200px /></td>
 									<!-- mb-5 -->
 									<td><p class="lead text-start text-white" 
-									style="font-weight: bold; text-shadow: 1px 1px 2px #911084;">
+									style="font-weight: bold; text-shadow: 1px 1px 2px #5D2FDA;">
 											유영진 | 풀스택 웹 개발자
 											<!-- 프론트엔드 엔지니어 -->
 											<br> 울산, 대한민국<br> <!-- <b style="color: #AE9EFF;"> -->
@@ -167,7 +168,8 @@
 								<tr>
 									<td colspan="2">
 										<p class="lead text-start text-light rounded mx-2 my-3"
-											style="text-indent: 1rem; background-color: rgba(0,0,0,0.3); word-break: break-word;">
+											style="text-indent: 1rem; background-color: rgba(0,0,0,0.3); word-break: break-word;
+											text-shadow: 1px 1px 2px black">
 											안녕하세요! 풀스택 웹 개발자 유영진입니다. 이용자들이
 											웹 서비스를 어떻게 하면 더욱더 편리하게 사용할 수 있을지 항상 생각하며, 사용자 친화적이면서 사람들에게
 											도움을 줄 수 있는 웹 서비스를 만드는 것에 관심이 많습니다. 개발을 통해 도움이 필요한 사람들을 도울 수
@@ -224,7 +226,7 @@
 					<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">
 					기술 목록</h2>
 					<p class="lead text-start text-center">
-					<ul style="list-style-type: square; color: white; font-size: 0.8rem; text-shadow: 1px 1px 2px black;">
+					<ul style="list-style-type: square; color: white; font-size: 0.8rem; text-shadow: 1px 1px 2px #5D2FDA;">
 						<li  class="silkscreen">Frontend: HTML, CSS, JavaScript, jQuery, Bootstrap</li>
 						<li  class="silkscreen">Backend: Spring, Java, JSP, MySQL, Python</li>
 						<li  class="silkscreen">Version Control: GitHub</li>
@@ -234,9 +236,9 @@
 					<div class="text-white rounded" style="background-color: rgba(0, 0, 0, 0.3);">
 					<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">
 						백엔드 웹페이지</h2>
-					<p class="lead text-start text-light" style="text-shadow: 1px 1px 2px black;">
+					<p class="lead text-start text-light" style="text-shadow: 1px 1px 2px #5D2FDA;">
 					<b class="silkscreen">Spring Boot, Maven, Spring Security, MySQL</b>를 이용해서 회원가입 및 로그인을 구현한 웹페이지입니다. 
-					<!-- 관리자 페이지는 진행중입니다.		 -->	
+					관리자 및 회원 페이지는 진행중입니다.
 					</p>
 <!-- 					<b class="silkscreen"> 
 					Backend: Spring Boot, Spring Security</b> -->
@@ -278,7 +280,7 @@
 					<span class="title-bar__title"><a href="#page-top"
 						id="windowTitle">Yeongjin's portfolio</a></span>
 				</div>
- 			</div> 
+			</div>
 
 			<div class="container">
 				<!-- 컨텐츠 내용 시작 -->
@@ -287,73 +289,209 @@
 						<source src="videos/tunnel.mp4" type="video/mp4">
 					</video>
 					<!-- Project Section Heading-->
-					<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">프로젝트</h2>
-					
-						<!--  포트폴리오 시작 -->
-						<h2
-							class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">포트폴리오 웹사이트</h2>
-						<p
-							style="margin: 0; padding: 0; font-weight: bold; color: white; text-align: center; text-shadow: 1px 1px 2px #5D2FDA;">
-							2023.04 (1인 개인 프로젝트)</p>
-						<table>
-							<tr>
-								<td><p class="lead text-start">
-										<img class="masthead-avatar" src="/assets/images/portfolioCapture1.png"
-											alt="Project1" height=auto width=400px /> 
-								</td>
-								<td>
-									<div class="lead text-start rounded text-white mx-2 my-3"
-										style="background-color: rgba(0, 0, 0, 0.3); word-break: break-word;">
-										포트폴리오 용도로 제작한 지금 보고 있는 웹사이트입니다. 반응형 웹페이지와 Bootstrap을 처음 사용할 수 있던 좋은 기회였습니다.
-										디자인은 90년대 레트로 스타일의 윈도우에 영감을 받아서 만들었습니다.
-										<br> 
-										<br>
-										<ul class="pl-3" style="list-style-type: square;">
-										<li><b>주요 기능</b>: 자기소개, 기술 목록, 프로젝트, 블로그/깃허브, 훈련/교육, 수상 내역</li>
-										<li class="silkscreen">GitHub: <a href="https://github.com/yjyuwisely/Full-Stack-Developer-Portfolio.git" title="깃허브로 이동"> 
-										<b>github.com/yjyuwisely/Team-Project-2023</b></a></li>
-										<li  class="silkscreen">Frontend: HTML, CSS, Bootstrap, Vanilla JS, jQuery</li>
+					<h2
+						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">프로젝트</h2>
+
+					<!--  [3.1] 포트폴리오 시작 -->
+					<h2
+						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">포트폴리오
+						웹사이트</h2>
+					<p
+						style="margin: 0; padding: 0; font-weight: bold; color: white; text-align: center; text-shadow: 1px 1px 2px #5D2FDA;">
+						2023.04 (1인 개인 프로젝트)</p>
+					<table>
+						<tr>
+							<td >
+								<p class="lead text-start text-center">
+									<img class="masthead-avatar"
+										src="/assets/images/portfolioCapture1.png" alt="Project1"
+										height=auto width=400px />
+								    <img class="masthead-avatar"
+										src="/assets/images/portfolioCapture2.png" alt="Project1"
+										height=auto width=400px />
+								</p>
+							</td>
+						</tr>
+						<!-- 슬라이드쇼 -->
+						<!-- 							<div class="slideshow-container">
+									<div class="mySlides">
+										fade
+										<div class="numbertext">1 / 5</div>
+										<img src="/assets/images/portfolioCapture1.png"
+											style="width: 400px; height: auto;">
+										width: 100%
+										<div class="text">Caption Text</div>
+									</div>
+
+									<div class="mySlides">
+										fade
+										<div class="numbertext">2 / 5</div>
+										<img src="/assets/images/portfolioCapture2.png"
+											style="width: 400px; height: auto;">
+										<div class="text">Caption Two</div>
+									</div>
+
+									<div class="mySlides">
+										fade
+										<div class="numbertext">3 / 5</div>
+										<img src="/assets/images/portfolioCapture4.png"
+											style="width: 400px; height: auto;">
+										<div class="text">Caption Three</div>
+									</div>
+
+									<div class="mySlides">
+										fade
+										<div class="numbertext">4 / 5</div>
+										<img src="/assets/images/portfolioCapture5.png"
+											style="width: 400px; height: auto;">
+										<div class="text">Caption Three</div>
+									</div>
+
+									<div class="mySlides">
+										fade
+										<div class="numbertext">5 / 5</div>
+										<img src="/assets/images/portfolioCapture6.png"
+											style="width: 400px; height: auto;">
+										<div class="text">Caption Three</div>
+									</div>
+
+									<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a
+										class="next" onclick="plusSlides(1)">&#10095;</a>
+
+								</div> <br>
+
+								<div style="text-align: center">
+									<span class="dot" onclick="currentSlide(1)"></span> <span
+										class="dot" onclick="currentSlide(2)"></span> <span
+										class="dot" onclick="currentSlide(3)"></span> <span
+										class="dot" onclick="currentSlide(4)"></span> <span
+										class="dot" onclick="currentSlide(5)"></span>
+								</div> -->
+						<!-- 							</td> -->
+						<!-- 							<td> -->
+						<tr>
+							<td>
+								<div class="lead text-start rounded text-white mx-2"
+									style="background-color: rgba(0, 0, 0, 0.3); word-break: break-word; text-shadow: 1px 1px 2px #5D2FDA;">
+									포트폴리오 용도로 제작한 지금 보고 있는 웹사이트입니다. 반응형 웹페이지와 Bootstrap을 처음 사용할 수
+									있던 좋은 기회였습니다. 디자인은 90년대 레트로 스타일의 윈도우에 영감을 받아서 만들었습니다. <br>
+									<br>
+									<ul class="pl-3" style="list-style-type: square;">
+										<li><b>주요 기능</b>: 자기소개, 기술 목록, 프로젝트, 블로그/깃허브, 훈련/교육, 수상
+											내역</li>
+										<li class="silkscreen">GitHub: <a
+											href="https://github.com/yjyuwisely/Full-Stack-Developer-Portfolio.git"
+											title="깃허브로 이동"> <b>github.com/yjyuwisely/Team-Project-2023</b></a></li>
+										<li class="silkscreen">Frontend: HTML, CSS, Bootstrap,
+											Vanilla JS, jQuery</li>
 										<!-- <li  class="silkscreen">Backend: Spring, Java </li> -->
-										</ul>
-									</div>
-								</td>
-							</tr>
-						</table>
-				
-					<!-- 개인 프로젝트 시작 -->
-					<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">울산 울주군 여행 웹사이트</h2>
+									</ul>
+								</div>
+							</td>
+						</tr>
+					</table>
 
-					<p style="margin: 0; padding: 0; font-weight: bold; color: white; text-align: center; text-shadow: 1px 1px 2px #5D2FDA;">
+					<!-- [3.2] 개인 프로젝트 시작 -->
+					<h2
+						class="page-section-heading text-center text-uppercase text-secondary pt-5 mb-0 text-light">울산
+						울주군 여행 웹사이트</h2>
+
+					<p
+						style="margin: 0; padding: 0; font-weight: bold; color: white; text-align: center; text-shadow: 1px 1px 2px #5D2FDA;">
 						2023.01-2023.02 (1인 개인 프로젝트)</p>
-					<div class="table-responsive">
-						<table class ="table-responsive">
-							<tr>
-								<td><p class="lead text-start">
-										<img class="masthead-avatar" src="/assets/images/ulju2.png"
-											alt="Project1" height=auto width=400px /></td>
-								<td>
-
-									<div class="lead text-start rounded text-white mx-2 my-3"
-										style="background-color: rgba(0, 0, 0, 0.3); word-break: break-word; text-shadow: 1px 1px 2px black; ">
-										울산 울주군 여행 웹사이트를 진행하게 된 계기는 저도 몰랐던 고향의 여러 여행 장소에 대해 자세히 알고 싶었었고,
-										울산에 거주 중임에도 불구하고 저는 울산 시티 투어와 울산 관광 택시가 있는 줄 몰랐기 때문입니다.
-										그래서 사람들에게 울산 여행에 대해 공유하고자 만들게 되었습니다. 아직 백엔드 작업이 진행 중인 개인 프로젝트입니다. <br>
-										<br>
-										<ul class="pl-3" style="list-style-type: square;">
-											<li><b>주요 기능</b>: 울산 시티 투어와 울산 관광 택시의 여행 장소와 경로 소개</li>
-											<li  class="silkscreen">GitHub: <a
-												href="https://github.com/yjyuwisely/My-First-Project-Traveling-from-Ulju-gun"
-												title="깃허브로 이동"> <b>github.com/yjyuwisely/Traveling-from-Ulju-gun</b></a></li>
-											<li  class="silkscreen">Frontend: HTML, CSS, Vanilla JS, jQuery</li>
- 											<li  class="silkscreen">Backend: 진행 완료 후 적을 예정입니다.</li> 
-										</ul>
+					<table>
+						<tr>
+							<td style="padding-top: 33px;">
+								<!-- 								<p class="lead text-start">
+										<img class="masthead-avatar" src="/assets/images/portfolioCapture1.png"
+											alt="Project1" height=auto width=400px />  -->
+								<div class="slideshow-container">
+									<div class="mySlides">
+										<!-- fade -->
+										<div class="numbertext">1 / 6</div>
+										<img src="/assets/images/uljuCapture1.png"
+											style="width: 400px; height: 420px;">
+										<!-- width: 100% -->
+										<!-- <div class="text">Caption Text</div> -->
 									</div>
-								</td>
-							</tr>
-						</table>
-				</div>
-						<!--  포트폴리오 시작 -->
-<!-- 						<h2
+
+									<div class="mySlides">
+										<!-- fade -->
+										<div class="numbertext">2 / 6</div>
+										<img src="/assets/images/uljuCapture2.png"
+											style="width: 400px; height: 420px;">
+										<!-- <div class="text">Caption Two</div> -->
+									</div>
+
+									<div class="mySlides">
+										<!-- fade -->
+										<div class="numbertext">3 / 6</div>
+										<img src="/assets/images/uljuCapture3.png"
+											style="width: 400px; height: 420px;">
+										<!-- <div class="text">Caption Three</div> -->
+									</div>
+
+									<div class="mySlides">
+										<!-- fade -->
+										<div class="numbertext">4 / 6</div>
+										<img src="/assets/images/uljuCapture4.png"
+											style="width: 400px; height: 420px;">
+										<!-- <div class="text">Caption Three</div> -->
+									</div>
+
+									<div class="mySlides">
+										<!-- fade -->
+										<div class="numbertext">5 / 6</div>
+										<img src="/assets/images/uljuCapture5.png"
+											style="width: 400px; height: 420px;">
+										<!-- <div class="text">Caption Three</div> -->
+									</div>
+
+									<div class="mySlides">
+										<!-- fade -->
+										<div class="numbertext">6 / 6</div>
+										<img src="/assets/images/uljuCapture6.png"
+											style="width: 400px; height: 420px;">
+										<!-- <div class="text">Caption Three</div> -->
+									</div>
+
+									<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a
+										class="next" onclick="plusSlides(1)">&#10095;</a>
+
+								</div> <br>
+
+								<div style="text-align: center; margin-top:0; padding-top:0;">
+									<span class="dot" onclick="currentSlide(1)"></span> <span
+										class="dot" onclick="currentSlide(2)"></span> <span
+										class="dot" onclick="currentSlide(3)"></span> <span
+										class="dot" onclick="currentSlide(4)"></span> <span
+										class="dot" onclick="currentSlide(5)"></span> <span
+										class="dot" onclick="currentSlide(6)"></span>
+								</div>
+							</td>
+							<td>
+								<div class="lead text-start rounded text-white mx-2 my-3"
+									style="background-color: rgba(0, 0, 0, 0.3); word-break: break-word; text-shadow: 1px 1px 2px black;">
+									울산 울주군 여행 웹사이트를 진행하게 된 계기는 저도 몰랐던 고향의 여러 여행 장소에 대해 자세히 알고 싶었었고,
+									울산에 거주 중임에도 불구하고 저는 울산 시티 투어와 울산 관광 택시가 있는 줄 몰랐기 때문입니다. 그래서
+									사람들에게 울산 여행에 대해 공유하고자 만들게 되었습니다. 아직 백엔드 작업이 진행 중인 개인 프로젝트입니다. <br>
+									<br>
+									<ul class="pl-3" style="list-style-type: square;">
+										<li><b>주요 기능</b>: 울산 시티 투어와 울산 관광 택시의 여행 장소와 경로 소개</li>
+										<li class="silkscreen">GitHub: <a
+											href="https://github.com/yjyuwisely/My-First-Project-Traveling-from-Ulju-gun"
+											title="깃허브로 이동"> <b>github.com/yjyuwisely/Traveling-from-Ulju-gun</b></a></li>
+										<li class="silkscreen">Frontend: HTML, CSS, Vanilla JS,
+											jQuery</li>
+										<li class="silkscreen">Backend: 진행 완료 후 적을 예정입니다.</li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+					</table>
+					<!-- 					</div> -->
+					<!--  포트폴리오 시작 -->
+					<!-- 						<h2
 							class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">프로젝트
 							이름 (미정)</h2>
 						<p
@@ -382,18 +520,17 @@
 							</tr>
 						</table>
 					</div> -->
-					
+				</div>
+			</div>
 
-
-
-		</div>
 			<a class="navbar-brand  fs-6 text-light text-uppercase"
 				href="#page-top" id="TopTitle"
 				style="float: left; margin-left: 0.3rem; margin-top: 0.5rem;">
 				Projects </a>
 			<div class="controls">
-				<a href="#skills"><button class="btn btn_auto">Prev</button></a>
-				<a href="#archiving"><button class="btn btn_auto">Next</button></a>
+				<a href="#skills"><button class="btn btn_auto">Prev</button></a> <a
+					href="#archiving"><button class="btn btn_auto">Next</button></a>
+
 			</div>
 		</div>
 	</section>
@@ -425,9 +562,9 @@
 								</p>
 							</div>
 						</div> -->
-						
-						
-<!-- 											Project Item 2
+
+
+	<!-- 											Project Item 2
 						<div class="col-md-6 col-lg-4"> mb-5
 							<div class="portfolio-item mx-auto" data-bs-toggle="modal"
 								data-bs-target="#portfolioModal2">
@@ -451,10 +588,10 @@
 								</p>
 							</div>
 						</div> -->
-						
-						
-						<!-- Project Item 3-->
-						<!--                      <div class="col-md-6 col-lg-4 mb-5">
+
+
+	<!-- Project Item 3-->
+	<!--                      <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
@@ -469,8 +606,8 @@
                         </div>
                     </div>  -->
 
-				<!--                     Portfolio Item 4-->
-				<!--                      <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+	<!--                     Portfolio Item 4-->
+	<!--                      <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
@@ -478,7 +615,7 @@
                             <img class="img-fluid" src="/assets/images/portfolio/game.png" alt="..." />
                         </div>
                     </div>  -->
-				<!--                     Portfolio Item 5
+	<!--                     Portfolio Item 5
                     <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
@@ -496,14 +633,14 @@
                             <img class="img-fluid" src="/assets/images/portfolio/submarine.png" alt="..." />
                         </div>
                     </div> -->
-				<!--                 </div>
+	<!--                 </div>
             </div> -->
-				<!-- Icon Divider-->
-				<!--                 <div class="divider-custom">
+	<!-- Icon Divider-->
+	<!--                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div> -->
-				<!--                 </div> -->
+	<!--                 </div> -->
 
 
 
@@ -531,7 +668,7 @@
 						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">블로그/깃허브</h2>
 
 					<!-- Project Grid Items-->
-					<div class="row justify-content-center" style="text-shadow: 1px 1px 2px black;"> <!-- #9B28BF -->
+					<div class="row justify-content-center" style="text-shadow: 1px 1px 2px #5D2FDA;"> <!-- #9B28BF -->
 
 						<!-- Blog Item 1-->
 						<div class="col-md-6 col-lg-5 my-3 mx-3 text-white rounded" style="background-color: rgba(0, 0, 0, 0.1);">
