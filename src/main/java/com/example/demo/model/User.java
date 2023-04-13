@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import javax.persistence.JoinColumn;
 
-@Entity
+@Entity //JPA를 사용할 클래스를 명시하며, 테이블과 매핑하는 역할
 @Table(name = "user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {
 
@@ -23,10 +23,10 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "first_name")
+	@Column(name = "firstname") //first_name
 	private String firstName;
 
-	@Column(name = "last_name")
+	@Column(name = "lastname") //last_name
 	private String lastName;
 
 	private String email;
@@ -47,7 +47,7 @@ public class User {
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
-		this.roles = roles;
+		//this.roles = roles;
 	}
 
 	public Long getId() {

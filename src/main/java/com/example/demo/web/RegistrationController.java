@@ -11,6 +11,7 @@ import com.example.demo.service.UserService;
 
 @Controller
 @RequestMapping("/registration")
+// a Spring MVC controller that handles POST requests to the "/register" URL.
 public class RegistrationController {
 
 	private UserService userService;
@@ -35,7 +36,7 @@ public class RegistrationController {
 
 		userService.save(registrationDto);
 		return "index";
-		/* return "redirect:/index"; */
+		// return "redirect:/index"; 
 		/* return "redirect:/registration?success"; */
 	}
 }

@@ -29,6 +29,14 @@ body {
 	background-image: url(../assets/images/bgPink.png) !important;
 }
 
+input{
+	font-size:12px !important;
+}
+
+#login-submit{
+	font-size:16px !important;
+}
+
 input[type="submit"]:hover{
 color:white !important;
 	}
