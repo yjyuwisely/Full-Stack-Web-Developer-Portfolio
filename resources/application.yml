@@ -1,7 +1,7 @@
 spring:
   devtools: 
     livereload:
-      enabled: true
+      enabled: true   
   freemarker:
     cache: false
   thymeleaf:

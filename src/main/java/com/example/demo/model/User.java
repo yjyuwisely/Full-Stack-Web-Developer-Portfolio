@@ -47,7 +47,7 @@ public class User {
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
-		//this.roles = roles;
+		this.roles = roles;
 	}
 
 	public Long getId() {
@@ -91,7 +91,7 @@ public class User {
 	}
 
 	public Collection<Role> getRoles() {
-		return roles;
+		return roles; 
 	}
 
 	public void setRoles(Collection<Role> roles) {

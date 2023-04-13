@@ -3793,7 +3793,7 @@ textarea.form-control-lg {
   font-family: 'Do Hyeon', sans-serif, 'Gugi', "IBM Plex Sans KR"; /* 네비게이션 폰트 */
   display: block;
   /* padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x); */
-  font-size: var(--bs-nav-link-font-size);
+  /* font-size: var(--bs-nav-link-font-size); */
   font-weight: var(--bs-nav-link-font-weight);
   color: var(--bs-nav-link-color);
   text-decoration: none;
