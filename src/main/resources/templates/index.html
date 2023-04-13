@@ -63,7 +63,7 @@
 				id="navbarResponsive">
 				
 
-				<ul class="navbar-nav fs-5">
+				<ul class="navbar-nav fs-3">
 					<li class="nav-item mx-3">
 					<a class="nav-link px-0 px-lg-2 rounded text-light " href="#about"><!-- px-0: 0 pixels on the X-axis -->
 					자기소개</a></li><!-- py-3 -->
@@ -88,9 +88,9 @@
 					<a class="nav-link px-0 px-lg-2 rounded text-light" href="#achievements"> <!-- px:padding x, lg:large screen, 2:0.5rem -->
 					수상 내역</a></li>
 					
-					<li class="nav-item mx-3">
-					<a class="nav-link px-0 px-lg-2 rounded text-light" href="#backend"> <!-- px:padding x, lg:large screen, 2:0.5rem -->
-					백엔드 공간</a></li>
+<!-- 					<li class="nav-item mx-3">
+					<a class="nav-link px-0 px-lg-2 rounded text-light" href="#backend"> px:padding x, lg:large screen, 2:0.5rem
+					백엔드 공간</a></li> -->
 					
 <!-- 					<li class="nav-item mx-3">
 					<a class="nav-link px-0 px-lg-2 rounded text-light" th:href="@{/registration}"> px:padding x, lg:large screen, 2:0.5rem
@@ -225,13 +225,36 @@
 					기술 목록</h2>
 					<p class="lead text-start text-center">
 					<ul style="list-style-type: square; color: white; font-size: 0.8rem; text-shadow: 1px 1px 2px black;">
-						<li  class="silkscreen">Frontend: HTML, CSS, JavaScript, jQeury, Bootstrap</li>
-						<li  class="silkscreen">Backend: Spring, Java, SQL, Python</li>
+						<li  class="silkscreen">Frontend: HTML, CSS, JavaScript, jQuery, Bootstrap</li>
+						<li  class="silkscreen">Backend: Spring, Java, JSP, MySQL, Python</li>
 						<li  class="silkscreen">Version Control: GitHub</li>
 						<li  class="silkscreen">Statistical computing and graphics : R</li>
 					</ul>
+					
+					<div class="text-white rounded" style="background-color: rgba(0, 0, 0, 0.3);">
+					<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">
+						백엔드 웹페이지</h2>
+					<p class="lead text-start text-light" style="text-shadow: 1px 1px 2px black;">
+					<b class="silkscreen">Spring Boot, Maven, Spring Security, MySQL</b>를 이용해서 회원가입 및 로그인을 구현한 웹페이지입니다. 
+					<!-- 관리자 페이지는 진행중입니다.		 -->	
+					</p>
+<!-- 					<b class="silkscreen"> 
+					Backend: Spring Boot, Spring Security</b> -->
+
+<!-- 					<ul class="text-center"
+						style="list-style-type: square; color: white; font-size: 0.8rem; text-shadow: 1px 1px 2px black;">
+						<li class="silkscreen">Backend: Spring Boot, Spring Security</li>
+					</ul> -->
+					<div class="controls text-center">
+						<a th:href="@{/login}"><button class="btn btn_auto mb-3" style="font-family: 'Do Hyeon';">입장하기</button></a>
+						<br>
+					</div>					
+					</div>
 				</div>
 			</div>
+					
+<!-- 				</div> -->
+<!-- 		</div>   -->
 			<a class="navbar-brand  fs-6 text-light text-uppercase"
 				href="#page-top" id="TopTitle"
 				style="float: left; margin-left: 0.3rem; margin-top: 0.5rem;">
@@ -240,7 +263,7 @@
 				<a href="#about"><button class="btn btn_auto">Prev</button></a> <a
 					href="#projects"><button class="btn btn_auto">Next</button></a>
 			</div>
-		</div>
+		</div>   
 	</section>
 
 
@@ -266,39 +289,71 @@
 					<!-- Project Section Heading-->
 					<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">프로젝트</h2>
 					
-					<!-- 개인 프로젝트 시작 -->
-					<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">울산 울주군 여행 웹사이트</h2>
-
-					<p style="margin: 0; padding: 0; font-weight: bold; color: white; text-align: center; text-shadow: 1px 1px 2px #5D2FDA;">
-						2023.01-2023.04(예정) (1인 개인 프로젝트)</p>
-					<div class="table-responsive">
+						<!--  포트폴리오 시작 -->
+						<h2
+							class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">포트폴리오 웹사이트</h2>
+						<p
+							style="margin: 0; padding: 0; font-weight: bold; color: white; text-align: center; text-shadow: 1px 1px 2px #5D2FDA;">
+							2023.04 (1인 개인 프로젝트)</p>
 						<table>
 							<tr>
 								<td><p class="lead text-start">
-										<img class="masthead-avatar" src="/assets/images/character.png"
-											alt="Project1" height=200px width=200px /></td>
+										<img class="masthead-avatar" src="/assets/images/portfolioCapture1.png"
+											alt="Project1" height=auto width=400px /> 
+								</td>
 								<td>
-
 									<div class="lead text-start rounded text-white mx-2 my-3"
 										style="background-color: rgba(0, 0, 0, 0.3); word-break: break-word;">
-										고향의 여러 지역에 대해 자세히 알고 싶었던 것이 이 프로젝트를 진행하게 된 계기였습니다.
-										또한 다른 사람들에게 울산 여행에 대해 공유하고자 만들게 되었습니다. 아직 진행중인 개인 프로젝트입니다. <br>
+										포트폴리오 용도로 제작한 지금 보고 있는 웹사이트입니다. 반응형 웹페이지와 Bootstrap을 처음 사용할 수 있던 좋은 기회였습니다.
+										디자인은 90년대 레트로 스타일의 윈도우에 영감을 받아서 만들었습니다.
+										<br> 
 										<br>
 										<ul class="pl-3" style="list-style-type: square;">
-											<li><b>주요 기능</b>: 진행 완료 후 적을 예정입니다.</li>
-											<li  class="silkscreen">GitHub: <a
-												href="https://github.com/yjyuwisely/My-First-Project-Traveling-from-Ulju-gun"
-												title="깃허브로 이동"> <b>github.com/yjyuwisely/Traveling-from-Ulju-gun</b></a></li>
-											<li  class="silkscreen">Frontend: HTML, CSS, jQuery</li>
-											<li  class="silkscreen">Backend: 진행 완료 후 적을 예정입니다.</li>
+										<li><b>주요 기능</b>: 자기소개, 기술 목록, 프로젝트, 블로그/깃허브, 훈련/교육, 수상 내역</li>
+										<li class="silkscreen">GitHub: <a href="https://github.com/yjyuwisely/Full-Stack-Developer-Portfolio.git" title="깃허브로 이동"> 
+										<b>github.com/yjyuwisely/Team-Project-2023</b></a></li>
+										<li  class="silkscreen">Frontend: HTML, CSS, Bootstrap, Vanilla JS, jQuery</li>
+										<!-- <li  class="silkscreen">Backend: Spring, Java </li> -->
 										</ul>
 									</div>
 								</td>
 							</tr>
 						</table>
-						
-						<!--  팀 프로젝트 시작 -->
-						<h2
+				
+					<!-- 개인 프로젝트 시작 -->
+					<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">울산 울주군 여행 웹사이트</h2>
+
+					<p style="margin: 0; padding: 0; font-weight: bold; color: white; text-align: center; text-shadow: 1px 1px 2px #5D2FDA;">
+						2023.01-2023.02 (1인 개인 프로젝트)</p>
+					<div class="table-responsive">
+						<table class ="table-responsive">
+							<tr>
+								<td><p class="lead text-start">
+										<img class="masthead-avatar" src="/assets/images/ulju2.png"
+											alt="Project1" height=auto width=400px /></td>
+								<td>
+
+									<div class="lead text-start rounded text-white mx-2 my-3"
+										style="background-color: rgba(0, 0, 0, 0.3); word-break: break-word; text-shadow: 1px 1px 2px black; ">
+										울산 울주군 여행 웹사이트를 진행하게 된 계기는 저도 몰랐던 고향의 여러 여행 장소에 대해 자세히 알고 싶었었고,
+										울산에 거주 중임에도 불구하고 저는 울산 시티 투어와 울산 관광 택시가 있는 줄 몰랐기 때문입니다.
+										그래서 사람들에게 울산 여행에 대해 공유하고자 만들게 되었습니다. 아직 백엔드 작업이 진행 중인 개인 프로젝트입니다. <br>
+										<br>
+										<ul class="pl-3" style="list-style-type: square;">
+											<li><b>주요 기능</b>: 울산 시티 투어와 울산 관광 택시의 여행 장소와 경로 소개</li>
+											<li  class="silkscreen">GitHub: <a
+												href="https://github.com/yjyuwisely/My-First-Project-Traveling-from-Ulju-gun"
+												title="깃허브로 이동"> <b>github.com/yjyuwisely/Traveling-from-Ulju-gun</b></a></li>
+											<li  class="silkscreen">Frontend: HTML, CSS, Vanilla JS, jQuery</li>
+ 											<li  class="silkscreen">Backend: 진행 완료 후 적을 예정입니다.</li> 
+										</ul>
+									</div>
+								</td>
+							</tr>
+						</table>
+				</div>
+						<!--  포트폴리오 시작 -->
+<!-- 						<h2
 							class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">프로젝트
 							이름 (미정)</h2>
 						<p
@@ -313,7 +368,7 @@
 								<td>
 									<div class="lead text-start rounded text-white mx-2 my-3"
 										style="background-color: rgba(0, 0, 0, 0.4); word-break: break-word;">
-										그린컴퓨터아카데미 울산캠퍼스에서 진행 예정인 팀프로젝트입니다. 4월 17일에서 6월 15일까지 진행 완료 후 적을 예정입니다.<br> 
+										그린컴퓨터아카데미 울산캠퍼스에서 진행 예정인 팀프로젝트입니다. 4월 17일에서 6월 30일까지 진행 완료 후 적을 예정입니다.<br> 
 										<br>
 										<ul class="pl-3" style="list-style-type: square;">
 										<li><b>주요 기능</b>: 진행 완료 후 적을 예정입니다. </li>
@@ -326,9 +381,11 @@
 								</td>
 							</tr>
 						</table>
-					</div>
+					</div> -->
+					
 
-				</div>
+
+
 		</div>
 			<a class="navbar-brand  fs-6 text-light text-uppercase"
 				href="#page-top" id="TopTitle"
@@ -552,13 +609,13 @@
 										<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">훈련/교육</h2>
 						<ul class="lead text-start rounded text-white mx-2 my-3" 
 								style="list-style-type: square; background-color: rgba(0,0,0,0.4); text-shadow: 1px 1px 2px #9B28BF;">
-						<li><b class="silkscreen">[K-디지털 트레이닝] IoT기반 스마트 헬스케어 웹 서비스 개발 과정 (그린컴퓨터아카데미 울산캠퍼스 (22.12.29 - 23.07.04))</b><br>
-						개인 프로젝트와 팀 프로젝트를 진행했으며 아래 과정들을 배웠고 학습했습니다.<br>
+						<li><b class="silkscreen">[K-디지털 트레이닝] IoT 기반 스마트 헬스케어 웹 서비스 개발 과정 (그린컴퓨터아카데미 울산 캠퍼스 (22.12.29-23.07.04))</b><br>
+						개인 프로젝트와 팀 프로젝트를 진행했으며 아래 과정들을 학습했습니다.<br>
 						<b  class="silkscreen">Frontend</b>: HTML, CSS, Javascript, jQuery<br>
-						<b class="silkscreen">Backend</b>: Spring, JSP, JAVA, MySQL, Python<br></li>
+						<b class="silkscreen">Backend</b>: Spring, JSP, JAVA, MySQL, Python<br><br></li>
 						
 
-							<img class="img-fluid" src="/assets/images/character.png" height=200px width=200px alt="dataGraphs" />
+<!-- 							<img class="img-fluid" src="/assets/images/character.png" height=200px width=200px alt="dataGraphs" /> -->
 								
 								<!-- 추천 이미지: Data visualization charts or graphs using R 
 								examples of charts or graphs you have created in R or other programs.
@@ -570,7 +627,7 @@
 								<b>통계학 석사 코스 워크 완료</b><br> 
 								고급 통계 이론을 공부했고, R을 사용한 빅데이터 분석을 공부했습니다.
 								대규모 데이터셋을 다루는 프로젝트에 참여하면서 경험을 쌓았습니다.
-								또한 인공지능, 수치해석학과 같은 수학 과목들도 공부했습니다.</li>
+								또한 인공지능, 수치해석학과 같은 수학 과목들도 공부했습니다.<br></li>
 <!-- 								학부 때보다는 좀 더 어려운 통계학 이론 수업들을 들었었고,
 								대학교때보다는 규모가 큰 프로젝트로 R을 이용한 빅데이터 분석을 공부했습니다.
 								인공 지능 과목과 수치해석학 같은 수학 과목들도 공부했습니다. -->
@@ -580,7 +637,7 @@
 								 <b>이학사 - 양적 분석</b><br>
 							통계 이론을 포함한 R을 이용한 데이터 분석 과정을 4년간 공부했습니다.
 							데이터 분석과 데이터 시각화에 익숙해졌습니다.
-							이 기간 동안 데이터 분석을 하기 위해 직접 코딩을 해야했기 때문에 코딩에 익숙해진 경험을 얻었습니다.😊 
+							이 기간에 데이터 분석을 하기 위해 직접 코딩해야 했기 때문에 코딩에 익숙해진 경험을 얻었습니다.😊 
 							데이터 분석의 수학적 기반을 이해하는 데 도움이 되는 미적분, 선형대수학과 같은 수학 과목들도 수강했습니다.</li></ul>
 					</div>
 				</div>
@@ -620,14 +677,14 @@
 							class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">수상
 							내역</h2>
 
-						<img class="img-fluid" src="/assets/images/character.png"
-							height=200px width=200px alt="Prize" /><br>
+<!-- 						<img class="img-fluid" src="/assets/images/character.png"
+							height=200px width=200px alt="Prize" /><br> -->
 						<p class="lead text-start rounded text-white text-center mx-2 my-3" style="background-color: rgba(0,0,0,0.3); text-shadow: 1px 1px 2px #9B28BF;">
 							<b class="silkscreen" style="text-shadow: 1px 1px 2px #9B28BF;">'MO BAO AWARD'<br> </b>
 							Outstanding Performance in the Field<br> 
 							International Studio of Art and Culture<br> 
 							<br>
-							인도네시아 발리에서 디자인
+							인도네시아 발리에서 건축 및 디자인
 							학부의 그림, 사진 수업을 들었습니다. 
 							주변 학생들에게 좋은 영향을 주는 우수 학생으로 전공자들을
 							제치고 유일하게 상을 받았습니다. 
@@ -635,7 +692,11 @@
 							쪽이 아님을 상당히 신기해하셨던 기억이 납니다.
 							<!-- Yes, it would be appropriate to include this achievement in the experience section of your portfolio, 
 					especially if it demonstrates your creativity, determination, and ability to excel in areas outside your major. 
-					It could also show your potential to bring unique perspectives and ideas to your work as a full stack developer. -->
+					It could also show your potential to bring unique perspectives and ideas to your work as a full stack developer. 
+					Winning a prize for your creativity and artistic skills can certainly be a valuable asset in any field, including web development. 
+					While it may not be directly related to full-stack development, 
+					it can still demonstrate your ability to think creatively and pay attention to detail. 
+					-->
 						</p>
 					</div>
 				</div>
@@ -645,44 +706,44 @@
 				Achievements </a>
 			<div class="controls">
 				<a href="#education"><button class="btn btn_auto">Prev</button></a>
-				<a href="#backend"><button class="btn btn_auto">Next</button></a> 
+<!-- 				<a href="#backend"><button class="btn btn_auto">Next</button></a>  -->
 			</div>
 			</div>
 	</section>
 
 
 	<!-- [7] 백엔드 공간 섹션: Back-end Section-->
-	<section class="page-section skills" id="backend">
+<!-- 	<section class="page-section skills" id="backend">
 		<div class="container outer">
 			<div class="title-bar">
 				<div>
-					<!-- 레트로 윈도우 창 -->
+					레트로 윈도우 창
 					<span class="title-bar__title"><a href="#page-top"
 						id="windowTitle">Yeongjin's portfolio</a></span>
 				</div>
-			</div>
+			</div> -->
 
-			<div class="container">
-				<!-- 컨텐츠 내용 시작 -->
+<!-- 			<div class="container">
+				컨텐츠 내용 시작
 				<div class="display">
 					<video id="background-video" autoplay loop muted>
 						<source src="videos/tunnel.mp4" type="video/mp4">
 					</video>
-					<!-- Skills Section Heading-->
+					Skills Section Heading
 					<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">
 						백엔드 공간</h2>
 					<p class="lead text-start text-center text-light  rounded" style="background-color: rgba(0, 0, 0, 0.3); text-shadow: 1px 1px 2px black;">
 					제가 만든 백엔드 공간입니다. :) <br>
 					<b class="silkscreen"> 
 					Backend: Spring Boot, Spring Security</b>
-					</p>
+					</p> -->
 <!-- 					<ul class="text-center"
 						style="list-style-type: square; color: white; font-size: 0.8rem; text-shadow: 1px 1px 2px black;">
 						<li class="silkscreen">Backend: Spring Boot, Spring Security</li>
 					</ul> -->
 					
 					
-					<div class="controls text-center">
+<!-- 					<div class="controls text-center">
 						<a th:href="@{/login}"><button class="btn btn_auto" style="font-family: 'Do Hyeon';">입장하기</button></a>
 					</div>
 					
@@ -697,7 +758,7 @@
 				<a href="#achievements"><button class="btn btn_auto">Prev</button></a> 
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 
 	<!-- <!-- 	[8] 연락처 섹션: Contact Section

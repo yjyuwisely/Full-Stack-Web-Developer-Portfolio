@@ -11,6 +11,10 @@
 
 body {
 	background-image: url("../assets/images/bgPink.jpg");
+	background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 	display: flex;
 	justify-content: center;
 	align-items: center;
