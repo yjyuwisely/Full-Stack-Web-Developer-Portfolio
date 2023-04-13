@@ -1,8 +1,0 @@
-spring:
-  devtools: 
-    livereload:
-      enabled: true
-  freemarker:
-    cache: false
-  thymeleaf:
-    cache: false
