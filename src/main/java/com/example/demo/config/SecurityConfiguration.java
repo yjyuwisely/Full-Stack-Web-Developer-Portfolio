@@ -47,13 +47,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests() // I added: "/","/index**","assets/images/**", "/videos/**","/login?error"
 				// 폴더를 login 없이 허용
 				.antMatchers("/", "/index**", "/assets**", "/registration**", "/js/**", "/css/**", "/assets/images/**",
-						"/videos/**", "/login?error")
-				.permitAll()
+						"/videos/**", "/login?error").permitAll()
 				// 그 외 모든 요청은 인증과정 필요
 				.anyRequest().authenticated().and().formLogin().loginPage("/login")
 				// .defaultSuccessUrl("/index", true) // I added: redirect to index.html. After a successful login, any user will be redirected to index.html.
 				// .failureUrl("/login")
-				.permitAll().and().logout().invalidateHttpSession(true).clearAuthentication(true)
+				.permitAll()
+				.and().logout().invalidateHttpSession(true).clearAuthentication(true)
 				.logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login?logout")
 				.permitAll();
 

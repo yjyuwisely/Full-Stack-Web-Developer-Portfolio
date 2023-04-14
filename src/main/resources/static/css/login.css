@@ -9,6 +9,10 @@
 	font-family: 'Silkscreen', "IBM Plex Sans KR";
 }
 
+.alert{
+	font-size:12px;
+}
+
 body {
 	background-image: url("../assets/images/bgPink.jpg");
 	background-repeat: no-repeat;
@@ -48,3 +52,35 @@ color:white !important;
 button[type="submit"]:hover{
 color:white !important;
 	}
+	
+/* Target the placeholder pseudo-element for all input elements */
+::placeholder {
+  font-size: 14px; 
+}
+
+/* Target the placeholder pseudo-element specifically for the username input element */
+#username::placeholder {
+  font-size: 14px; 
+  color: white;
+}
+
+/* Target the placeholder pseudo-element specifically for the password input element */
+#password::placeholder {
+  font-size: 14px; 
+  color: white;
+}
+
+#firstName::placeholder {
+  font-size: 14px; 
+  color: white;
+}
+
+#lastName::placeholder {
+  font-size: 14px; 
+  color: white;
+}
+
+#email::placeholder {
+  font-size: 14px; 
+  color: white;
+}
