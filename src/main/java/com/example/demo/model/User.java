@@ -15,6 +15,12 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import javax.persistence.JoinColumn;
 
+/* The User class in your code represents a user account, 
+	which has attributes such as firstName, lastName, email, password, and roles. 
+	This class is used to 1) store user information in a database, 2) authenticate users, 
+	and 3) authorize access to protected resources in your application.
+*/
+
 @Entity //JPA를 사용할 클래스를 명시하며, 테이블과 매핑하는 역할
 @Table(name = "user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {

@@ -1,10 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>회원정보</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- CSS 경로 추가 -->
+<link href="/css/styles.css" rel="stylesheet" />
+<!-- Retro style window 레트로 윈도우 창 효과 CSS -->
+<link href="/css/window.css" rel="stylesheet" />
+<link href="/css/login.css" rel="stylesheet" />
 </head>
 <body>
 
+	<header>
+		<nav class="navbar navbar-expand-lg text-uppercase bs-light "
+			id="mainNav"></nav>
+
+		<nav
+			class="navbar navbar-expand-lg bs-light text-uppercase justify-content-center fixed-top"
+			id="mainNav">
+			<!-- fixed-top  -->
+			<div class="collapse navbar-collapse " id="navbarResponsive">
+
+				<ul class="navbar-nav fs-1">
+					<li class="nav-item">
+						<!--  mx-3 --> <!-- style="font-size: 20px;" --> <a
+						class="nav-link px-0 px-lg-2 rounded text-light" th:href="@{/}">
+							Yeongjin's Portfolio</a>
+					</li>
+
+					<li class="nav-item mx-3">
+						<form th:action="@{/login}" method="get">
+							<button type="submit" class="btn btn-primary"
+								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
+								로그인</button>
+						</form>
+					</li>
+					<li class="nav-item mx-3">
+						<form th:action="@{/logout}" method="get">
+							<button type="submit" class="btn btn-primary"
+								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
+								로그아웃</button>
+						</form>
+					</li>
+					<li class="nav-item mx-3">
+						<form th:action="@{/profile}" method="get">
+							<button type="submit" class="btn btn-primary"
+								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
+								정보 수정</button>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<section class="page-section skills" id="login"
+		style="padding-top: 3.5rem; padding-bottom: 5rem;">
+		<!-- Create HTML registration form -->
+		<div class="container outer justify-content-center"
+			style="width: 350px;">
+			<div class="title-bar">
+				<div>
+					<!-- 레트로 윈도우 창 -->
+					<span class="title-bar__title" style="font-size: 12px;">Edit
+						Your Profile</span>
+				</div>
+			</div>
+
+			<div class="container">
+				<!-- 컨텐츠 내용 시작 -->
+				<div class="display">
+					<video id="background-video" autoplay loop muted>
+						<source src="videos/tunnel2.mp4" type="video/mp4">
+					</video>
+					
+					<form th:action="@{/profile}" method="post">
+						
+						<div class="form-group">
+							<label class="control-label" for="firstName"> <!--  First Name  -->
+							</label> 이름<input id="firstName"
+								class="form-control bg-black text-white border-0"
+								 required autofocus="autofocus"
+								placeholder="이름" />
+						</div>
+
+						<div class="form-group">
+							<label class="control-label" for="lastName"> 성</label> <input
+								id="lastName" class="form-control bg-black text-white border-0"
+								 required autofocus="autofocus"
+								placeholder="성" />
+						</div>
+
+						<div class="form-group">
+							<label class="control-label" for="email"> 이메일</label> <input
+								id="email" class="form-control bg-black text-white border-0"
+								 required autofocus="autofocus"
+								placeholder="이메일" />
+						</div>
+
+						<div class="form-group">
+							<label class="control-label" for="password"> 비밀번호</label> <input
+								id="password" class="form-control bg-black text-white border-0"
+								type="password"  required
+								autofocus="autofocus" placeholder="비밀번호" />
+						</div>
+						<br>
+
+						<!-- when the "수정하기" button is clicked, 
+						it sends a POST request to the server with the updated profile data. -->
+						<!-- 						<form th:action="@{/profile}" method="post"> -->
+						<!-- your form fields go here -->
+						<div class="form-group text-center">
+							<button type="submit" class="btn btn-primary"
+								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">수정하기</button>
+						</div>
+					</form>
+
+					<!-- 						<div class="form-group text-center">
+							<button type="submit" class="btn btn-primary"
+								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
+								수정하기</button>
+						</div> -->
+
+					<!-- 					</form> -->
+				</div>
+			</div>
+		</div>
+	</section>
 </body>
 </html>

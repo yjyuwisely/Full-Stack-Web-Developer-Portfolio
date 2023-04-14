@@ -44,10 +44,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
-		http.authorizeRequests() // I added: "/","/index**","assets/images/**", "/videos/**","/login?error"
+		http.authorizeRequests() // I added: "/","/index**","assets/images/**", "/videos/**","/login?error, "/profile**"
 				// 폴더를 login 없이 허용
 				.antMatchers("/", "/index**", "/assets**", "/registration**", "/js/**", "/css/**", "/assets/images/**",
-						"/videos/**", "/login?error").permitAll()
+						"/videos/**", "/login?error", "/profile**").permitAll()
 				// 그 외 모든 요청은 인증과정 필요
 				.anyRequest().authenticated().and().formLogin().loginPage("/login")
 				// .defaultSuccessUrl("/index", true) // I added: redirect to index.html. After a successful login, any user will be redirected to index.html.

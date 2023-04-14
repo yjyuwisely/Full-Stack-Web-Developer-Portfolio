@@ -1,35 +1,109 @@
 package com.example.demo.web;
 
-import java.security.Principal;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
-import com.example.demo.model.User;
-import com.example.demo.service.UserService;
 
 @Controller
 public class UserProfileController {
-    
-    @Autowired
-    private UserService userService;
 
+    // GET method to show profile page
     @GetMapping("/profile")
-    public String showProfilePage(Model model, Principal principal) {
-        User user = userService.findByUsername(principal.getName());
-        model.addAttribute("user", user);
+    public String showProfilePage() {
+    	System.out.println("여기로 오나요?");
         return "profile";
     }
 
-    @PostMapping("/profile")
-    public String updateProfile(@ModelAttribute("user") User user, BindingResult result) {
-        userService.update(user);
-        return "redirect:/profile?success";
-    }
-
+	/*
+	 * // POST method to handle form submission
+	 * 
+	 * @PostMapping("") public String handleProfileUpdate(@ModelAttribute
+	 * UserProfile userProfile) { // update the user profile // ... return
+	 * "redirect:/profile"; }
+	 */
 }
+
+/*
+ * @Controller //@RequestMapping(value ="/profile", method = RequestMethod.GET)
+ * 
+ * @RequestMapping("/profile") public class UserProfileController {
+ * 
+ * @Autowired private UserProfileRepository userProfileRepository;
+ */
+	/*
+	 * @Controller public class UserProfileController {
+	 * 
+	 * @Autowired private UserProfileService userProfileService;
+	 * 
+	 * @GetMapping("/profile") public String showUserProfile(Model model,
+	 * Authentication authentication) { String userEmail =
+	 * authentication.getFirstName(); UserProfile userProfile =
+	 * userProfileService.getUserProfileByEmail(userEmail);
+	 * model.addAttribute("userProfile", userProfile); return "userProfile"; }
+	 * 
+	 * @PostMapping("/profile") public String saveUserProfile(@ModelAttribute
+	 * UserProfile userProfile, Authentication authentication) { String userEmail =
+	 * authentication.getFirstName(); UserProfile existingUserProfile =
+	 * userProfileService.getUserProfileByEmail(userEmail);
+	 * existingUserProfile.setFirstName(userProfile.getFirstName());
+	 * existingUserProfile.setPassword(userProfile.getPassword());
+	 * userProfileService.saveUserProfile(existingUserProfile); return
+	 * "redirect:/profile"; }
+	 * 
+	 * }
+	
+	/*
+	 * @PostMapping("") public String handleProfileUpdate(@ModelAttribute
+	 * UserProfile userProfile) { // update the user profile
+	 * userProfileRepository.save(userProfile); return "redirect:/profile"; }
+	 */
+	
+	/*//에러 떴다 -> post 방식 사용해야 한다.
+	 * @GetMapping("") public String showProfilePage() { return "profile"; }
+	 */
+
+	/*
+	 * @Autowired private UserProfileRepository userProfileRepository;
+	 * 
+	 * @GetMapping("/{id}") public String getProfile(@PathVariable("id") Long id,
+	 * Model model) { UserProfile userProfile =
+	 * userProfileRepository.findById(id).orElse(null);
+	 * model.addAttribute("userProfile", userProfile); return "userProfile"; }
+	 * 
+	 * //editUserProfile.html
+	 * 
+	 * @GetMapping("/edit/{id}") public String editProfile(@PathVariable("id") Long
+	 * id, Model model) { UserProfile userProfile =
+	 * userProfileRepository.findById(id).orElse(null);
+	 * model.addAttribute("userProfile", userProfile); return "editUserProfile"; }
+	 * 
+	 * @PostMapping("/update/{id}") public String updateProfile(@PathVariable("id")
+	 * Long id, @ModelAttribute UserProfile userProfile) { userProfile.setId(id);
+	 * userProfileRepository.save(userProfile); return "redirect:/profile/" + id; }
+	 */
+//}
+
+
+/* 이전 코드 */
+/*
+ * @Controller public class UserProfileController {
+ * 
+ * @Autowired private UserProfileService userProfileService;
+ * 
+ * @GetMapping("/profile") public String showUserProfile(Model model,
+ * Authentication authentication) { String userEmail =
+ * authentication.getFirstName(); UserProfile userProfile =
+ * userProfileService.getUserProfileByEmail(userEmail);
+ * model.addAttribute("userProfile", userProfile); return "userProfile"; }
+ * 
+ * @PostMapping("/profile") public String saveUserProfile(@ModelAttribute
+ * UserProfile userProfile, Authentication authentication) { String userEmail =
+ * authentication.getFirstName(); UserProfile existingUserProfile =
+ * userProfileService.getUserProfileByEmail(userEmail);
+ * existingUserProfile.setFirstName(userProfile.getFirstName());
+ * existingUserProfile.setPassword(userProfile.getPassword());
+ * userProfileService.saveUserProfile(existingUserProfile); return
+ * "redirect:/profile"; }
+ * 
+ * }
+ */

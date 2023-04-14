@@ -12,28 +12,11 @@
 <link href="/css/window.css" rel="stylesheet" />
 <link href="/css/login.css" rel="stylesheet" />
 </head>
-<!-- <style>
-.navbar {
-	background-color: green;
-}
-</style> -->
 <body>
 
 	<header>
 		<nav class="navbar navbar-expand-lg text-uppercase bs-light "
-			id="mainNav">
-			<!-- fixed-top  -->
-<!-- 			<div class="navbar-header">
-				navbar-brand 위치
-				<button
-					class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
-					type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-					aria-expanded="false" aria-label="Toggle navigation">
-					Menu <i class="fas fa-bars"></i>
-				</button>
-			</div> -->
-		</nav>
+			id="mainNav"></nav>
 
 		<nav
 			class="navbar navbar-expand-lg bs-light text-uppercase justify-content-center fixed-top"
@@ -42,33 +25,31 @@
 			<div class="collapse navbar-collapse " id="navbarResponsive">
 
 				<ul class="navbar-nav fs-1">
-					<li class="nav-item"> <!--  mx-3 -->
-						<!-- style="font-size: 20px;" --> <a
+					<li class="nav-item">
+						<!--  mx-3 --> <!-- style="font-size: 20px;" --> <a
 						class="nav-link px-0 px-lg-2 rounded text-light" th:href="@{/}">
 							Yeongjin's Portfolio</a>
 					</li>
 
 					<li class="nav-item mx-3">
-						<form th:action="@{/login}" method="post">
+						<form th:action="@{/login}" method="get">
 							<button type="submit" class="btn btn-primary"
 								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
 								로그인</button>
 						</form>
 					</li>
-					<!-- 					<li class="nav-item mx-3"><a
-						class="nav-link px-0 px-lg-2 rounded text-light"
-						th:href="@{/login}"> 로그인</a></li> -->
-
-					<!-- 					<li class="nav-item mx-3"><a
-						class="nav-link px-0 px-lg-2 rounded text-light"
-						th:href="@{/registration}"> 회원가입</a></li> -->
-
 					<li class="nav-item mx-3">
-						<form th:action="@{/logout}" method="post">
+						<form th:action="@{/logout}" method="get">
 							<button type="submit" class="btn btn-primary"
 								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
 								로그아웃</button>
-							<!-- <input type="submit" value="Logout"> -->
+						</form>
+					</li>
+					<li class="nav-item mx-3">
+						<form th:action="@{/profile}" method="get">
+							<button type="submit" class="btn btn-primary"
+								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
+								정보 수정</button>
 						</form>
 					</li>
 				</ul>
@@ -84,7 +65,7 @@
 			<div class="title-bar">
 				<div>
 					<!-- 레트로 윈도우 창 -->
-					<span class="title-bar__title" style="font-size:12px;">Registration</span>
+					<span class="title-bar__title" style="font-size: 12px;">Registration</span>
 				</div>
 			</div>
 
@@ -95,14 +76,9 @@
 						<source src="videos/tunnel2.mp4" type="video/mp4">
 					</video>
 					<!-- success message -->
-									<div th:if="${param.success}">
-					<div class="alert alert-info">
-					회원가입을 축하합니다. </div>
-				</div>
-
-					<!-- 				<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light"
-					style="font-size:25px !important;">
-					간편 회원가입</h2> -->
+					<div th:if="${param.success}">
+						<div class="alert alert-info">회원가입을 축하합니다.</div>
+					</div>
 					<form th:action="@{/registration}" method="post"
 						th:object="${user}">
 						<div class="form-group">
@@ -138,24 +114,12 @@
 							<button type="submit" class="btn btn-primary"
 								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
 								가입 완료</button>
-							<button class="btn btn_auto text-center"
-								style="height: 40px;">
+							<button class="btn btn_auto text-center" style="height: 40px;">
 								<a th:href="@{/login}" style="font-family: 'Do Hyeon';">돌아가기</a>
 							</button>
-							<!-- 						<button class="btn btn_auto mt-2"><a th:href="@{/login}">PRE</a></button>  -->
 						</div>
 					</form>
 				</div>
-				<!-- 	<a class="navbar-brand  fs-6 text-light text-uppercase"
-		 id="TopTitle"
-		style="float: left; margin-left: 0.3rem; margin-top: 2rem;  font-size:20px!important;">
-		Registration </a> -->
-				<!-- href="#page-top" -->
-
-				<!-- <div class="controls"> -->
-					<!-- <button class="btn btn_auto mt-2"><a th:href="@{/login}">PRE</a></button> -->
-					<!-- 				<a href="#projects"><button class="btn btn_auto">Next</button></a> -->
-				<!-- </div> -->
 			</div>
 		</div>
 	</section>

@@ -1,5 +1,8 @@
 package com.example.demo.dto;
 
+//Data transfer object (DTO), formerly known as value objects or VO, 
+//is a design pattern used to transfer data between software application subsystems.
+
 public class UserRegistrationDto {
 
 	private String firstName;

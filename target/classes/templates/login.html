@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<meta charset="ISO-8859-1">
 <title>로그인</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -25,7 +24,7 @@
 		<nav class="navbar navbar-expand-lg text-uppercase bs-light "
 			id="mainNav">
 			<!-- fixed-top  -->
-<!-- 			<div class="navbar-header">
+			<!-- 			<div class="navbar-header">
 				navbar-brand 위치
 				<button
 					class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
@@ -44,14 +43,14 @@
 			<div class="collapse navbar-collapse " id="navbarResponsive">
 
 				<ul class="navbar-nav fs-1">
-					<li class="nav-item"> <!--  mx-3 -->
-						<!-- style="font-size: 20px;" --> <a
+					<li class="nav-item">
+						<!--  mx-3 --> <!-- style="font-size: 20px;" --> <a
 						class="nav-link px-0 px-lg-2 rounded text-light" th:href="@{/}">
 							Yeongjin's Portfolio</a>
 					</li>
 
 					<li class="nav-item mx-3">
-						<form th:action="@{/login}" method="post">
+						<form th:action="@{/login}" method="get">
 							<button type="submit" class="btn btn-primary"
 								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
 								로그인</button>
@@ -66,10 +65,19 @@
 						th:href="@{/registration}"> 회원가입</a></li> -->
 
 					<li class="nav-item mx-3">
-						<form th:action="@{/logout}" method="post">
+						<form th:action="@{/logout}" method="get">
 							<button type="submit" class="btn btn-primary"
 								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
 								로그아웃</button>
+							<!-- <input type="submit" value="Logout"> -->
+						</form>
+					</li>
+					
+					<li class="nav-item mx-3">
+						<form th:action="@{/profile}" method="get">
+							<button type="submit" class="btn btn-primary"
+								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
+								정보 수정</button>
 							<!-- <input type="submit" value="Logout"> -->
 						</form>
 					</li>
@@ -85,7 +93,8 @@
 			<div class="title-bar">
 				<div>
 					<!-- 레트로 윈도우 창 -->
-					<span class="title-bar__title" style="font-size:14px;">User Login Page</span>
+					<span class="title-bar__title" style="font-size: 14px;">User
+						Login Page</span>
 					<!-- <a th:href="@{/}">User Login Page</a> -->
 				</div>
 			</div>
@@ -138,7 +147,7 @@
 										value="로그인" />
 									<button class="btn btn_auto text-center">
 										<a th:href="@{/registration}" style="font-family: 'Do Hyeon';">
-										회원가입</a>
+											회원가입</a>
 									</button>
 								</div>
 
@@ -162,9 +171,9 @@
 			<!-- href="#page-top"  -->
 
 			<!-- <div class="controls"> -->
-				<!-- 				<a href="#about"><button class="btn btn_auto">Prev</button></a>  -->
-				<!-- <button class="btn btn_auto"><a th:href="@{/registration}">회원가입</a></button> -->
-				<!-- <a href="#projects"><button class="btn btn_auto">회원가입</button></a> -->
+			<!-- 				<a href="#about"><button class="btn btn_auto">Prev</button></a>  -->
+			<!-- <button class="btn btn_auto"><a th:href="@{/registration}">회원가입</a></button> -->
+			<!-- <a href="#projects"><button class="btn btn_auto">회원가입</button></a> -->
 			<!-- </div> -->
 
 		</div>
