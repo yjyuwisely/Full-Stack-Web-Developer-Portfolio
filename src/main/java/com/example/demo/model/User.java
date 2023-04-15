@@ -41,12 +41,15 @@ public class User {
 
 	private String password;
 
-	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinTable(name = "users_roles", 
-	joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), 
-	inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+	/*
+	 * @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	 * 
+	 * @JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_id",
+	 * referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name =
+	 * "role_id", referencedColumnName = "id"))
+	 */
 	
-	private Collection<Role> roles;
+	/* private Collection<Role> roles; */
 
 	/*
 	 * public User() {
@@ -55,9 +58,9 @@ public class User {
 	 */
 	
 	//roles의 값으로 USER, ADMIN 2개를 입력한다.
-	public enum roles{
-		USER, ADMIN
-	}
+	/*
+	 * public enum roles{ USER, ADMIN }
+	 */
 	
 	public User(String firstName, String lastName, String email, String password, Collection<Role> roles) {
 
@@ -65,7 +68,7 @@ public class User {
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
-		this.roles = roles;
+		/* this.roles = roles; */
 	}
 
 	public Long getId() {
@@ -103,11 +106,9 @@ public class User {
 		this.password = password;
 	}
 
-	public Collection<Role> getRoles() {
-		return roles; 
-	}
-	public void setRoles(Collection<Role> roles) {
-		this.roles = roles;
-	}
+	/*
+	 * public Collection<Role> getRoles() { return roles; } public void
+	 * setRoles(Collection<Role> roles) { this.roles = roles; }
+	 */
 
 }

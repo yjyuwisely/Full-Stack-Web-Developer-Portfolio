@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"> <!-- use Thymeleaf's functionality, such as dynamic expressions and conditionals, 
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- use Thymeleaf's functionality, such as dynamic expressions and conditionals, 
 to generate dynamic content on your web page.  -->
 <head>
 <meta charset="utf-8" />
@@ -13,10 +14,23 @@ to generate dynamic content on your web page.  -->
 <link href="/css/login.css" rel="stylesheet" />
 </head>
 <body>
-
 	<header>
+		<!-- create navigation bar (header) -->
+		<!-- Navigation-->
 		<nav class="navbar navbar-expand-lg text-uppercase bs-light "
-			id="mainNav"></nav>
+			id="mainNav">
+			<!-- fixed-top  -->
+			<!-- 			<div class="navbar-header">
+				navbar-brand 위치
+				<button
+					class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
+					type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+					aria-expanded="false" aria-label="Toggle navigation">
+					Menu <i class="fas fa-bars"></i>
+				</button>
+			</div> -->
+		</nav>
 
 		<nav
 			class="navbar navbar-expand-lg bs-light text-uppercase justify-content-center fixed-top"
@@ -30,19 +44,12 @@ to generate dynamic content on your web page.  -->
 						class="nav-link px-0 px-lg-2 rounded text-light" th:href="@{/}">
 							Yeongjin's Portfolio</a>
 					</li>
-
-					<li class="nav-item mx-3">
-						<form th:action="@{/login}" method="get">
-							<button type="submit" class="btn btn-primary"
-								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
-								로그인</button>
-						</form>
-					</li>
 					<li class="nav-item mx-3">
 						<form th:action="@{/logout}" method="get">
 							<button type="submit" class="btn btn-primary"
 								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
 								로그아웃</button>
+							<!-- 							<input type="submit" value="Logout"> -->
 						</form>
 					</li>
 					<li class="nav-item mx-3">
@@ -50,6 +57,7 @@ to generate dynamic content on your web page.  -->
 							<button type="submit" class="btn btn-primary"
 								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
 								정보 수정</button>
+							<!-- <input type="submit" value="Logout"> -->
 						</form>
 					</li>
 				</ul>
@@ -123,5 +131,7 @@ to generate dynamic content on your web page.  -->
 			</div>
 		</div>
 	</section>
+
+	<footer> </footer>
 </body>
 </html>
