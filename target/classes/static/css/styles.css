@@ -10,9 +10,9 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
-/*  @import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"); /* font-family: 'Silkscreen', cursive; */
+/*  @import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');  font-family: 'Nabla', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Roboto&display=swap'); /*font-family: 'IBM Plex Sans KR', sans-serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');/* font-family: 'Gugi', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');/* font-family: 'Do Hyeon', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');	/* font-family: 'Monoton', cursive; */

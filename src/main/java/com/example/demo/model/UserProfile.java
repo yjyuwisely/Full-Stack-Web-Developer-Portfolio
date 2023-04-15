@@ -16,17 +16,17 @@ display the user's profile information in the userProfile.html view.*/
 @Entity
 public class UserProfile {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
-  private String email;
+	private String email;
 
-  private String firstName;
-  
-  private String lastName;
+	private String firstName;
 
-  private String password;
+	private String lastName;
+
+	private String password;
 
 	public Long getId() {
 		return id;
@@ -68,9 +68,9 @@ public class UserProfile {
 		this.password = password;
 	}
 
-	/*
-	 * public Collection<Role> getRoles() { return roles; }
-	 * 
-	 * public void setRoles(Collection<Role> roles) { this.roles = roles; }
-	 */
+	
+	  public Collection<Role> getRoles() { return roles; }
+	  
+	  public void setRoles(Collection<Role> roles) { this.roles = roles; }
+	 
 }

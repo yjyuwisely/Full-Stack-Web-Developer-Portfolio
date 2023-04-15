@@ -1,47 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- , shrink-to-fit=no -->
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Yeongjin's Portfolio</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <!-- CSS 경로 추가 -->
-        <link href="/css/styles.css" rel="stylesheet" />
-        <!-- Retro style window 레트로 윈도우 창 효과 CSS -->
-        <link href="/css/window.css" rel="stylesheet" />
-        <link href="/css/slides.css" rel="stylesheet" />
-        
-         <!--탑버튼 Top button -->
-		<script type="text/javascript">
-		$(function(){
-		  $("#gotop").hide();
-		  $(window).scroll(function(){
-		    if($(this).scrollTop() > 1000){$("#gotop").fadeIn();}
-		    else{$("#gotop").fadeOut();}
-		  });
-		});
-		</script>
-    </head>
+<html xmlns:th="http://www.thymeleaf.org"><!-- use Thymeleaf's functionality, such as dynamic expressions and conditionals, 
+to generate dynamic content on your web page.  -->
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- , shrink-to-fit=no -->
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>Yeongjin's Portfolio</title>
+<!-- Favicon-->
+<!-- <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> -->
+<!-- Font Awesome icons (free version)-->
+<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+	crossorigin="anonymous"></script>
+<!-- Core theme CSS (includes Bootstrap)-->
+<!-- CSS 경로 추가 -->
+<link href="/css/styles.css" rel="stylesheet" />
+<!-- Retro style window 레트로 윈도우 창 효과 CSS -->
+<link href="/css/window.css" rel="stylesheet" />
+<link href="/css/slides.css" rel="stylesheet" />
 
-    <body id="page-top"> <!-- <div class="container d-flex align-items-center flex-column"> 생략한 것 -->
-    <!-- 탑 버튼 Top Button -->
-    <a href="#page-top" id="gotop" title="Top">
+<!--탑버튼 Top button -->
+<script type="text/javascript">
+	$(function() {
+		$("#gotop").hide();
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 1000) {
+				$("#gotop").fadeIn();
+			} else {
+				$("#gotop").fadeOut();
+			}
+		});
+	});
+</script>
+</head>
+
+<body id="page-top">
+	<!-- <div class="container d-flex align-items-center flex-column"> 생략한 것 -->
+	<!-- 탑 버튼 아이콘 Top Button Icon -->
+	<a href="#page-top" id="gotop" title="Top">
 		<button class="btn btn_auto">TOP</button>
 	</a>
-    
-        <!-- Navigation-->
+
+	<!-- Navigation-->
 	<header>
-		<nav
-			class="navbar navbar-expand-lg text-uppercase bs-light "
+		<nav class="navbar navbar-expand-lg text-uppercase bs-light "
 			id="mainNav">
 			<!-- fixed-top  -->
 			<div class="navbar-header">
@@ -58,50 +61,50 @@
 
 		<nav
 			class="navbar navbar-expand-lg bs-light text-uppercase justify-content-center fixed-top"
-			id="mainNav">
-			<!-- fixed-top  -->
-			<div class="collapse navbar-collapse "
-				id="navbarResponsive">
-				
+			id="mainNav"><!-- fixed-top  -->
+			<div class="collapse navbar-collapse " id="navbarResponsive">
 
 				<ul class="navbar-nav fs-4">
-					<li class="nav-item mx-3">
-					<a class="nav-link px-0 px-lg-2 rounded text-light " href="#about"><!-- px-0: 0 pixels on the X-axis -->
-					자기소개</a></li><!-- py-3 -->
-					
-					<li class="nav-item mx-3">
-					<a class="nav-link px-0 px-lg-2 rounded text-light" href="#skills">
-					기술 목록</a></li>
-					
-					<li class="nav-item mx-3">
-					<a class="nav-link px-0 px-lg-2 rounded text-light" href="#projects">
-					프로젝트</a></li>
-					
-					<li class="nav-item mx-3">
-					<a class="nav-link px-0 px-lg-2 rounded text-light" href="#archiving">
-					블로그/깃허브</a></li>
- 
-					<li class="nav-item mx-3">
-					<a class="nav-link px-0 px-lg-2 rounded text-light" href="#education">
-					훈련/교육</a></li>
-					
-					<li class="nav-item mx-3">
-					<a class="nav-link px-0 px-lg-2 rounded text-light" href="#achievements"> <!-- px:padding x, lg:large screen, 2:0.5rem -->
-					수상 내역</a></li>
+					<li class="nav-item mx-3"><a
+						class="nav-link px-0 px-lg-2 rounded text-light " href="#about"><!-- px-0: 0 pixels on the X-axis --> 
+							자기소개</a></li> <!-- py-3 -->
 
-<!-- 					<li class="nav-item mx-3">
+					<li class="nav-item mx-3"><a
+						class="nav-link px-0 px-lg-2 rounded text-light" href="#skills">
+							기술 목록</a></li>
+
+					<li class="nav-item mx-3"><a
+						class="nav-link px-0 px-lg-2 rounded text-light" href="#projects">
+							프로젝트</a></li>
+
+					<li class="nav-item mx-3"><a
+						class="nav-link px-0 px-lg-2 rounded text-light" href="#archiving">
+							블로그/깃허브</a></li>
+
+					<li class="nav-item mx-3"><a
+						class="nav-link px-0 px-lg-2 rounded text-light" href="#education">
+							훈련/교육</a></li>
+
+					<li class="nav-item mx-3"><a
+						class="nav-link px-0 px-lg-2 rounded text-light"
+						href="#achievements"> <!-- px:padding x, lg:large screen, 2:0.5rem -->
+							수상 내역
+					</a></li>
+
+					<!-- 					<li class="nav-item mx-3">
 					<a class="nav-link px-0 px-lg-2 rounded text-light" href="#contact">
 					연락</a></li> -->
-<!-- 					      <li class="nav-item mx-3"><a class="nav-link px-0 px-lg-3 rounded text-dark" href="#contact">English</a></li> -->
+					<!-- 					      <li class="nav-item mx-3"><a class="nav-link px-0 px-lg-3 rounded text-dark" href="#contact">English</a></li> -->
 				</ul>
 			</div>
 		</nav>
 	</header>
-    
+
 	<!-- [1] About 섹션: About Section-->
 	<!-- About: A section where you can talk about yourself, your background, and your interests.
 		& where you introduce yourself and your background. -->
-	<section class="page-section skills" id="about" style="padding-top: 3.5rem; padding-bottom: 5rem;">
+	<section class="page-section skills" id="about"
+		style="padding-top: 3.5rem; padding-bottom: 5rem;">
 		<div class="container outer">
 			<!-- <div class="window"> -->
 			<div class="title-bar">
@@ -110,9 +113,8 @@
 					<span class="title-bar__title"><a href="#page-top"
 						id="windowTitle">Yeongjin's portfolio</a></span>
 				</div>
-
-			<!--	<div class="title-bar__controls">
-
+					<!-- top-right buttons -->
+<!-- 					<div class="title-bar__controls" style="font-family:'Silkscreen', cursive;">
 					 <button class="btn">- 버튼
 						<svg width="19" height="3" viewBox="0 0 19 3" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
@@ -127,49 +129,51 @@
 								stroke="#353535" stroke-width="3" />
        					 </svg>
 					</button>
-
 					<button class="btn">x</button>x 버튼 
 				</div>-->
-			</div>
-
+			</div> 
+			
 			<div class="container">
 				<!-- 컨텐츠 내용 시작 -->
 				<div class="display">
-						<video id="background-video" autoplay loop muted>
-							<source src="videos/road.mp4" type="video/mp4">
-						</video>
-						<h2
-							class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">자기소개</h2>
-						<div class="table-responsive">
-							<table>
-								<tr>
-									<td><p class="lead text-start">
-											<img class="masthead-avatar" src="/assets/images/character.png"
-												alt="프로필" height=200px width=200px /></td>
-									<!-- mb-5 -->
-									<td><p class="lead text-start text-white" 
-									style="font-weight: bold; text-shadow: 1px 1px 2px #5D2FDA;">
-											유영진 | 풀스택 웹 개발자
-											<!-- 프론트엔드 엔지니어 -->
-											<br> 울산, 대한민국<br> <!-- <b style="color: #AE9EFF;"> -->
-												yjyuwisely@gmail.com<!-- </b> --><br> 
-												<b class="silkscreen" style="text-shadow: 1px 1px 2px #9B28BF;">
-												Junior full stack software engineer with a desire to learn new
-												technologies and a passion for creating clean and intuitive user interfaces.😊</b>
-										</p></td>
-								</tr>
-								<tr>
-									<td colspan="2">
-										<p class="lead text-start text-light rounded mx-2 my-3"
-											style="text-indent: 1rem; background-color: rgba(0,0,0,0.3); word-break: break-word;
-											text-shadow: 1px 1px 2px black">
-											안녕하세요! 풀스택 웹 개발자 유영진입니다. 이용자들이
-											웹 서비스를 어떻게 하면 더욱더 편리하게 사용할 수 있을지 항상 생각하며, 사용자 친화적이면서 사람들에게
-											도움을 줄 수 있는 웹 서비스를 만드는 것에 관심이 많습니다. 개발을 통해 도움이 필요한 사람들을 도울 수
-											있다는 점이 큰 가치가 있다고 생각합니다. 새로운 것을 끊임없이 배우는 것을 즐기며, 새로운 기술을 시도해서
-											개발 스킬을 향상하고 싶습니다. 최상의 서비스를 제공하기 위해 또한 앞으로의 개발자로서 큰 발전과 성장을 위해
-											열심히 달려 나가겠습니다.</p> 
-											<!-- Hello, I'm Yeongjin Yu, a junior full-stack developer. 
+					<video id="background-video" autoplay loop muted>
+						<source src="videos/road.mp4" type="video/mp4">
+					</video>
+					
+					<h2
+						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">자기소개</h2>
+					<div class="table-responsive">
+						<table>
+							<tr>
+								<td><p class="lead text-start">
+										<img class="masthead-avatar"
+											src="/assets/images/character.png" alt="프로필" height=200px
+											width=200px /></td> <!-- mb-5 -->
+								<td><p class="lead text-start text-white"
+										style="font-weight: bold; text-shadow: 1px 1px 2px #5D2FDA;">
+										유영진 | 풀스택 웹 개발자 <!-- 프론트엔드 엔지니어 -->
+										<br> 울산, 대한민국<br>
+										yjyuwisely@gmail.com
+										<br> <b class="silkscreen"
+											style="text-shadow: 1px 1px 2px #9B28BF;"> Junior full
+											stack software engineer with a desire to learn new
+											technologies and a passion for creating clean and intuitive
+											user interfaces.😊</b>
+	 
+								</p></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<p class="lead text-start text-light rounded mx-2 my-3"
+										style="text-indent: 1rem; background-color: rgba(0, 0, 0, 0.3); word-break: break-word; text-shadow: 1px 1px 2px black">
+										안녕하세요! 새로운 기술을 학습하는 열정과 
+										사용자들이 알아보기 쉬운 직관적인 사용자 인터페이스를 만드는 데 관심이 많은 풀 스택 웹 개발자 유영진입니다. 
+										사용자들이 웹 서비스를 어떻게 하면 더욱더 편리하게 사용할 수 있을지 항상 생각하며, 
+										사용자 친화적이면서 사람들에게 도움을 줄 수 있는 웹 서비스를 만드는 것에 관심이 많습니다. 
+										개발을 통해 도움이 필요한 사람들을 도울 수 있다는 점이 큰 가치가 있다고 생각합니다. 
+										새로운 것을 끊임없이 배우는 것을 즐기며, 새로운 기술을 시도해서 개발 스킬을 향상하고 싶습니다. 
+										최상의 서비스를 제공하기 위해 또한 앞으로의 개발자로서 큰 발전과 성장을 위해 열심히 달려 나가겠습니다.</p> 
+										<!-- Hello, I'm Yeongjin Yu, a junior full-stack developer. 
 											My passion lies in creating web services that are not only user-friendly 
 											but also enhance people's lives. 
 											I thrive on continuously learning and experimenting with new technologies 
@@ -178,12 +182,20 @@
 											My goal is to contribute to this cause 
 											by providing the best possible service 
 											to my customers and growing as a developer in the process. -->
-									</td>
-								</tr>
-							</table>
-						</div>
+											<!-- "Hello! I am Youngjin Yoo, a full-stack web developer who is passionate about learning new technologies 
+											and creating clean and intuitive user interfaces.
+											 I always think about how users can use web services more conveniently, 
+											 and I am interested in creating user-friendly web services that can help people. 
+											 I believe that there is great value in helping people in need through development. 
+											 I enjoy learning new things constantly and want to improve my development skills 
+											 by trying new technologies. In order to provide the best service, 
+											 I will work hard to develop and grow as a developer in the future." -->
+								</td>
+							</tr>
+						</table>
 					</div>
 				</div>
+			</div>
 			<a class="navbar-brand  fs-6 text-light text-uppercase"
 				href="#page-top" id="TopTitle"
 				style="float: left; margin-left: 0.3rem; margin-top: 0.5rem;">
@@ -216,40 +228,48 @@
 						<source src="videos/tunnel.mp4" type="video/mp4">
 					</video>
 					<!-- Skills Section Heading-->
-					<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">
-					기술 목록</h2>
+					<h2
+						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">
+						기술 목록</h2>
 					<p class="lead text-start text-center">
-					<ul style="list-style-type: square; color: white; font-size: 0.8rem; text-shadow: 1px 1px 2px #5D2FDA;">
-						<li  class="silkscreen">Frontend: HTML, CSS, JavaScript, jQuery, Bootstrap</li>
-						<li  class="silkscreen">Backend: Spring, Java, JSP, MySQL, Python</li>
-						<li  class="silkscreen">Version Control: GitHub</li>
-						<li  class="silkscreen">Statistical computing and graphics : R</li>
+					<ul
+						style="list-style-type: square; color: white; font-size: 0.8rem; text-shadow: 1px 1px 2px #5D2FDA;">
+						<li class="silkscreen">Frontend: HTML, CSS, JavaScript,
+							jQuery, Bootstrap</li>
+						<li class="silkscreen">Backend: Spring, Java, JSP, MySQL,
+							Python</li>
+						<li class="silkscreen">Version Control: GitHub</li>
+						<li class="silkscreen">Statistical computing and graphics : R</li>
 					</ul>
-					
-					<div class="text-white rounded" style="background-color: rgba(0, 0, 0, 0.3);">
-					<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">
-						백엔드 웹페이지</h2>
-					<p class="lead text-start text-light" style="text-shadow: 1px 1px 2px #5D2FDA;">
-					<b class="silkscreen">Spring Boot, Maven, Spring Security, MySQL</b>를 이용해서 회원가입, 로그인, 로그아웃을 구현한 웹페이지입니다. 
-					<!-- 관리자 및 회원 페이지는 진행 중입니다. -->
-					</p>
-<!-- 					<b class="silkscreen"> 
+
+					<div class="text-white rounded"
+						style="background-color: rgba(0, 0, 0, 0.3);">
+						<h2
+							class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">
+							백엔드 웹페이지</h2>
+						<p class="lead text-start text-light"
+							style="text-shadow: 1px 1px 2px #5D2FDA;">
+							<b class="silkscreen">Spring Boot, Maven, Spring Security,
+								MySQL</b>를 이용해서 회원가입, 로그인, 로그아웃을 구현한 웹페이지입니다.
+							<!-- 관리자 및 회원 페이지는 진행 중입니다. -->
+						</p>
+						<!-- 					<b class="silkscreen"> 
 					Backend: Spring Boot, Spring Security</b> -->
 
-<!-- 					<ul class="text-center"
+						<!-- 					<ul class="text-center"
 						style="list-style-type: square; color: white; font-size: 0.8rem; text-shadow: 1px 1px 2px black;">
 						<li class="silkscreen">Backend: Spring Boot, Spring Security</li>
 					</ul> -->
-					<div class="controls text-center">
-						<a th:href="@{/login}"><button class="btn btn_auto mb-3" style="font-family: 'Do Hyeon';">입장하기</button></a>
-						<br>
-					</div>					
+						<div class="controls text-center">
+							<a th:href="@{/login}"><button class="btn btn_auto mb-3"
+									style="font-family: 'Do Hyeon';">입장하기</button></a> <br>
+						</div>
 					</div>
 				</div>
 			</div>
-					
-<!-- 				</div> -->
-<!-- 		</div>   -->
+
+			<!-- 				</div> -->
+			<!-- 		</div>   -->
 			<a class="navbar-brand  fs-6 text-light text-uppercase"
 				href="#page-top" id="TopTitle"
 				style="float: left; margin-left: 0.3rem; margin-top: 0.5rem;">
@@ -258,11 +278,11 @@
 				<a href="#about"><button class="btn btn_auto">Prev</button></a> <a
 					href="#projects"><button class="btn btn_auto">Next</button></a>
 			</div>
-		</div>   
+		</div>
 	</section>
 
 
-	<!-- [3] 프로젝트 섹션: Project Section-->
+	<!-- [3.1] 프로젝트 섹션: Project Section-->
 	<!-- Projects: A section where you can showcase your projects, including descriptions, screenshots, and preferably links 
 		to the live versions(live demos) or Github repositories -->
 	<section class="page-section skills" id="projects">
@@ -294,12 +314,11 @@
 						2023.04 (1인 개인 프로젝트)</p>
 					<table>
 						<tr>
-							<td >
+							<td>
 								<p class="lead text-start text-center">
 									<img class="masthead-avatar"
 										src="/assets/images/portfolioCapture1.png" alt="Project1"
-										height=auto width=400px />
-								    <img class="masthead-avatar"
+										height=auto width=400px /> <img class="masthead-avatar"
 										src="/assets/images/portfolioCapture2.png" alt="Project1"
 										height=auto width=400px />
 								</p>
@@ -369,14 +388,14 @@
 									포트폴리오 용도로 제작한 지금 보고 있는 웹사이트입니다. 반응형 웹페이지와 Bootstrap을 처음 사용할 수
 									있던 좋은 기회였습니다. 디자인은 90년대 레트로 스타일의 윈도우에 영감을 받아서 만들었습니다. <br>
 									<br>
+									<!-- Make sure to include any other relevant details or achievements related to this project 
+									that you think could be useful for potential employers or clients to know. -->
 									<ul class="pl-3" style="list-style-type: square;">
-										<li><b>주요 기능</b>: 자기소개, 기술 목록, 프로젝트, 블로그/깃허브, 훈련/교육, 수상
-											내역</li>
+										<li><b>주요 기능</b>: 자기소개, 기술 목록, 프로젝트, 블로그/깃허브, 훈련/교육, 수상 내역</li>
 										<li class="silkscreen">GitHub: <a
 											href="https://github.com/yjyuwisely/Full-Stack-Developer-Portfolio.git"
 											title="깃허브로 이동"> <b>github.com/yjyuwisely/Full-Stack-Developer-Portfolio.git</b></a></li>
-										<li class="silkscreen">Frontend: HTML, CSS, Bootstrap,
-											Vanilla JS, jQuery</li>
+										<li class="silkscreen">Frontend: HTML, CSS, Bootstrap, Vanilla JS, jQuery</li>
 										<!-- <li  class="silkscreen">Backend: Spring, Java </li> -->
 									</ul>
 								</div>
@@ -384,24 +403,101 @@
 						</tr>
 					</table>
 
-					<!-- [3.2] 개인 프로젝트 시작 -->
-					<h2
-						class="page-section-heading text-center text-uppercase text-secondary pt-5 mb-0 text-light">울산
-						울주군 여행 웹사이트</h2>
+					<!-- 					</div> -->
+					<!--  팀 프로젝트 시작 -->
+					<!-- 						<h2
+							class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">프로젝트
+							이름 (미정)</h2>
+						<p
+							style="margin: 0; padding: 0; font-weight: bold; color: white; text-align: center; text-shadow: 1px 1px 2px #5D2FDA;">
+							2023.04-2023.06 (K-디지털 트레이닝 3인 팀 프로젝트)</p>
+						<table>
+							<tr>
+								<td><p class="lead text-start">
+										<img class="masthead-avatar" src="/assets/images/character.png"
+											alt="Project1" height=200px width=200px />
+								</td>
+								<td>
+									<div class="lead text-start rounded text-white mx-2 my-3"
+										style="background-color: rgba(0, 0, 0, 0.4); word-break: break-word;">
+										그린컴퓨터아카데미 울산캠퍼스에서 진행 예정인 팀프로젝트입니다. 4월 17일에서 6월 30일까지 진행 완료 후 적을 예정입니다.<br> 
+										<br>
+										<ul class="pl-3" style="list-style-type: square;">
+										<li><b>주요 기능</b>: 진행 완료 후 적을 예정입니다. </li>
+										<li class="silkscreen">GitHub: <a href="https://github.com/yjyuwisely/Team-Project-2023" title="깃허브로 이동"> 
+										<b>github.com/yjyuwisely/Team-Project-2023</b></a></li>
+										<li  class="silkscreen">Frontend: 진행 완료 후 적을 예정입니다. </li>
+										<li  class="silkscreen">Backend: 진행 완료 후 적을 예정입니다. </li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div> -->
+<!-- 				</div>
+			</div>
 
+			<a class="navbar-brand  fs-6 text-light text-uppercase"
+				href="#page-top" id="TopTitle"
+				style="float: left; margin-left: 0.3rem; margin-top: 0.5rem;">
+				Projects </a>
+			<div class="controls">
+				<a href="#skills"><button class="btn btn_auto">Prev</button></a> <a
+					href="#archiving"><button class="btn btn_auto">Next</button></a>
+
+			</div>
+		</div>
+	</section>
+
+
+[3.2] 프로젝트 섹션: Project Section
+	Projects: A section where you can showcase your projects, including descriptions, screenshots, and preferably links 
+		to the live versions(live demos) or Github repositories
+	<section class="page-section skills" id="projects">
+		<div class="container outer">
+			<div class="title-bar">
+				<div>
+					레트로 윈도우 창
+					<span class="title-bar__title"><a href="#page-top"
+						id="windowTitle">Yeongjin's portfolio</a></span>
+				</div>
+			</div>
+
+			<div class="container">
+				컨텐츠 내용 시작
+				<div class="display">
+					<video id="background-video" autoplay loop muted>
+						<source src="videos/tunnel.mp4" type="video/mp4">
+					</video>
+					Project Section Heading
+					<h2
+						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">프로젝트</h2>
+ -->
+					<!--  [3.2] 포트폴리오 시작 -->
+					<h2
+						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">울산 울주군 여행
+						웹사이트</h2>
 					<p
 						style="margin: 0; padding: 0; font-weight: bold; color: white; text-align: center; text-shadow: 1px 1px 2px #5D2FDA;">
-						2023.01-2023.02 (1인 개인 프로젝트)</p>
+						2023.01-02 (1인 개인 프로젝트)</p>
 					<table>
 						<tr>
 							<td style="padding-top: 33px;">
-								<!-- 								<p class="lead text-start">
+								 <div style="text-align: center; margin-top: 0; padding-top: 0;">
+									<span class="dot" onclick="currentSlide(1)"></span> <span
+										class="dot" onclick="currentSlide(2)"></span> <span
+										class="dot" onclick="currentSlide(3)"></span> <span
+										class="dot" onclick="currentSlide(4)"></span> <span
+										class="dot" onclick="currentSlide(5)"></span> <span
+										class="dot" onclick="currentSlide(6)"></span>
+								</div> 
+								<!-- 	<p class="lead text-start">
 										<img class="masthead-avatar" src="/assets/images/portfolioCapture1.png"
 											alt="Project1" height=auto width=400px />  -->
 								<div class="slideshow-container">
 									<div class="mySlides">
 										<!-- fade -->
-										<div class="numbertext">1 / 6</div>
+										<!-- <div class="numbertext">1 / 6</div> -->
 										<img src="/assets/images/uljuCapture1.png"
 											style="width: 450px; height: 473px;">
 										<!-- width: 100% -->
@@ -410,7 +506,7 @@
 
 									<div class="mySlides">
 										<!-- fade -->
-										<div class="numbertext">2 / 6</div>
+										<!-- <div class="numbertext">2 / 6</div> -->
 										<img src="/assets/images/uljuCapture2.png"
 											style="width: 450px; height: 473px;">
 										<!-- <div class="text">Caption Two</div> -->
@@ -418,7 +514,7 @@
 
 									<div class="mySlides">
 										<!-- fade -->
-										<div class="numbertext">3 / 6</div>
+										<!-- <div class="numbertext">3 / 6</div> -->
 										<img src="/assets/images/uljuCapture3.png"
 											style="width: 450px; height: 473px;">
 										<!-- <div class="text">Caption Three</div> -->
@@ -426,7 +522,7 @@
 
 									<div class="mySlides">
 										<!-- fade -->
-										<div class="numbertext">4 / 6</div>
+										<!-- <div class="numbertext">4 / 6</div> -->
 										<img src="/assets/images/uljuCapture4.png"
 											style="width: 450px; height: 473px;">
 										<!-- <div class="text">Caption Three</div> -->
@@ -434,7 +530,7 @@
 
 									<div class="mySlides">
 										<!-- fade -->
-										<div class="numbertext">5 / 6</div>
+										<!-- <div class="numbertext">5 / 6</div> -->
 										<img src="/assets/images/uljuCapture5.png"
 											style="width: 450px; height: 473px;">
 										<!-- <div class="text">Caption Three</div> -->
@@ -442,32 +538,23 @@
 
 									<div class="mySlides">
 										<!-- fade -->
-										<div class="numbertext">6 / 6</div>
+										<!-- <div class="numbertext">6 / 6</div> -->
 										<img src="/assets/images/uljuCapture6.png"
 											style="width: 450px; height: 473px;">
 										<!-- <div class="text">Caption Three</div> -->
 									</div>
-
+									<!-- <, > buttons -->
 									<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a
 										class="next" onclick="plusSlides(1)">&#10095;</a>
 
 								</div> <br>
-
-								<div style="text-align: center; margin-top:0; padding-top:0;">
-									<span class="dot" onclick="currentSlide(1)"></span> <span
-										class="dot" onclick="currentSlide(2)"></span> <span
-										class="dot" onclick="currentSlide(3)"></span> <span
-										class="dot" onclick="currentSlide(4)"></span> <span
-										class="dot" onclick="currentSlide(5)"></span> <span
-										class="dot" onclick="currentSlide(6)"></span>
-								</div>
 							</td>
 							<td>
 								<div class="lead text-start rounded text-white mx-2 my-3"
 									style="background-color: rgba(0, 0, 0, 0.3); word-break: break-word; text-shadow: 1px 1px 2px black;">
 									울산 울주군 여행 웹사이트를 진행하게 된 계기는 저도 몰랐던 고향의 여러 여행 장소에 대해 자세히 알고 싶었었고,
 									울산에 거주 중임에도 불구하고 저는 울산 시티 투어와 울산 관광 택시가 있는 줄 몰랐기 때문입니다. 그래서
-									사람들에게 울산 여행에 대해 공유하고자 만들게 되었습니다. 아직 백엔드 작업이 진행 중인 개인 프로젝트입니다. <br>
+									사람들에게 울산 여행에 대해 공유하고자 만들게 되었습니다. <!-- 아직 백엔드 작업이 진행 중인 개인 프로젝트입니다.  --><br>
 									<br>
 									<ul class="pl-3" style="list-style-type: square;">
 										<li><b>주요 기능</b>: 울산 시티 투어와 울산 관광 택시의 여행 장소와 경로 소개</li>
@@ -476,7 +563,7 @@
 											title="깃허브로 이동"> <b>github.com/yjyuwisely/Traveling-from-Ulju-gun</b></a></li>
 										<li class="silkscreen">Frontend: HTML, CSS, Vanilla JS,
 											jQuery</li>
-										<li class="silkscreen">Backend: 진행 완료 후 적을 예정입니다.</li>
+										<!-- <li class="silkscreen">Backend: 진행 완료 후 적을 예정입니다.</li> -->
 									</ul>
 								</div>
 							</td>
@@ -527,78 +614,9 @@
 			</div>
 		</div>
 	</section>
-
 	<!-- 안 쓰는 코드 -->
 	<!-- 					Project Grid Items
 					<div class=" justify-content-center">row
-						Project Item 1
-						<div class="col-md-6 col-lg-4">mb-5
-							<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1"> 외부 팝업 
-								<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-									<div class="portfolio-item-caption-content text-center text-white">
-										<i class="fas fa-plus fa-3x"></i>
-									</div>
-								</div>
-								<img class="img-fluid" src="/assets/images/character.png"
-									height=200px width=200px alt="Project1" />
-
-								<p style="font-weight: bold; color:white;text-align:center;text-shadow: 1px 1px 2px #5D2FDA;">울주군 여행 웹사이트</p>
-								<p class="lead text-start rounded" style="background-color: rgba(255,255,255,0.7);" >
-									개인 프로젝트로 울산 울주군 여행 웹사이트를 만들었습니다.<br><br>
-									<b style="font-weight: bold;">기간</b>: 2023.01-2023.04(예정)<br>
-									<b style="font-weight: bold;">주요 기능</b>: 완료 후 적을 예정입니다.<br>
-									<b>GitHub</b>:<br>
-									<a href = "https://github.com/yjyuwisely/My-First-Project-Traveling-from-Ulju-gun" title="깃허브로 이동">
-									github.com/yjyuwisely/Traveling-from-Ulju-gun</a><br>
-									<b>Frontend</b>:<br> HTML, CSS, jQuery<br> 
-									<b>Backend</b>:<br> 완료 후 적을 예정입니다.<br>
-								</p>
-							</div>
-						</div> -->
-
-
-	<!-- 											Project Item 2
-						<div class="col-md-6 col-lg-4"> mb-5
-							<div class="portfolio-item mx-auto" data-bs-toggle="modal"
-								data-bs-target="#portfolioModal2">
-								<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-									<div class="portfolio-item-caption-content text-center text-white">
-										<i class="fas fa-plus fa-3x"></i>
-									</div>
-								</div>
-								<img class="img-fluid" src="/assets/images/character.png"
-									height=200px width=200px alt="Project2" />
-								<p style="font-weight: bold; color:white; text-align:center;text-shadow: 1px 1px 2px #5D2FDA;">팀 프로젝트 이름 (예정)</p>
-								<p class="lead text-start rounded" style="background-color: rgba(255,255,255,0.7);">
-									그린컴퓨터아카데미 울산캠퍼스에서 진행한 팀프로젝트입니다.<br><br>
-									<b style="font-weight: bold;">기간</b>: 2023.04-2023.06<br>
-									<b style="font-weight: bold;">주요 기능</b>: 4월 17일에서 6월 15일까지 진행 완료 후 적을 예정입니다.<br>
-									<b>GitHub</b>:<br>
-									<a href = "https://github.com/yjyuwisely/Team-Project-2023" title="깃허브로 이동">
-									github.com/yjyuwisely/Team-Project-2023</a><br>
-									<b>Frontend</b>:<br> 4월 17일에서 6월 15일까지 진행 완료 후 적을 예정입니다.<br> 
-									<b>Backend</b>:<br> 4월 17일에서 6월 15일까지 진행 완료 후 적을 예정입니다.<br>
-								</p>
-							</div>
-						</div> -->
-
-
-	<!-- Project Item 3-->
-	<!--                      <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="/assets/images/character.png"  height=200px width=200px alt="Project3" />
-                            <p class="lead text-start">
-                            상세 내용 적기 상세 내용 적기<br>
-                            상세 내용 적기 상세 내용 적기<br>
-                            상세 내용 적기 상세 내용 적기<br>
-                            상세 내용 적기 상세 내용 적기<br>
-                            상세 내용 적기 상세 내용 적기<br></p>
-                        </div>
-                    </div>  -->
-
 	<!--                     Portfolio Item 4-->
 	<!--                      <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
@@ -628,13 +646,6 @@
                     </div> -->
 	<!--                 </div>
             </div> -->
-	<!-- Icon Divider-->
-	<!--                 <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div> -->
-	<!--                 </div> -->
-
 
 
 	<!-- [4] 블로그/깃허브 섹션: Blog & Github Section-->
@@ -661,18 +672,23 @@
 						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">블로그/깃허브</h2>
 
 					<!-- Project Grid Items-->
-					<div class="row justify-content-center" style="text-shadow: 1px 1px 2px #5D2FDA;"> <!-- #9B28BF -->
+					<div class="row justify-content-center"
+						style="text-shadow: 1px 1px 2px #5D2FDA;">
+						<!-- #9B28BF -->
 
 						<!-- Blog Item 1-->
-						<div class="col-md-6 col-lg-5 my-3 mx-3 text-white rounded" style="background-color: rgba(0, 0, 0, 0.1);">
+						<div class="col-md-6 col-lg-5 my-3 mx-3 text-white rounded"
+							style="background-color: rgba(0, 0, 0, 0.1);">
 							<!-- mb-5 -->
 							<p class="lead text-start">
 								<img class="img-fluid" src="/assets/images/Tistory.png"
-									height=100px width=200px alt="Blog" /> <br> <!-- style="background-color: rgba(255, 255, 255, 0.2); border-radius:10px;"  -->
-									<a href="https://yjyuwisely.tistory.com" title="블로그로 이동"> 
-									<b>yjyuwisely.tistory.com</b><br></a> 
-									학습한 내용과 아래 리스트들을 담은 개인 블로그입니다. <br></p>
-							<ul  style="list-style-type: square; font-size:0.9rem;"><!-- class="pl-3"  -->
+									height=100px width=200px alt="Blog" /> <br>
+								<!-- style="background-color: rgba(255, 255, 255, 0.2); border-radius:10px;"  -->
+								<a href="https://yjyuwisely.tistory.com" title="블로그로 이동"> <b>yjyuwisely.tistory.com</b><br></a>
+								학습한 내용을 저장하고 공유하기 위해 만든 블로그입니다. 아래 리스트들을 담았습니다.
+							</p>
+							<ul style="list-style-type: square; font-size: 0.9rem;">
+								<!-- class="pl-3"  -->
 								<li>공부하면서 복습한 내용</li>
 								<li>프로젝트 경과 과정 기록</li>
 								<li>프로젝트를 만들면서 새로 알게 된 내용</li>
@@ -683,24 +699,27 @@
 						</div>
 
 						<!-- Github Item 2-->
-						<div class="col-md-6 col-lg-5 my-3 mx-3 text-white rounded" style="background-color: rgba(0, 0, 0, 0.1);" > <!-- mb-5 -->
+						<div class="col-md-6 col-lg-5 my-3 mx-3 text-white rounded"
+							style="background-color: rgba(0, 0, 0, 0.1);">
+							<!-- mb-5 -->
 							<p class="lead text-start">
-<!-- 								<div style="background-color: rgba(255, 255, 255, 0.2); border-radius:10px; height: 50px; width:180px;"> -->
-								<img class="img-fluid" src="/assets/images/github-mark.png" height=30px width=50px alt="github-mark" /> 
-									<img class="img-fluid" src="/assets/images/GitHub_Logo.png" height=100px width=120px alt="Github_Logo" /> 
-									<!-- </div> --><br>
-									<a href="https://www.github.com/yjyuwisely" title="깃허브로 이동"> 
-									<b>github.com/yjyuwisely</b><br></a> 
-										프로젝트 및 포트폴리오 소스 코드 저장소입니다. <br></p>
-										<ul  style="list-style-type: square; font-size:0.9rem;">
-								<li> 울주군 여행 개인 프로젝트 소스 코드 </li>
-								<!-- <li> 팀 프로젝트 소스 코드 </li> -->
-								<li> 포트폴리오 소스 코드</li>
-								</ul>
+								<!-- 								<div style="background-color: rgba(255, 255, 255, 0.2); border-radius:10px; height: 50px; width:180px;"> -->
+								<img class="img-fluid" src="/assets/images/github-mark.png"
+									height=30px width=50px alt="github-mark" /> 
+									<img class="img-fluid" src="/assets/images/GitHub_Logo.png"
+									height=100px width=120px alt="Github_Logo" style="margin:2px;" /> 
+								<!-- </div> -->
+								<br> <a href="https://www.github.com/yjyuwisely"
+									title="깃허브로 이동"> <b>github.com/yjyuwisely</b><br></a> 
+									프로젝트의 소스 코드 저장소입니다. 
+							</p>
+							<ul style="list-style-type: square; font-size: 0.9rem;">
+								<li>포트폴리오 소스 코드</li> 
+								<li>울산 울주군 개인 프로젝트 소스 코드</li>
+<!-- 								<li> 팀 프로젝트 소스 코드</li>  -->
+							</ul>
 						</div>
-						
 					</div>
-
 				</div>
 			</div>
 			<a class="navbar-brand  fs-6 text-light text-uppercase"
@@ -715,7 +734,7 @@
 	</section>
 
 
-<!-- [5] 훈련/교육 섹션: Training/Education Section-->
+	<!-- [6] 훈련/교육 섹션: Training/Education Section-->
 	<!-- A section where you can list your academic qualifications(education), including degrees, 
 		diplomas, certifications & any relevant coursework.-->
 	<section class="page-section skills" id="education">
@@ -726,7 +745,6 @@
 					<span class="title-bar__title"><a href="#page-top"
 						id="windowTitle">Yeongjin's portfolio</a></span>
 				</div>
-
 			</div>
 
 			<div class="container">
@@ -736,54 +754,54 @@
 						<source src="videos/tunnel2.mp4" type="video/mp4">
 					</video>
 					<!-- Trainig/Experience Section Heading -->
-										<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">훈련/교육</h2>
-						<ul class="lead text-start rounded text-white mx-2 my-3" 
-								style="list-style-type: square; background-color: rgba(0,0,0,0.4); text-shadow: 1px 1px 2px #9B28BF;">
-						<li><b class="silkscreen">[K-디지털 트레이닝] IoT 기반 스마트 헬스케어 웹 서비스 개발 과정 (그린컴퓨터아카데미 울산 캠퍼스 (22.12.29-23.07.04))</b><br>
-						개인 프로젝트와 팀 프로젝트를 진행했으며 아래 과정들을 학습했습니다.<br>
-						<b  class="silkscreen">Frontend</b>: HTML, CSS, Javascript, jQuery<br>
-						<b class="silkscreen">Backend</b>: Spring, JSP, JAVA, MySQL, Python<br><br></li>
-						
+					<h2
+						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">훈련/교육</h2>
+					<ul class="lead text-start rounded text-white mx-2 my-3"
+						style="list-style-type: square; background-color: rgba(0, 0, 0, 0.4); text-shadow: 1px 1px 2px #9B28BF;">
+						<li><b class="silkscreen">[K-디지털 트레이닝] IoT 기반 스마트 헬스케어 웹
+								서비스 개발 과정 (그린컴퓨터아카데미 울산 캠퍼스 (22.12.29-23.07.04))</b><br> 개인
+							프로젝트와 팀 프로젝트를 진행했으며 아래 과정들을 학습했습니다.<br> <b
+							class="silkscreen">Frontend</b>: HTML, CSS, Javascript, jQuery<br>
+							<b class="silkscreen">Backend</b>: Spring, JSP, JAVA, MySQL,
+							Python<br> <br></li>
 
-<!-- 							<img class="img-fluid" src="/assets/images/character.png" height=200px width=200px alt="dataGraphs" /> -->
-								
-								<!-- 추천 이미지: Data visualization charts or graphs using R 
+
+						<!--<img class="img-fluid" src="/assets/images/character.png" height=200px width=200px alt="dataGraphs" /> -->
+
+						<!-- 추천 이미지: Data visualization charts or graphs using R 
 								examples of charts or graphs you have created in R or other programs.
 								Code snippets, Screenshots of projects
 								-->
-								<li>
-								<b  class="silkscreen">Completed coursework for Master of Statistics 
-								(University of Wollongong)</b>
-								<b>통계학 석사 코스 워크 완료</b><br> 
-								고급 통계 이론을 공부했고, R을 사용한 빅데이터 분석을 공부했습니다.
-								대규모 데이터셋을 다루는 프로젝트에 참여하면서 경험을 쌓았습니다.
-								또한 인공지능, 수치해석학과 같은 수학 과목들도 공부했습니다.<br></li>
-<!-- 								학부 때보다는 좀 더 어려운 통계학 이론 수업들을 들었었고,
+						<li><b class="silkscreen">Completed coursework for Master
+								of Statistics (University of Wollongong)</b> <b>통계학 석사 코스 워크 완료</b><br>
+							고급 통계 이론을 공부했고, R을 사용한 빅데이터 분석을 공부했습니다. 대규모 데이터셋을 다루는 프로젝트에 참여하면서
+							경험을 쌓았습니다. 또한 인공지능, 수치해석학과 같은 수학 과목들도 공부했습니다.<br></li>
+						<!-- 	학부 때보다는 좀 더 어려운 통계학 이론 수업들을 들었었고,
 								대학교때보다는 규모가 큰 프로젝트로 R을 이용한 빅데이터 분석을 공부했습니다.
 								인공 지능 과목과 수치해석학 같은 수학 과목들도 공부했습니다. -->
-								<br>
-								<li><b  class="silkscreen">Bachelor of Science in Quantitative Methods 
-								(University of Western Australia)</b>
-								 <b>이학사 - 양적 분석</b><br>
-							통계 이론을 포함한 R을 이용한 데이터 분석 과정을 4년간 공부했습니다.
-							데이터 분석과 데이터 시각화에 익숙해졌습니다.
-							이 기간에 데이터 분석을 하기 위해 직접 코딩해야 했기 때문에 코딩에 익숙해진 경험을 얻었습니다.😊 
-							데이터 분석의 수학적 기반을 이해하는 데 도움이 되는 미적분, 선형대수학과 같은 수학 과목들도 수강했습니다.</li></ul>
-					</div>
+						<br>
+						<li><b class="silkscreen">Bachelor of Science in
+								Quantitative Methods (University of Western Australia)</b> <b>이학사
+								- 양적 분석</b><br> 통계 이론을 포함한 R을 이용한 데이터 분석 과정을 4년간 공부했습니다. 데이터
+							분석과 데이터 시각화에 익숙해졌습니다. 이 기간에 데이터 분석을 하기 위해 직접 코딩해야 했기 때문에 코딩에 익숙해진
+							경험을 얻었습니다.😊 데이터 분석의 수학적 기반을 이해하는 데 도움이 되는 미적분, 선형대수학과 같은 수학 과목들도
+							수강했습니다.</li>
+					</ul>
 				</div>
-											<a class="navbar-brand  fs-6 text-light text-uppercase"
+			</div>
+			<a class="navbar-brand  fs-6 text-light text-uppercase"
 				href="#page-top" id="TopTitle"
 				style="float: left; margin-left: 0.3rem; margin-top: 0.5rem;">
-				 Trainig/Education  </a>
+				Trainig/Education </a>
 			<div class="controls">
 				<a href="#archiving"><button class="btn btn_auto">Prev</button></a>
 				<a href="#achievements"><button class="btn btn_auto">Next</button></a>
 			</div>
-				</div>
-</section>
-	
+		</div>
+	</section>
 
-	<!-- [7] 수상 내역 섹션: Achievements Section-->
+
+	<!-- [6] 수상 내역 섹션: Achievements Section-->
 	<!-- A section where you can list your professional experience, including internships, part-time jobs, and freelance work.
 		& any relevant work experience or bootcamp programs you've completed. -->
 	<section class="page-section skills" id="achievements">
@@ -799,99 +817,53 @@
 			<div class="container">
 				<!-- 컨텐츠 내용 시작 -->
 				<div class="display">
-						<video id="background-video" autoplay loop muted>
-							<source src="videos/discolights.mp4" type="video/mp4">
-						</video>
-						<!-- Experience Section Heading -->
-						<h2
-							class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">수상
-							내역</h2>
+					<video id="background-video" autoplay loop muted>
+						<source src="videos/discolights.mp4" type="video/mp4">
+					</video>
+					<!-- Experience Section Heading -->
+					<h2
+						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">수상
+						내역</h2>
 
-<!-- 						<img class="img-fluid" src="/assets/images/character.png"
+					<!-- 						<img class="img-fluid" src="/assets/images/character.png"
 							height=200px width=200px alt="Prize" /><br> -->
-						<p class="lead text-start rounded text-white text-center mx-2 my-3" style="background-color: rgba(0,0,0,0.3); text-shadow: 1px 1px 2px #9B28BF;">
-							<b class="silkscreen" style="text-shadow: 1px 1px 2px #9B28BF;">'MO BAO AWARD'<br> </b>
-							Outstanding Performance in the Field<br> 
-							International Studio of Art and Culture<br> 
-							<br>
-							인도네시아 발리에서 건축 및 디자인
-							학부의 그림, 사진 수업을 들었습니다. 
-							주변 학생들에게 좋은 영향을 주는 우수 학생으로 전공자들을
-							제치고 유일하게 상을 받았습니다. 
-							수업 담당 교수님이 제 전공을 물어보시더니 전공 분야가 디자인
-							쪽이 아님을 상당히 신기해하셨던 기억이 납니다.
-							<!-- Yes, it would be appropriate to include this achievement in the experience section of your portfolio, 
+					<div class="text-white rounded"
+						style="background-color: rgba(0, 0, 0, 0.3); text-shadow: 1px 1px 2px #9B28BF;">
+						<p class="lead text-start text-center mx-2 my-3">
+							<b class="silkscreen">
+								'MOBAO AWARD'<br>
+							</b> Outstanding Performance in the Field<br> International
+							Studio of Art and Culture
+						</p>
+						<p class="lead text-start text-left mx-2 my-3">
+							인도네시아 발리에서 건축 및 디자인 학부의 그림, 사진 수업을 들었습니다. 주변 학생들에게 좋은 영향을 주는 우수
+							학생으로 전공자들을 제치고 유일하게 상을 받았습니다. 수업 담당 교수님이 제 전공을 물어보시더니 전공 분야가 디자인
+							쪽이 아님을 상당히 신기해하셨던 기억이 납니다.</p>
+					<!-- If you would like to expand on your experience or provide more details, 
+					you could consider including any specific projects or tasks that you completed during the course or
+					any challenges you overcame to receive the award. -->
+						<!-- Yes, it would be appropriate to include this achievement in the experience section of your portfolio, 
 					especially if it demonstrates your creativity, determination, and ability to excel in areas outside your major. 
 					It could also show your potential to bring unique perspectives and ideas to your work as a full stack developer. 
 					Winning a prize for your creativity and artistic skills can certainly be a valuable asset in any field, including web development. 
 					While it may not be directly related to full-stack development, 
 					it can still demonstrate your ability to think creatively and pay attention to detail. 
 					-->
-						</p>
 					</div>
 				</div>
-							<a class="navbar-brand  fs-6 text-light text-uppercase"
+			</div>
+			<a class="navbar-brand  fs-6 text-light text-uppercase"
 				href="#page-top" id="TopTitle"
 				style="float: left; margin-left: 0.3rem; margin-top: 0.5rem;">
 				Achievements </a>
 			<div class="controls">
 				<a href="#education"><button class="btn btn_auto">Prev</button></a>
-<!-- 				<a href="#backend"><button class="btn btn_auto">Next</button></a>  -->
-			</div>
-			</div>
-	</section>
-
-
-	<!-- [7] 백엔드 공간 섹션: Back-end Section-->
-<!-- 	<section class="page-section skills" id="backend">
-		<div class="container outer">
-			<div class="title-bar">
-				<div>
-					레트로 윈도우 창
-					<span class="title-bar__title"><a href="#page-top"
-						id="windowTitle">Yeongjin's portfolio</a></span>
-				</div>
-			</div> -->
-
-<!-- 			<div class="container">
-				컨텐츠 내용 시작
-				<div class="display">
-					<video id="background-video" autoplay loop muted>
-						<source src="videos/tunnel.mp4" type="video/mp4">
-					</video>
-					Skills Section Heading
-					<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">
-						백엔드 공간</h2>
-					<p class="lead text-start text-center text-light  rounded" style="background-color: rgba(0, 0, 0, 0.3); text-shadow: 1px 1px 2px black;">
-					제가 만든 백엔드 공간입니다. :) <br>
-					<b class="silkscreen"> 
-					Backend: Spring Boot, Spring Security</b>
-					</p> -->
-<!-- 					<ul class="text-center"
-						style="list-style-type: square; color: white; font-size: 0.8rem; text-shadow: 1px 1px 2px black;">
-						<li class="silkscreen">Backend: Spring Boot, Spring Security</li>
-					</ul> -->
-					
-					
-<!-- 					<div class="controls text-center">
-						<a th:href="@{/login}"><button class="btn btn_auto" style="font-family: 'Do Hyeon';">입장하기</button></a>
-					</div>
-					
-				</div>
-			</div>
-
-				<a class="navbar-brand  fs-6 text-light text-uppercase"
-					href="#page-top" id="TopTitle"
-					style="float: left; margin-left: 0.3rem; margin-top: 0.5rem;">
-					Backend stacks </a>
-			<div class="controls">
-				<a href="#achievements"><button class="btn btn_auto">Prev</button></a> 
+				<!-- 				<a href="#backend"><button class="btn btn_auto">Next</button></a>  -->
 			</div>
 		</div>
-	</section> -->
+	</section>
 
-
-	<!-- <!-- 	[8] 연락처 섹션: Contact Section
+	<!-- <!-- 	[7] 연락처 섹션: Contact Section
     A section where you can provide your contact information, 
 		including email address, phone number, and links to your social media profiles.
 		for potential employers or collaborators to get in touch with you.
@@ -959,9 +931,9 @@
                     </div>
                 </div>
             </div>
-        </section> --> 
-        
-<!--         Footer
+        </section> -->
+
+	<!--         Footer
         <footer class="footer text-center">
             <div class="container">
                 <div class="row">
@@ -995,219 +967,274 @@
                 </div>
             </div>
         </footer> -->
-        <!-- Copyright Section-->
-        <div class="copyright text-center text-white" > 
-             <small style="font-family:'Silkscreen';">&copy 2023 Yeongjin's portfolio. All Rights Reserved.</small></div>
-            <!-- Copyright © Your Website 2023 -->
-        
-        <!-- Portfolio Modals-->
-        <!-- Portfolio Modal 1-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
-                                    <!-- Icon Divider-->
-                                    <!-- <div class="divider-custom">
+	<!-- Copyright Section-->
+	<div class="copyright text-center text-white">
+		<small style="font-family: 'Silkscreen';">&copy 2023
+			Yeongjin's portfolio. All Rights Reserved.</small>
+	</div>
+	<!-- Copyright © Your Website 2023 -->
+
+	<!-- Portfolio Modals-->
+	<!-- Portfolio Modal 1-->
+	<div class="portfolio-modal modal fade" id="portfolioModal1"
+		tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button class="btn-close" type="button" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center pb-5">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<!-- Portfolio Modal - Title-->
+								<h2
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Log
+									Cabin</h2>
+								<!-- Icon Divider-->
+								<!-- <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div> -->
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="/assets/images/portfolio/cabin.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, 
-                                    recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 2-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
-                                    <!-- Icon Divider-->
-<!--                                     <div class="divider-custom">
+								<!-- Portfolio Modal - Image-->
+								<img class="img-fluid rounded mb-5"
+									src="/assets/images/portfolio/cabin.png" alt="..." />
+								<!-- Portfolio Modal - Text-->
+								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
+									adipisicing elit. Mollitia neque assumenda ipsam nihil,
+									molestias magnam, recusandae quos quis inventore quisquam velit
+									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+									itaque. Nam.</p>
+								<button class="btn btn-primary" data-bs-dismiss="modal">
+									<i class="fas fa-xmark fa-fw"></i> Close Window
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Portfolio Modal 2-->
+	<div class="portfolio-modal modal fade" id="portfolioModal2"
+		tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button class="btn-close" type="button" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center pb-5">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<!-- Portfolio Modal - Title-->
+								<h2
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty
+									Cake</h2>
+								<!-- Icon Divider-->
+								<!--                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div> -->
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="/assets/images/portfolio/cake.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, 
-                                    recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 3-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
-                                    <!-- Icon Divider-->
-<!--                                     <div class="divider-custom">
+								<!-- Portfolio Modal - Image-->
+								<img class="img-fluid rounded mb-5"
+									src="/assets/images/portfolio/cake.png" alt="..." />
+								<!-- Portfolio Modal - Text-->
+								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
+									adipisicing elit. Mollitia neque assumenda ipsam nihil,
+									molestias magnam, recusandae quos quis inventore quisquam velit
+									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+									itaque. Nam.</p>
+								<button class="btn btn-primary" data-bs-dismiss="modal">
+									<i class="fas fa-xmark fa-fw"></i> Close Window
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Portfolio Modal 3-->
+	<div class="portfolio-modal modal fade" id="portfolioModal3"
+		tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button class="btn-close" type="button" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center pb-5">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<!-- Portfolio Modal - Title-->
+								<h2
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus
+									Tent</h2>
+								<!-- Icon Divider-->
+								<!--                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div> -->
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="/assets/images/portfolio/circus.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, 
-                                    recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 4-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
-          	 <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-m·odal-title text-secondary text-uppercase mb-0">Controller</h2>
-                                    <!-- Icon Divider-->
-<!--                                     <div class="divider-custom">
+								<!-- Portfolio Modal - Image-->
+								<img class="img-fluid rounded mb-5"
+									src="/assets/images/portfolio/circus.png" alt="..." />
+								<!-- Portfolio Modal - Text-->
+								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
+									adipisicing elit. Mollitia neque assumenda ipsam nihil,
+									molestias magnam, recusandae quos quis inventore quisquam velit
+									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+									itaque. Nam.</p>
+								<button class="btn btn-primary" data-bs-dismiss="modal">
+									<i class="fas fa-xmark fa-fw"></i> Close Window
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Portfolio Modal 4-->
+	<div class="portfolio-modal modal fade" id="portfolioModal4"
+		tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button class="btn-close" type="button" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center pb-5">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<!-- Portfolio Modal - Title-->
+								<h2
+									class="portfolio-m·odal-title text-secondary text-uppercase mb-0">Controller</h2>
+								<!-- Icon Divider-->
+								<!--                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div> 
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="/assets/images/portfolio/game.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, 
-                                    recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 5-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
-                                    <!-- Icon Divider-->
-<!--                                     <div class="divider-custom">
+								<img class="img-fluid rounded mb-5"
+									src="/assets/images/portfolio/game.png" alt="..." />
+								<!-- Portfolio Modal - Text-->
+								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
+									adipisicing elit. Mollitia neque assumenda ipsam nihil,
+									molestias magnam, recusandae quos quis inventore quisquam velit
+									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+									itaque. Nam.</p>
+								<button class="btn btn-primary" data-bs-dismiss="modal">
+									<i class="fas fa-xmark fa-fw"></i> Close Window
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Portfolio Modal 5-->
+	<div class="portfolio-modal modal fade" id="portfolioModal5"
+		tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button class="btn-close" type="button" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center pb-5">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<!-- Portfolio Modal - Title-->
+								<h2
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked
+									Safe</h2>
+								<!-- Icon Divider-->
+								<!--                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div> -->
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="/assets/images/portfolio/safe.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, 
-                                    recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 6-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
-                                    <!-- Icon Divider-->
-<!--                                     <div class="divider-custom">
+								<!-- Portfolio Modal - Image-->
+								<img class="img-fluid rounded mb-5"
+									src="/assets/images/portfolio/safe.png" alt="..." />
+								<!-- Portfolio Modal - Text-->
+								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
+									adipisicing elit. Mollitia neque assumenda ipsam nihil,
+									molestias magnam, recusandae quos quis inventore quisquam velit
+									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+									itaque. Nam.</p>
+								<button class="btn btn-primary" data-bs-dismiss="modal">
+									<i class="fas fa-xmark fa-fw"></i> Close Window
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Portfolio Modal 6-->
+	<div class="portfolio-modal modal fade" id="portfolioModal6"
+		tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button class="btn-close" type="button" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center pb-5">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<!-- Portfolio Modal - Title-->
+								<h2
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
+								<!-- Icon Divider-->
+								<!--                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div> -->
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="/assets/images/portfolio/submarine.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, 
-                                    recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <!-- 자바스크립트 경로 추가 -->
-        <script src="/js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+								<!-- Portfolio Modal - Image-->
+								<img class="img-fluid rounded mb-5"
+									src="/assets/images/portfolio/submarine.png" alt="..." />
+								<!-- Portfolio Modal - Text-->
+								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
+									adipisicing elit. Mollitia neque assumenda ipsam nihil,
+									molestias magnam, recusandae quos quis inventore quisquam velit
+									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+									itaque. Nam.</p>
+								<button class="btn btn-primary" data-bs-dismiss="modal">
+									<i class="fas fa-xmark fa-fw"></i> Close Window
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Bootstrap core JS-->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Core theme JS-->
+	<!-- 자바스크립트 경로 추가 -->
+	<script src="/js/scripts.js"></script>
+	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+	<!-- * *                               SB Forms JS                               * *-->
+	<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+	<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
 </html>

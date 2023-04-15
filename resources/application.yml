@@ -1,6 +1,6 @@
 spring:
   devtools: 
-    livereload:
+    livereload: #html, css, js: no need to restart when adjusting
       enabled: true   
   freemarker:
     cache: false

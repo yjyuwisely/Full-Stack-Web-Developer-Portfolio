@@ -10,7 +10,6 @@ public class UserProfileController {
     // GET method to show profile page
     @GetMapping("/profile")
     public String showProfilePage() {
-    	System.out.println("여기로 오나요?");
         return "profile";
     }
 

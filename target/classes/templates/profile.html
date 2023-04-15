@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"><!-- use Thymeleaf's functionality, such as dynamic expressions and conditionals, 
+to generate dynamic content on your web page.  -->
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8" />
 <title>회원정보</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -75,36 +76,33 @@
 					<video id="background-video" autoplay loop muted>
 						<source src="videos/tunnel2.mp4" type="video/mp4">
 					</video>
-					
+
 					<form th:action="@{/profile}" method="post">
-						
+
 						<div class="form-group">
 							<label class="control-label" for="firstName"> <!--  First Name  -->
 							</label> 이름<input id="firstName"
-								class="form-control bg-black text-white border-0"
-								 required autofocus="autofocus"
-								placeholder="이름" />
+								class="form-control bg-black text-white border-0" required
+								autofocus="autofocus" placeholder="이름" />
 						</div>
 
 						<div class="form-group">
 							<label class="control-label" for="lastName"> 성</label> <input
 								id="lastName" class="form-control bg-black text-white border-0"
-								 required autofocus="autofocus"
-								placeholder="성" />
+								required autofocus="autofocus" placeholder="성" />
 						</div>
 
 						<div class="form-group">
 							<label class="control-label" for="email"> 이메일</label> <input
 								id="email" class="form-control bg-black text-white border-0"
-								 required autofocus="autofocus"
-								placeholder="이메일" />
+								required autofocus="autofocus" placeholder="이메일" />
 						</div>
 
 						<div class="form-group">
 							<label class="control-label" for="password"> 비밀번호</label> <input
 								id="password" class="form-control bg-black text-white border-0"
-								type="password"  required
-								autofocus="autofocus" placeholder="비밀번호" />
+								type="password" required autofocus="autofocus"
+								placeholder="비밀번호" />
 						</div>
 						<br>
 
