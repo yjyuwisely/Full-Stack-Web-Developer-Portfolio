@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"><!-- use Thymeleaf's functionality, such as dynamic expressions and conditionals, 
+<html xmlns:th="http://www.thymeleaf.org"
+			xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+			layout:decorate="~{layouts/layout1}"><!-- use Thymeleaf's functionality, such as dynamic expressions and conditionals, 
 to generate dynamic content on your web page.  -->
 <head>
-<meta charset="utf-8" />
-<title>로그인</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- CSS 경로 추가 -->
@@ -12,16 +12,9 @@ to generate dynamic content on your web page.  -->
 <link href="/css/window.css" rel="stylesheet" />
 <link href="/css/login.css" rel="stylesheet" />
 </head>
-<!-- <style>
-.navbar {
-	background-color: green;
-}
-</style> -->
-
-<body>
-	<!-- create navigation bar ( header) -->
+<header>
+<!-- create navigation bar (header) -->
 	<!-- Navigation-->
-	<header>
 		<nav class="navbar navbar-expand-lg text-uppercase bs-light "
 			id="mainNav">
 			<!-- fixed-top  -->
@@ -39,8 +32,7 @@ to generate dynamic content on your web page.  -->
 
 		<nav
 			class="navbar navbar-expand-lg bs-light text-uppercase justify-content-center fixed-top"
-			id="mainNav">
-			<!-- fixed-top  -->
+			id="mainNav"><!-- fixed-top  -->
 			<div class="collapse navbar-collapse " id="navbarResponsive">
 
 				<ul class="navbar-nav fs-1">
@@ -85,8 +77,8 @@ to generate dynamic content on your web page.  -->
 				</ul>
 			</div>
 		</nav>
-	</header>
-
+</header>		
+<div layout:fragment="content">
 	<section class="page-section skills" id="login"
 		style="padding-top: 3.5rem; padding-bottom: 5rem;">
 		<div class="container outer justify-content-center"
@@ -179,5 +171,6 @@ to generate dynamic content on your web page.  -->
 
 		</div>
 	</section>
+	</div>
 </body>
 </html>

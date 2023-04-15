@@ -5,6 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');/* font-family: 'Gugi', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');/* font-family: 'Do Hyeon', sans-serif; */
 
+header{
+	height:70px;
+	display:fixed;
+}
 * {
 	font-family: 'Silkscreen', "IBM Plex Sans KR";
 }
@@ -19,10 +23,10 @@ body {
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-	display: flex;
+	display: fixed;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	/* height: 100vh; */
 }
 
 .controls { /* pre, next 버튼 */

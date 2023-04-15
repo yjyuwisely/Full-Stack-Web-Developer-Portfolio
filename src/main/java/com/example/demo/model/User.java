@@ -21,7 +21,9 @@ import javax.persistence.JoinColumn;
 	and 3) authorize access to protected resources in your application.
 */
 
+// 회원 정보를 저장하는 User 엔티티를 만든다. 관리할 회원 정보: fisrtName, lastName, email, password
 @Entity //JPA를 사용할 클래스를 명시하며, 테이블과 매핑하는 역할
+//email을 통해 유일하게 구분, 동일한 값이 데이터베이스에 들어올 수 없도록 unique 속성을 지정
 @Table(name = "user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {
 
@@ -40,13 +42,23 @@ public class User {
 	private String password;
 
 	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+	@JoinTable(name = "users_roles", 
+	joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), 
+	inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+	
 	private Collection<Role> roles;
 
-	public User() {
-
+	/*
+	 * public User() {
+	 * 
+	 * }
+	 */
+	
+	//roles의 값으로 USER, ADMIN 2개를 입력한다.
+	public enum roles{
+		USER, ADMIN
 	}
-
+	
 	public User(String firstName, String lastName, String email, String password, Collection<Role> roles) {
 
 		this.firstName = firstName;
@@ -59,7 +71,6 @@ public class User {
 	public Long getId() {
 		return id;
 	}
-
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -67,7 +78,6 @@ public class User {
 	public String getFirstName() {
 		return firstName;
 	}
-
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -75,7 +85,6 @@ public class User {
 	public String getLastName() {
 		return lastName;
 	}
-
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
@@ -83,7 +92,6 @@ public class User {
 	public String getEmail() {
 		return email;
 	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
@@ -91,7 +99,6 @@ public class User {
 	public String getPassword() {
 		return password;
 	}
-
 	public void setPassword(String password) {
 		this.password = password;
 	}
@@ -99,7 +106,6 @@ public class User {
 	public Collection<Role> getRoles() {
 		return roles; 
 	}
-
 	public void setRoles(Collection<Role> roles) {
 		this.roles = roles;
 	}

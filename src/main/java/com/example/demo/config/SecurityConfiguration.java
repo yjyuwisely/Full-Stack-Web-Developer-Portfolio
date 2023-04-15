@@ -20,6 +20,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private UserService userService;
 
+	/* 패스워드 암호화 전용, 동일한 메시지도 매번 다르게 암호화 생성, 복호화 불가, 올바르게 암호환 된 것인지만 확인 */
 	@Bean
 	public BCryptPasswordEncoder passwordEncoder() {
 
