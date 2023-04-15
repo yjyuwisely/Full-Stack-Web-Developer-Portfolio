@@ -50,12 +50,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.antMatchers("/", "/index**", "/assets**", "/registration**", "/js/**", "/css/**", "/assets/images/**",
 						"/videos/**", "/login?error", "/profile**").permitAll()
 				// 그 외 모든 요청은 인증과정 필요
-				.anyRequest().authenticated().and().formLogin().loginPage("/login")
-				// .defaultSuccessUrl("/index", true) // I added: redirect to index.html. After a successful login, any user will be redirected to index.html.
+				.anyRequest().authenticated().and().formLogin()
+				.loginPage("/login") /*로그인 페이지 URL */
+				.defaultSuccessUrl("/profile") // I added: redirect to index.html. After a successful login, any user will be redirected to index.html.
+				.usernameParameter("email") //로그인 성공 시 사용할 파라미터 이름 = email
 				// .failureUrl("/login")
 				.permitAll()
 				.and().logout().invalidateHttpSession(true).clearAuthentication(true)
-				.logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login?logout")
+				.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+				.logoutSuccessUrl("/login?logout") 
 				.permitAll();
 
 	}
