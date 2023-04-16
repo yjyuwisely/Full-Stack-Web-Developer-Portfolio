@@ -22,9 +22,9 @@ public class UserProfile {
 
 	private String email;
 
-	private String firstName;
+	private String firstname;
 
-	private String lastName;
+	private String lastname;
 
 	private String password;
 
@@ -36,35 +36,35 @@ public class UserProfile {
 		this.id = id;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getfirstname() {
+		return firstname;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setfirstname(String firstname) {
+		this.firstname = firstname;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getlastname() {
+		return lastname;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setlastname(String lastname) {
+		this.lastname = lastname;
 	}
 
-	public String getEmail() {
+	public String getemail() {
 		return email;
 	}
 
-	public void setEmail(String email) {
+	public void setemail(String email) {
 		this.email = email;
 	}
 
-	public String getPassword() {
+	public String getpassword() {
 		return password;
 	}
 
-	public void setPassword(String password) {
+	public void setpassword(String password) {
 		this.password = password;
 	}
 

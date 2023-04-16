@@ -44,9 +44,17 @@ to generate dynamic content on your web page.  -->
 						Yeongjin's Portfolio</a>
 				</li>
 				<li class="nav-item mx-3">
+					<form th:action="@{/main}" method="get">
+						<button type="submit" class="btn btn-primary"
+							style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">
+							메인 화면</button>
+						<!-- <input type="submit" value="Logout"> -->
+					</form>
+				</li>
+				<li class="nav-item mx-3">
 					<form th:action="@{/logout}" method="get">
 						<button type="submit" class="btn btn-primary"
-							style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
+							style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">
 							로그아웃</button>
 						<!-- 							<input type="submit" value="Logout"> -->
 					</form>
@@ -54,7 +62,7 @@ to generate dynamic content on your web page.  -->
 				<li class="nav-item mx-3">
 					<form th:action="@{/profile}" method="get">
 						<button type="submit" class="btn btn-primary"
-							style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
+							style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">
 							정보 수정</button>
 						<!-- <input type="submit" value="Logout"> -->
 					</form>
@@ -122,7 +130,7 @@ to generate dynamic content on your web page.  -->
 							<button type="submit" class="btn btn-primary"
 								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">수정하기</button>
 							<button class="btn btn_auto text-center" style="height: 40px;">
-								<a th:href="@{/login}" style="font-family: 'Do Hyeon';">돌아가기</a>
+								<a th:href="@{/main}" style="font-family: 'Do Hyeon';">돌아가기</a>
 							</button>
 						</div>
 					</form>

@@ -13,9 +13,7 @@ import com.example.demo.service.UserService;
 @RequestMapping("/registration")
 // a Spring MVC controller that handles POST requests to the "/register" URL.
 public class RegistrationController {
-
 	private UserService userService;
-
 	public RegistrationController(UserService userService) {
 		super();
 		this.userService = userService;
@@ -35,8 +33,9 @@ public class RegistrationController {
 	public String registerUserAccount(@ModelAttribute("user") UserRegistrationDto registrationDto) {
 
 		userService.save(registrationDto);
-		return "index";
+		return "/login"; //회원 가입 후에 로그인 페이지로 이동한다.
 		// return "redirect:/index"; 
 		/* return "redirect:/registration?success"; */
+		
 	}
 }

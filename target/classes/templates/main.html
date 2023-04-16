@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+	layout:decorate="~{layouts/layout1}">
+<!-- use Thymeleaf's functionality, such as dynamic expressions and conditionals, 
+to generate dynamic content on your web page.  -->
+<head>
+<meta charset="utf-8" />
+<title>메인 화면</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- CSS 경로 추가 -->
+<link href="/css/styles.css" rel="stylesheet" />
+<!-- Retro style window 레트로 윈도우 창 효과 CSS -->
+<link href="/css/window.css" rel="stylesheet" />
+<link href="/css/login.css" rel="stylesheet" />
+</head>
+<header>
+	<!-- create navigation bar (header) -->
+	<!-- Navigation-->
+	<nav
+		class="navbar navbar-expand-lg bs-light text-uppercase justify-content-center fixed-top"
+		id="mainNav">
+		<!-- fixed-top  -->
+		<div class="collapse navbar-collapse " id="navbarResponsive">
+
+			<ul class="navbar-nav fs-1">
+				<li class="nav-item">
+					<!--  mx-3 --> <!-- style="font-size: 20px;" --> <a
+					class="nav-link px-0 px-lg-2 rounded text-light" th:href="@{/}">
+						Yeongjin's Portfolio</a>
+				</li>
+
+				<li class="nav-item mx-3">
+					<form th:action="@{/logout}" method="get">
+						<button type="submit" class="btn btn-primary"
+							style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">
+							로그아웃</button>
+						<!-- <input type="submit" value="Logout"> -->
+					</form>
+				</li>
+
+				<li class="nav-item mx-3">
+					<form th:action="@{/profile}" method="get">
+						<button type="submit" class="btn btn-primary"
+							style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">
+							정보 수정</button>
+						<!-- <input type="submit" value="Logout"> -->
+					</form>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header>
+
+<div layout:fragment="content">
+	<section class="page-section skills" id="login"
+		style="padding-top: 3.5rem; padding-bottom: 5rem;">
+		<div class="container outer justify-content-center"
+			style="width: 350px;">
+			<div class="title-bar">
+				<div>
+					<!-- 레트로 윈도우 창 -->
+					<span class="title-bar__title" style="font-size: 14px;">Welcome!</span>
+					<!-- <a th:href="@{/}">User Login Page</a> -->
+				</div>
+			</div>
+
+			<div class="container">
+				<!-- 컨텐츠 내용 시작 -->
+				<div class="display">
+					<video id="background-video" autoplay loop muted>
+						<source src="videos/tunnel.mp4" type="video/mp4">
+					</video>
+					<!-- Skills Section Heading-->
+					<h2
+						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">
+						메인 화면</h2>
+					<p class="lead text-start text-light rounded mx-2 my-3"
+						style="text-indent: 1rem; background-color: rgba(0, 0, 0, 0.3); word-break: break-word; text-shadow: 1px 1px 2px black">
+						Welcome, <span th:text="${useremail}"></span>. <br> This is
+						the main page.
+					</p>
+					
+				</div>
+			</div>
+
+		</div>
+	</section>
+</div>
+</body>
+</html>

@@ -4,6 +4,8 @@
 			layout:decorate="~{layouts/layout1}"><!-- use Thymeleaf's functionality, such as dynamic expressions and conditionals, 
 to generate dynamic content on your web page.  -->
 <head>
+<meta charset="utf-8" />
+<title>로그인</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- CSS 경로 추가 -->
@@ -57,23 +59,32 @@ to generate dynamic content on your web page.  -->
 						class="nav-link px-0 px-lg-2 rounded text-light"
 						th:href="@{/registration}"> 회원가입</a></li> -->
 
-					<li class="nav-item mx-3">
+<!-- 				<li class="nav-item mx-3">
+					<form th:action="@{/main}" method="get">
+						<button type="submit" class="btn btn-primary"
+							style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">
+							메인 화면</button>
+						<input type="submit" value="Logout">
+					</form>
+				</li>
+
+				<li class="nav-item mx-3">
 						<form th:action="@{/logout}" method="get">
 							<button type="submit" class="btn btn-primary"
-								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
+								style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">
 								로그아웃</button>
-							<!-- <input type="submit" value="Logout"> -->
+							<input type="submit" value="Logout">
 						</form>
 					</li>
 
 					<li class="nav-item mx-3">
 						<form th:action="@{/profile}" method="get">
 							<button type="submit" class="btn btn-primary"
-								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">
+								style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">
 								정보 수정</button>
-							<!-- <input type="submit" value="Logout"> -->
+							<input type="submit" value="Logout">
 						</form>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</nav>
@@ -118,9 +129,10 @@ to generate dynamic content on your web page.  -->
 						</div>
 
 						<div class="form-group">
-							<label for="username"> </label> <input type="text"
-								class="form-control bg-black text-white border-0" id="username"
-								name="username" placeholder="이메일" autofocus="autofocus">
+							<label for="username"> </label> 
+							<input type="email"
+								class="form-control bg-black text-white border-0" id="email"
+								name="email" placeholder="이메일" autofocus="autofocus">
 						</div>
 
 						<div class="form-group">
