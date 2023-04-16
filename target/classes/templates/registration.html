@@ -38,13 +38,13 @@ to generate dynamic content on your web page.  -->
 			<!-- fixed-top  -->
 			<div class="collapse navbar-collapse " id="navbarResponsive">
 
-				<ul class="navbar-nav" style="font-size:37px;">
+				<ul class="navbar-nav" style="font-size: 37px;">
 					<li class="nav-item">
 						<!--  mx-3 --> <!-- style="font-size: 20px;" --> <a
 						class="nav-link px-0 px-lg-2 rounded text-light" th:href="@{/}">
 							Yeongjin's Portfolio</a>
 					</li>
-<!-- 					<li class="nav-item mx-3">
+					<!-- 					<li class="nav-item mx-3">
 						<form th:action="@{/main}" method="get">
 							<button type="submit" class="btn btn-primary"
 								style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">
@@ -52,7 +52,7 @@ to generate dynamic content on your web page.  -->
 							<input type="submit" value="Logout">
 						</form>
 					</li> -->
-<!-- 					<li class="nav-item mx-3">
+					<!-- 					<li class="nav-item mx-3">
 						<form th:action="@{/logout}" method="get">
 							<button type="submit" class="btn btn-primary"
 								style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">
@@ -91,49 +91,57 @@ to generate dynamic content on your web page.  -->
 					<video id="background-video" autoplay loop muted>
 						<source src="videos/tunnel2.mp4" type="video/mp4">
 					</video>
-					
+
 					<h2
 						class="page-section-heading text-center text-uppercase text-secondary text-light mb-5 mt-3">
 						회원 가입</h2>
-						
+
 					<!-- success message -->
 					<div th:if="${param.success}">
 						<div class="alert alert-info">회원가입을 축하합니다.</div>
 					</div>
-					<form th:action="@{/registration}" method="post"
-						th:object="${user}">
-						
-					  <div class="form-group">
-							<!-- <label class="control-label" for="email">  </label> --><input
-								id="email" class="form-control bg-black text-white border-0"
+					
+					<form th:action="@{/registration}" th:object="${user}" method="post">
+
+						<div class="form-group">
+							<!-- <label class="control-label" for="email">  </label> -->
+							<input id="email"
+								class="form-control bg-black text-white border-0"
 								th:field="*{email}" required autofocus="autofocus"
 								placeholder="이메일" />
 						</div>
+						
 						<div class="form-group">
-							<!-- <label class="control-label" for="password"> </label>  --><input
-								id="password" class="form-control bg-black text-white border-0"
+							<!-- <label class="control-label" for="password"> </label>  -->
+							<input id="password"
+								class="form-control bg-black text-white border-0"
 								type="password" th:field="*{password}" required
 								autofocus="autofocus" placeholder="비밀번호" />
 						</div>
+						
 						<div class="form-group">
 							<!-- <label class="control-label" for="firstName">  First Name 
-							</label>  --><input id="name"
+							</label>  -->
+							<input id="name"
 								class="form-control bg-black text-white border-0"
 								th:field="*{name}" required autofocus="autofocus"
 								placeholder="이름" />
 						</div>
+						
 						<div class="form-group">
-							<!-- <label class="control-label" for="lastName"> </label>  --><input
-								id="phone" class="form-control bg-black text-white border-0"
+							<!-- <label class="control-label" for="lastName"> </label>  -->
+							<input id="phone"
+								class="form-control bg-black text-white border-0"
 								th:field="*{phone}" required autofocus="autofocus"
-								placeholder="휴대폰번호" />
+								placeholder="휴대폰 번호" />
 						</div>
+						
 						<br>
 						<div class="form-group text-center">
 							<button type="submit" class="btn btn-primary"
 								style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">
 								가입하기</button>
- 							<button class="btn btn_auto text-center" style="height: 30px;">
+							<button class="btn btn_auto text-center" style="height: 30px;">
 								<a th:href="@{/login}" style="font-family: 'Do Hyeon';">돌아가기</a>
 							</button>
 						</div>
@@ -142,11 +150,13 @@ to generate dynamic content on your web page.  -->
 			</div>
 		</div>
 	</section>
-<footer>	<!-- Copyright Section-->
-	<div class="copyright text-center text-white">
-		<small style="font-family: 'Silkscreen';">&copy 2023
-			Yeongjin's portfolio. All Rights Reserved.</small>
-	</div>
-	<!-- Copyright © Your Website 2023 --></footer>
+	<footer>
+		<!-- Copyright Section-->
+		<div class="copyright text-center text-white">
+			<small style="font-family: 'Silkscreen';">&copy 2023
+				Yeongjin's portfolio. All Rights Reserved.</small>
+		</div>
+		<!-- Copyright © Your Website 2023 -->
+	</footer>
 </body>
 </html>

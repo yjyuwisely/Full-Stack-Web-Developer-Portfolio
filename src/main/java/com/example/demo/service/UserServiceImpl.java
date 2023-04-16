@@ -18,7 +18,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl implements UserService { //부모의 메소드를 반드시 오버라이딩(재정의)해야 한다.
 
 	private UserRepository userRepository;
 
@@ -54,6 +54,19 @@ public class UserServiceImpl implements UserService {
 
 		return userRepository.findAll();
 	}
+	
+	// This method should retrieve a User object from the database based on the provided email address.
+    @Override
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+    
+    //    This will update the user's data in the database when the form is submitted.
+    // update the corresponding User object in the database with the new data.
+    @Override
+    public void updateUser(User user) {
+        userRepository.save(user);
+    }
 }
 /*
  * @Service public class UserServiceImpl implements UserService {

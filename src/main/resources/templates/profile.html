@@ -59,7 +59,7 @@ to generate dynamic content on your web page.  -->
 						<!-- 							<input type="submit" value="Logout"> -->
 					</form>
 				</li>
-<!-- 				<li class="nav-item mx-3">
+				<!-- 				<li class="nav-item mx-3">
 					<form th:action="@{/profile}" method="get">
 						<button type="submit" class="btn btn-primary"
 							style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">
@@ -95,29 +95,31 @@ to generate dynamic content on your web page.  -->
 					<h2
 						class="page-section-heading text-center text-uppercase text-secondary my-4 text-light">
 						정보 수정</h2>
-					<form th:action="@{/profile}" method="post">
+
+					<form th:action="@{/profile}" th:object="${user}" method="post">
+					
 						<div class="form-group">
-							<!-- <label class="control-label" for="email"> </label>  --><input
-								id="email" class="form-control bg-black text-white border-0"
-								required autofocus="autofocus" placeholder="이메일" />
+							<input id="email"
+								class="form-control  bg-black text-white border-0" type="email" th:field="*{email}" readonly />
 						</div>
+						
 						<div class="form-group">
-							<!-- <label class="control-label" for="password"> </label> --> <input
-								id="password" class="form-control bg-black text-white border-0"
-								type="password" required autofocus="autofocus"
-								placeholder="비밀번호" />
+							 <input id="password"
+								class="form-control  bg-black text-white border-0" type="password" th:field="*{password}" 
+								placeholder="비밀번호 수정"/>
 						</div>
-					 <div class="form-group">
-							<!-- <label class="control-label" for="firstName"> <!--  First Name  -->
-							<!-- </label> --> <input id="name"
-								class="form-control bg-black text-white border-0" required
-								autofocus="autofocus" placeholder="이름" />
-						</div>
+						
 						<div class="form-group">
-							<!-- <label class="control-label" for="lastName"> </label> --> <input
-								id="phone" class="form-control bg-black text-white border-0"
-								required autofocus="autofocus" placeholder="휴대폰번호" />
+							<input id="name"
+								class="form-control  bg-black text-white border-0" type="text" th:field="*{name}" readonly />
 						</div>
+						
+						<div class="form-group">
+							 <input id="phone"
+								class="form-control  bg-black text-white border-0" type="text" th:field="*{phone}"
+								/>
+						</div>
+						
 						<br>
 						<!-- when the "수정하기" button is clicked, 
 						it sends a POST request to the server with the updated profile data. -->
@@ -126,7 +128,7 @@ to generate dynamic content on your web page.  -->
 						<div class="form-group text-center">
 							<button type="submit" class="btn btn-primary"
 								style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">수정하기</button>
-<!-- 							<button class="btn btn_auto text-center" style="height: 30px;">
+							<!-- 							<button class="btn btn_auto text-center" style="height: 30px;">
 								<a th:href="@{/main}" style="font-family: 'Do Hyeon';">돌아가기</a>
 							</button> -->
 						</div>
@@ -144,10 +146,12 @@ to generate dynamic content on your web page.  -->
 		</div>
 	</section>
 </body>
-<footer>	<!-- Copyright Section-->
+<footer>
+	<!-- Copyright Section-->
 	<div class="copyright text-center text-light">
 		<small style="font-family: 'Silkscreen';">&copy 2023
 			Yeongjin's portfolio. All Rights Reserved.</small>
 	</div>
-	<!-- Copyright © Your Website 2023 --></footer>
+	<!-- Copyright © Your Website 2023 -->
+</footer>
 </html>
