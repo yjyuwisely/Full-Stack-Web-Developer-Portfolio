@@ -33,18 +33,19 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		auth.setPasswordEncoder(passwordEncoder());
 		return auth;
 	}
-	
+
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.authenticationProvider(authenticationProvider());
 	}
-	
+
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests() // I added: "/","/index**","assets/images/**", "/videos/**","/login?error, "/profile**"
+		http.authorizeRequests() // I added: "/","/index**","assets/images/**", "/videos/**","/login?error,
+									// "/profile**"
 				// 폴더를 login 없이 허용
 				.antMatchers("/", "/index**", "/assets**", "/registration**", "/js/**", "/css/**", "/assets/images/**",
-						"/videos/**", "/login?error", "/profile**") //"/main**" 뺐다.
+						"/videos/**", "/login?error", "/profile**") // "/main**" 뺐다.
 				.permitAll()
 				// 그 외 모든 요청은 인증과정 필요
 				.anyRequest().authenticated().and().formLogin().loginPage("/login") /* 로그인 페이지 URL */

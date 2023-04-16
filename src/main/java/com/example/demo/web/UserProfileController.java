@@ -38,7 +38,7 @@ public class UserProfileController {
 	public String updateProfile(@RequestParam("phone") String phone, @RequestParam("password") String password,
 			Principal principal) {
 		User user = userRepository.findByEmail(principal.getName());
-		user.setname(phone);
+		user.setphone(phone);
 		if (!password.isEmpty()) {
 			user.setpassword(passwordEncoder.encode(password));
 		}
@@ -46,46 +46,9 @@ public class UserProfileController {
 		return "redirect:/profile";
 	}
 }
-	/*
-	 * @PostMapping("/profile") public String updateProfile(@ModelAttribute("user")
-	 * User user) { userService.updateUser(user); // update the user's data in the
-	 * database return "redirect:/profile?success"; // redirect the user back to the
-	 * profile page with a success message } }
-	 */
-	/*
-	 * @PostMapping("/profile") public String updateProfile(@ModelAttribute("user")
-	 * User user, BindingResult result, Model model) { if (result.hasErrors()) {
-	 * return "profile"; } userService.updateUser(user); // Update the user's data
-	 * in the database return "redirect:/profile"; }
-	 */
-
 
 /*
  * //에러 떴다 -> post 방식 사용해야 한다.
  * 
  * @GetMapping("") public String showProfilePage() { return "profile"; }
- */
-
-/* 이전 코드 */
-/*
- * @Controller public class UserProfileController {
- * 
- * @Autowired private UserProfileService userProfileService;
- * 
- * @GetMapping("/profile") public String showUserProfile(Model model,
- * Authentication authentication) { String userEmail =
- * authentication.getFirstName(); UserProfile userProfile =
- * userProfileService.getUserProfileByEmail(userEmail);
- * model.addAttribute("userProfile", userProfile); return "userProfile"; }
- * 
- * @PostMapping("/profile") public String saveUserProfile(@ModelAttribute
- * UserProfile userProfile, Authentication authentication) { String userEmail =
- * authentication.getFirstName(); UserProfile existingUserProfile =
- * userProfileService.getUserProfileByEmail(userEmail);
- * existingUserProfile.setFirstName(userProfile.getFirstName());
- * existingUserProfile.setPassword(userProfile.getPassword());
- * userProfileService.saveUserProfile(existingUserProfile); return
- * "redirect:/profile"; }
- * 
- * }
  */

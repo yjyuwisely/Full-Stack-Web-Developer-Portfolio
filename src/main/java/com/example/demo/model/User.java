@@ -14,21 +14,21 @@ import javax.persistence.UniqueConstraint;
 	and 3) authorize access to protected resources in your application.*/
 
 // 회원 정보를 저장하는 User 엔티티를 만든다. 관리할 회원 정보: name, phone, email, password
-@Entity //JPA를 사용할 클래스를 명시하며, 테이블과 매핑하는 역할
+@Entity // JPA를 사용할 클래스를 명시하며, 테이블과 매핑하는 역할
 //email을 통해 유일하게 구분, 동일한 값이 데이터베이스에 들어올 수 없도록 unique 속성을 지정
 @Table(name = "user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Column(name = "name") 
+
+	@Column(name = "name")
 	private String name;
-	
+
 	/* @Column(name = "lastname") */
 	private String phone;
-	
-	 @Column(unique = true)
+
+	@Column(unique = true)
 	private String email;
 	private String password;
 
@@ -39,20 +39,21 @@ public class User {
 	 * referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name =
 	 * "role_id", referencedColumnName = "id"))
 	 */
-	
+
 	/* private Collection<Role> roles; */
 
-	//adding a default constructor with no arguments to the User class 
-	//will allow Hibernate to instantiate objects of the class during database queries
-	  public User() {
-	  }
-	 
-	//roles의 값으로 USER, ADMIN 2개를 입력한다.
+	// adding a default constructor with no arguments to the User class
+	// will allow Hibernate to instantiate objects of the class during database
+	// queries
+	public User() {
+	}
+
+	// roles의 값으로 USER, ADMIN 2개를 입력한다.
 	/*
 	 * public enum roles{ USER, ADMIN }
 	 */
-	
-	//deleted: Collection<Role> roles
+
+	// deleted: Collection<Role> roles
 	public User(String name, String phone, String email, String password) {
 		this.name = name;
 		this.phone = phone;
@@ -60,11 +61,12 @@ public class User {
 		this.password = password;
 		/* this.roles = roles; */
 	}
-	
-	//MySQL에 숫자로 저장됨
+
+	// MySQL에 숫자로 저장됨
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -72,6 +74,7 @@ public class User {
 	public String getname() {
 		return name;
 	}
+
 	public void setname(String name) {
 		this.name = name;
 	}
@@ -79,13 +82,15 @@ public class User {
 	public String getphone() {
 		return phone;
 	}
-	public void setlastname(String phone) {
+
+	public void setphone(String phone) {
 		this.phone = phone;
 	}
 
 	public String getemail() {
 		return email;
 	}
+
 	public void setemail(String email) {
 		this.email = email;
 	}
@@ -93,6 +98,7 @@ public class User {
 	public String getpassword() {
 		return password;
 	}
+
 	public void setpassword(String password) {
 		this.password = password;
 	}

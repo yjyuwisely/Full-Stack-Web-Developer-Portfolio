@@ -1,5 +1,6 @@
-/*//I don't use this at the moment (230416) since I did not divide users into users and admin.
- * package com.example.demo.model;
+/*
+ * //I don't use this at the moment (230416) since I did not divide users into
+ * users and admin. package com.example.demo.model;
  * 
  * import javax.persistence.Entity; import javax.persistence.GeneratedValue;
  * import javax.persistence.GenerationType; import javax.persistence.Id; import

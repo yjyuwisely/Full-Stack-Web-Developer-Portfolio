@@ -89,64 +89,55 @@ to generate dynamic content on your web page.  -->
 				<!-- 컨텐츠 내용 시작 -->
 				<div class="display">
 					<video id="background-video" autoplay loop muted>
-						<source src="videos/tunnel2.mp4" type="video/mp4">
+						<source src="videos/discolights.mp4" type="video/mp4">
 					</video>
 
 					<h2
 						class="page-section-heading text-center text-uppercase text-secondary text-light mb-5 mt-3">
 						회원 가입</h2>
 
-					<!-- success message -->
-					<div th:if="${param.success}">
-						<div class="alert alert-info">회원가입을 축하합니다.</div>
-					</div>
-					
-					<form th:action="@{/registration}" th:object="${user}" method="post">
+					<form th:action="@{/registration}" th:object="${user}"
+						method="post">
 
 						<div class="form-group">
-							<!-- <label class="control-label" for="email">  </label> -->
 							<input id="email"
-								class="form-control bg-black text-white border-0"
+								class="form-control bg-black text-white border-0 opacity-75"
 								th:field="*{email}" required autofocus="autofocus"
 								placeholder="이메일" />
 						</div>
-						
+
 						<div class="form-group">
-							<!-- <label class="control-label" for="password"> </label>  -->
 							<input id="password"
-								class="form-control bg-black text-white border-0"
+								class="form-control bg-black text-white border-0 opacity-75"
 								type="password" th:field="*{password}" required
 								autofocus="autofocus" placeholder="비밀번호" />
 						</div>
-						
+
 						<div class="form-group">
-							<!-- <label class="control-label" for="firstName">  First Name 
-							</label>  -->
 							<input id="name"
-								class="form-control bg-black text-white border-0"
+								class="form-control bg-black text-white border-0 opacity-75"
 								th:field="*{name}" required autofocus="autofocus"
 								placeholder="이름" />
 						</div>
-						
+
 						<div class="form-group">
-							<!-- <label class="control-label" for="lastName"> </label>  -->
 							<input id="phone"
-								class="form-control bg-black text-white border-0"
+								class="form-control bg-black text-white border-0 opacity-75"
 								th:field="*{phone}" required autofocus="autofocus"
 								placeholder="휴대폰 번호" />
 						</div>
-						
-						<br>
+
 						<div class="form-group text-center">
 							<button type="submit" class="btn btn-primary"
 								style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">
 								가입하기</button>
-							<button class="btn btn_auto text-center" style="height: 30px;">
+<!-- 							<button class="btn btn_auto text-center" style="height: 30px;">
 								<a th:href="@{/login}" style="font-family: 'Do Hyeon';">돌아가기</a>
-							</button>
+							</button> -->
 						</div>
 					</form>
 				</div>
+			
 			</div>
 		</div>
 	</section>

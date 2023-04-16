@@ -109,7 +109,7 @@ color:white !important;
 
 footer{
 	padding-top:10px;
-	background-color: navy;
+	background-color:rgb(0, 0, 134);
 	position:fixed; /*이 부분을 고정*/
 	bottom:0; /*하단에 여백 없다.*/
 	width: 100%; /*너비:가로 사이즈를 브라우저에 가득 채운다.*/

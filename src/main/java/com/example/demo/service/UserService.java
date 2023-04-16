@@ -5,18 +5,18 @@ import java.util.List;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import com.example.demo.dto.UserRegistrationDto;
 import com.example.demo.model.User;
+import com.example.demo.repository.UserRepository;
 
 public interface UserService extends UserDetailsService {
 
-	  User save(UserRegistrationDto registrationDto);
+	User save(UserRegistrationDto registrationDto);
 
-	  List<User> getAll();
+	List<User> getAll();
 
-	  User findByEmail(String email);
-	  
-	  void updateUser(User user);
-	}
- 
+	User findByEmail(String email);
+
+	void updateUser(User user);
+}
 
 /*
  * @Service

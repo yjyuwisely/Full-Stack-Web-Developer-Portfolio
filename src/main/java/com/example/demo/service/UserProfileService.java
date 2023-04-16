@@ -9,14 +9,14 @@ import com.example.demo.repository.UserProfileRepository;
 @Service
 public class UserProfileService {
 
-  @Autowired
-  private UserProfileRepository userProfileRepository;
+	@Autowired
+	private UserProfileRepository userProfileRepository;
 
-  public UserProfile getUserProfileByEmail(String email) {
-    return userProfileRepository.findByEmail(email);
-  }
+	public UserProfile getUserProfileByEmail(String email) {
+		return userProfileRepository.findByEmail(email);
+	}
 
-  public void saveUserProfile(UserProfile userProfile) {
-    userProfileRepository.save(userProfile);
-  }
+	public void saveUserProfile(UserProfile userProfile) {
+		userProfileRepository.save(userProfile);
+	}
 }
