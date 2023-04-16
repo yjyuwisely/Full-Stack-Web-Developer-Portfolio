@@ -45,7 +45,9 @@
 #TopTitle {
 	font-family:'Pacifico', 'Monoton', cursive;
 	animation: neon1 1.5s ease-in-out infinite alternate;
+	margin-left:1rem;
 }
+
 
 /* Yeongjin's Portfolio 텍스트 네온 효과 */
 @keyframes neon1 {

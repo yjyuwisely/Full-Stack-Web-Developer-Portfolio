@@ -42,70 +42,86 @@ to generate dynamic content on your web page.  -->
 		<button class="btn btn_auto">TOP</button>
 	</a>
 
-	<!-- Navigation-->
-	<header>
-		<nav class="navbar navbar-expand-lg text-uppercase bs-light "
+       <!-- Navigation-->
+<!-- 	<header class="mp-0"> -->
+	
+			<nav
+			class="navbar navbar-expand-lg text-uppercase bs-light fixed-top"
 			id="mainNav">
 			<!-- fixed-top  -->
-			<div class="navbar-header">
-				<!-- navbar-brand 위치 -->
+	<!-- 		   <div class=" navbar-header"> -->
+<!-- 			<div class="navbar-header"> -->
+
+
+
+
+
 				<button
-					class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded fixed-left"
+					class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
 					type="button" data-bs-toggle="collapse"
 					data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
 					aria-expanded="false" aria-label="Toggle navigation">
 					Menu <i class="fas fa-bars"></i>
 				</button>
-			</div>
-		</nav>
+				
+	<!-- 		</div> -->
+			
+<!-- 		</nav> -->
+<!-- 		<nav
+			class="navbar navbar-expand-lg bs-light text-uppercase fixed-top"
+			id="mainNav"> -->
+			<!-- fixed-top  -->
+			<div class="collapse navbar-collapse mp-0 "
+				id="navbarResponsive">
 
-		<nav
-			class="navbar navbar-expand-lg bs-light text-uppercase justify-content-center fixed-top"
-			id="mainNav"><!-- fixed-top  -->
-			<div class="collapse navbar-collapse " id="navbarResponsive">
+				<ul class="navbar-nav fs-5 ">
+				
+								<li class="nav-item mp-0"><a class="navbar-brand justify-content-center fs-3" href="#page-top" id="TopTitle"
+				>
+				Yeongjin's
+					portfolio</a></li>
+					<li class="nav-item m-2 "><a
+						class="nav-link px-0 px-lg-2 rounded text-light " href="#about">
+							 자기소개
+					</a></li>
 
-				<ul class="navbar-nav fs-3">
-					<li class="nav-item mx-3"><a
-						class="nav-link px-0 px-lg-2 rounded text-light " href="#about"><!-- px-0: 0 pixels on the X-axis --> 
-							자기소개</a></li> <!-- py-3 -->
 
-					<li class="nav-item mx-3"><a
+					<li class="nav-item m-2 "><a
 						class="nav-link px-0 px-lg-2 rounded text-light" href="#skills">
 							기술 목록</a></li>
 
-					<li class="nav-item mx-3"><a
+					<li class="nav-item m-2 "><a
 						class="nav-link px-0 px-lg-2 rounded text-light" href="#projects">
 							프로젝트</a></li>
 
-					<li class="nav-item mx-3"><a
+					<li class="nav-item m-2 "><a
 						class="nav-link px-0 px-lg-2 rounded text-light" href="#archiving">
 							블로그/깃허브</a></li>
 
-					<li class="nav-item mx-3"><a
+					<li class="nav-item m-2 "><a
 						class="nav-link px-0 px-lg-2 rounded text-light" href="#education">
 							훈련/교육</a></li>
 
-					<li class="nav-item mx-3"><a
+					<li class="nav-item m-2 "><a
 						class="nav-link px-0 px-lg-2 rounded text-light"
-						href="#achievements"> <!-- px:padding x, lg:large screen, 2:0.5rem -->
+						href="#achievements"> 
 							수상 내역
 					</a></li>
-
-					<!-- 					<li class="nav-item mx-3">
+										<!-- <li class="nav-item mx-3">
 					<a class="nav-link px-0 px-lg-2 rounded text-light" href="#contact">
-					연락</a></li> -->
-					<!-- 					      <li class="nav-item mx-3"><a class="nav-link px-0 px-lg-3 rounded text-dark" href="#contact">English</a></li> -->
+					연락</a></li>
+										      <li class="nav-item mx-3"><a class="nav-link px-0 px-lg-3 rounded text-dark" href="#contact">English</a></li> -->
 				</ul>
-			</div>
-		</nav>
-	</header>
-
+				</div>
+<!-- 			</div> -->
+		</nav> 
+<!-- 	</header> -->
 	<!-- [1] About 섹션: About Section-->
 	<!-- About: A section where you can talk about yourself, your background, and your interests.
 		& where you introduce yourself and your background. -->
-	<section class="page-section skills" id="about"
-		style="padding-top: 3.5rem; padding-bottom: 5rem;">
-		<div class="container outer" style="margin-top:0.8rem;">
+	<section class="page-section skills mt-5" id="about" 
+		style="padding-top:1.5rem; padding-bottom: 5rem;"><!-- mt-5 --> <!-- padding-top: 3.5rem -->
+		<div class="container outer" style="margin-top: 0.8rem;">
 			<!-- <div class="window"> -->
 			<div class="title-bar">
 				<div>
@@ -113,8 +129,8 @@ to generate dynamic content on your web page.  -->
 					<span class="title-bar__title"><a href="#page-top"
 						id="windowTitle">Yeongjin's portfolio</a></span>
 				</div>
-					<!-- top-right buttons -->
-<!-- 					<div class="title-bar__controls" style="font-family:'Silkscreen', cursive;">
+				<!-- top-right buttons -->
+				<!-- 					<div class="title-bar__controls" style="font-family:'Silkscreen', cursive;">
 					 <button class="btn">- 버튼
 						<svg width="19" height="3" viewBox="0 0 19 3" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
@@ -131,15 +147,15 @@ to generate dynamic content on your web page.  -->
 					</button>
 					<button class="btn">x</button>x 버튼 
 				</div>-->
-			</div> 
-			
+			</div>
+
 			<div class="container">
 				<!-- 컨텐츠 내용 시작 -->
 				<div class="display">
 					<video id="background-video" autoplay loop muted>
 						<source src="videos/road.mp4" type="video/mp4">
 					</video>
-					
+
 					<h2
 						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">자기소개</h2>
 					<div class="table-responsive">
@@ -148,32 +164,30 @@ to generate dynamic content on your web page.  -->
 								<td><p class="lead text-start">
 										<img class="masthead-avatar"
 											src="/assets/images/character.png" alt="프로필" height=200px
-											width=200px style="margin-left:20px;"/></td> <!-- mb-5 -->
+											width=200px style="margin-left: 20px;" /></td>
+								<!-- mb-5 -->
 								<td><p class="lead text-start text-white"
 										style="font-weight: bold; text-shadow: 1px 1px 2px #5D2FDA;">
-										유영진 | 풀스택 웹 개발자 <!-- 프론트엔드 엔지니어 -->
-										<br> 울산, 대한민국<br>
-										yjyuwisely@gmail.com
-										<br> <b class="silkscreen"
-											style="text-shadow: 1px 1px 2px #9B28BF;"> Junior full
-											stack software engineer with a desire to learn new
-											technologies and a passion for creating clean and intuitive
-											user interfaces.😊</b>
-	 
-								</p></td>
+										유영진 | 풀스택 웹 개발자
+										<!-- 프론트엔드 엔지니어 -->
+										<br> 울산, 대한민국<br> yjyuwisely@gmail.com <br> <b
+											class="silkscreen" style="text-shadow: 1px 1px 2px #9B28BF;">
+											Junior full stack software engineer with a desire to learn
+											new technologies and a passion for creating clean and
+											intuitive user interfaces.😊</b>
+
+									</p></td>
 							</tr>
 							<tr>
 								<td colspan="2">
 									<p class="lead text-start text-light rounded mx-2 my-3"
 										style="text-indent: 1rem; background-color: rgba(0, 0, 0, 0.3); word-break: break-word; text-shadow: 1px 1px 2px black">
-										안녕하세요! 새로운 기술을 학습하는 열정과 
-										사용자들이 알아보기 쉬운 직관적인 사용자 인터페이스를 만드는 데 관심이 많은 풀 스택 웹 개발자 유영진입니다. 
-										사용자들이 웹 서비스를 어떻게 하면 더욱더 편리하게 사용할 수 있을지 항상 생각하며, 
-										사용자 친화적이면서 사람들에게 도움을 줄 수 있는 웹 서비스를 만드는 것에 관심이 많습니다. 
-										개발을 통해 도움이 필요한 사람들을 도울 수 있다는 점이 큰 가치가 있다고 생각합니다. 
-										새로운 것을 끊임없이 배우는 것을 즐기며, 새로운 기술을 시도해서 개발 스킬을 향상하고 싶습니다. 
-										최상의 서비스를 제공하기 위해 또한 앞으로의 개발자로서 큰 발전과 성장을 위해 열심히 달려 나가겠습니다.</p> 
-										<!-- Hello, I'm Yeongjin Yu, a junior full-stack developer. 
+										안녕하세요! 새로운 기술을 학습하는 열정과 사용자들이 알아보기 쉬운 직관적인 사용자 인터페이스를 만드는 데
+										관심이 많은 풀 스택 웹 개발자 유영진입니다. 사용자들이 웹 서비스를 어떻게 하면 더욱더 편리하게 사용할 수
+										있을지 항상 생각하며, 사용자 친화적이면서 사람들에게 도움을 줄 수 있는 웹 서비스를 만드는 것에 관심이
+										많습니다. 개발을 통해 도움이 필요한 사람들을 도울 수 있다는 점이 큰 가치가 있다고 생각합니다. 새로운 것을
+										끊임없이 배우는 것을 즐기며, 새로운 기술을 시도해서 개발 스킬을 향상하고 싶습니다. 최상의 서비스를 제공하기
+										위해 또한 앞으로의 개발자로서 큰 발전과 성장을 위해 열심히 달려 나가겠습니다.</p> <!-- Hello, I'm Yeongjin Yu, a junior full-stack developer. 
 											My passion lies in creating web services that are not only user-friendly 
 											but also enhance people's lives. 
 											I thrive on continuously learning and experimenting with new technologies 
@@ -182,7 +196,7 @@ to generate dynamic content on your web page.  -->
 											My goal is to contribute to this cause 
 											by providing the best possible service 
 											to my customers and growing as a developer in the process. -->
-											<!-- "Hello! I am Youngjin Yoo, a full-stack web developer who is passionate about learning new technologies 
+									<!-- "Hello! I am Youngjin Yoo, a full-stack web developer who is passionate about learning new technologies 
 											and creating clean and intuitive user interfaces.
 											 I always think about how users can use web services more conveniently, 
 											 and I am interested in creating user-friendly web services that can help people. 
@@ -247,10 +261,10 @@ to generate dynamic content on your web page.  -->
 						<h2
 							class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">
 							백엔드 웹페이지</h2>
-						<p class="lead text-start text-light" 
+						<p class="lead text-start text-light"
 							style="text-indent: 1rem; text-shadow: 1px 1px 2px #5D2FDA;">
-							<b class="silkscreen">Spring Boot, Spring Security, Maven, MySQL</b>를 이용해서 
-							회원가입, 로그인, 로그아웃, 회원 정보 수정을 구현한 웹페이지입니다.
+							<b class="silkscreen">Spring Boot, Spring Security, Maven,
+								MySQL</b>를 이용해서 회원가입, 로그인, 로그아웃, 회원 정보 수정을 구현한 웹페이지입니다.
 						</p>
 						<!-- 					<b class="silkscreen"> 
 					Backend: Spring Boot, Spring Security</b> -->
@@ -261,7 +275,7 @@ to generate dynamic content on your web page.  -->
 					</ul> -->
 						<div class="controls text-center">
 							<a th:href="@{/login}"><button class="btn btn_auto mb-3"
-									style="font-family: 'Do Hyeon'; height:40px;">입장하기</button></a> <br>
+									style="font-family: 'Do Hyeon'; height: 40px;">입장하기</button></a> <br>
 						</div>
 					</div>
 				</div>
@@ -386,17 +400,19 @@ to generate dynamic content on your web page.  -->
 								<div class="lead text-start rounded text-white mx-2 my-1"
 									style="background-color: rgba(0, 0, 0, 0.3); word-break: break-word; text-shadow: 1px 1px 2px #5D2FDA;">
 									<p class="lead text-start">
-									포트폴리오 용도로 제작한 지금 보고 있는 웹사이트입니다. 반응형 웹페이지와 Bootstrap을 처음 사용할 수
-									있던 좋은 기회였습니다. 디자인은 90년대 레트로 스타일의 윈도우에 영감을 받아서 만들었습니다. <br>
+										포트폴리오 용도로 제작한 지금 보고 있는 웹사이트입니다. 반응형 웹페이지와 Bootstrap을 처음 사용할 수
+										있던 좋은 기회였습니다. 디자인은 90년대 레트로 스타일의 윈도우에 영감을 받아서 만들었습니다. <br>
 									</p>
 									<!-- Make sure to include any other relevant details or achievements related to this project 
 									that you think could be useful for potential employers or clients to know. -->
 									<ul class="pl-3" style="list-style-type: square;">
-										<li><b>주요 기능</b>: 자기소개, 기술 목록, 프로젝트, 블로그/깃허브, 훈련/교육, 수상 내역</li>
+										<li><b>주요 기능</b>: 자기소개, 기술 목록, 프로젝트, 블로그/깃허브, 훈련/교육, 수상
+											내역</li>
 										<li class="silkscreen">GitHub: <a
 											href="https://github.com/yjyuwisely/Full-Stack-Developer-Portfolio.git"
 											title="깃허브로 이동"> <b>github.com/yjyuwisely/Full-Stack-Developer-Portfolio.git</b></a></li>
-										<li class="silkscreen">Frontend: HTML, CSS, Bootstrap, Vanilla JS, jQuery</li>
+										<li class="silkscreen">Frontend: HTML, CSS, Bootstrap,
+											Vanilla JS, jQuery</li>
 										<!--  <li  class="silkscreen">Backend: Spring Boot, Spring Security, MySQL, Java </li>  -->
 									</ul>
 								</div>
@@ -406,15 +422,14 @@ to generate dynamic content on your web page.  -->
 
 					<!--  [3.2] 포트폴리오 시작 -->
 					<h2
-						class="page-section-heading text-center text-uppercase text-secondary mb-0 my-5 text-light">울산 울주군 여행
-						웹사이트</h2>
+						class="page-section-heading text-center text-uppercase text-secondary mb-0 my-5 text-light">울산
+						울주군 여행 웹사이트</h2>
 					<p
 						style="margin: 0; padding: 0; font-weight: bold; color: white; text-align: center; text-shadow: 1px 1px 2px #5D2FDA;">
 						2023.01-02 (1인 개인 프로젝트)</p>
 					<table>
 						<tr>
 							<td style="padding-top: 33px;">
-
 								<!-- 	<p class="lead text-start">
 										<img class="masthead-avatar" src="/assets/images/portfolioCapture1.png"
 											alt="Project1" height=auto width=400px />  -->
@@ -470,24 +485,25 @@ to generate dynamic content on your web page.  -->
 									<!-- <, > buttons -->
 									<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a
 										class="next" onclick="plusSlides(1)">&#10095;</a>
-								 <div style="text-align: center; margin-top: 0; padding-top: 0;">
-									<span class="dot" onclick="currentSlide(1)"></span>
-									 <span class="dot" onclick="currentSlide(2)"></span> 
-										<span class="dot" onclick="currentSlide(3)"></span> 
-										<span class="dot" onclick="currentSlide(4)"></span> 
-										<span class="dot" onclick="currentSlide(5)"></span> 
-										<span class="dot" onclick="currentSlide(6)"></span>
-								</div>  
-								</div> 
+									<div style="text-align: center; margin-top: 0; padding-top: 0;">
+										<span class="dot" onclick="currentSlide(1)"></span> <span
+											class="dot" onclick="currentSlide(2)"></span> <span
+											class="dot" onclick="currentSlide(3)"></span> <span
+											class="dot" onclick="currentSlide(4)"></span> <span
+											class="dot" onclick="currentSlide(5)"></span> <span
+											class="dot" onclick="currentSlide(6)"></span>
+									</div>
+								</div>
 							</td>
-							<td> 
-								<div class="lead text-start rounded text-white mx-1 my-2"
+							<td>
+								<div class="lead text-start rounded text-white mx-1 my-2 "
 									style="background-color: rgba(0, 0, 0, 0.3); word-break: break-word; text-shadow: 1px 1px 2px black;">
 									<p class="lead text-start">
-									울산 울주군 여행 웹사이트를 진행하게 된 계기는 저도 몰랐던 고향의 여러 여행 장소에 대해 자세히 알고 싶었었고,
-									울산에 거주 중임에도 불구하고 저는 울산 시티 투어와 울산 관광 택시가 있는 줄 몰랐기 때문입니다. 그래서
-									사람들에게 울산 여행에 대해 공유하고자 만들게 되었습니다. <!-- 아직 백엔드 작업이 진행 중인 개인 프로젝트입니다.  --><br>
-									<br>
+										울산 울주군 여행 웹사이트를 진행하게 된 계기는 저도 몰랐던 고향의 여러 여행 장소에 대해 자세히 알고
+										싶었었고, 울산에 거주 중임에도 불구하고 저는 울산 시티 투어와 울산 관광 택시가 있는 줄 몰랐기 때문입니다.
+										그래서 사람들에게 울산 여행에 대해 공유하고자 만들게 되었습니다.
+										<!-- 아직 백엔드 작업이 진행 중인 개인 프로젝트입니다.  -->
+										<br> <br>
 									</p>
 									<ul class="pl-3" style="list-style-type: square;">
 										<li><b>주요 기능</b>: 울산 시티 투어와 울산 관광 택시의 여행 장소와 경로 소개</li>
@@ -638,18 +654,18 @@ to generate dynamic content on your web page.  -->
 							<p class="lead text-start">
 								<!-- 								<div style="background-color: rgba(255, 255, 255, 0.2); border-radius:10px; height: 50px; width:180px;"> -->
 								<img class="img-fluid" src="/assets/images/github-mark.png"
-									height=30px width=50px alt="github-mark" /> 
-									<img class="img-fluid" src="/assets/images/GitHub_Logo.png"
-									height=100px width=120px alt="Github_Logo" style="margin:2px;" /> 
+									height=30px width=50px alt="github-mark" /> <img
+									class="img-fluid" src="/assets/images/GitHub_Logo.png"
+									height=100px width=120px alt="Github_Logo" style="margin: 2px;" />
 								<!-- </div> -->
 								<br> <a href="https://www.github.com/yjyuwisely"
-									title="깃허브로 이동"> <b>github.com/yjyuwisely</b><br></a> 
-									프로젝트의 소스 코드 저장소입니다. 
+									title="깃허브로 이동"> <b>github.com/yjyuwisely</b><br></a>
+								프로젝트의 소스 코드 저장소입니다.
 							</p>
 							<ul style="list-style-type: square; font-size: 0.9rem;">
-								<li>포트폴리오 소스 코드</li> 
+								<li>포트폴리오 소스 코드</li>
 								<li>울산 울주군 개인 프로젝트 소스 코드</li>
-<!-- 								<li> 팀 프로젝트 소스 코드</li>  -->
+								<!-- 								<li> 팀 프로젝트 소스 코드</li>  -->
 							</ul>
 						</div>
 					</div>
@@ -763,16 +779,15 @@ to generate dynamic content on your web page.  -->
 					<div class="text-white rounded"
 						style="background-color: rgba(0, 0, 0, 0.3); text-shadow: 1px 1px 2px #9B28BF;">
 						<p class="lead text-start text-center mx-2 my-3">
-							<b class="silkscreen">
-								'MOBAO AWARD'<br>
+							<b class="silkscreen"> 'MOBAO AWARD'<br>
 							</b> Outstanding Performance in the Field<br> International
 							Studio of Art and Culture
 						</p>
-						<p class="lead text-start text-left mx-2 my-3">
-							인도네시아 발리에서 건축 및 디자인 학부의 그림, 사진 수업을 들었습니다. 주변 학생들에게 좋은 영향을 주는 우수
-							학생으로 전공자들을 제치고 유일하게 상을 받았습니다. 수업 담당 교수님이 제 전공을 물어보시더니 전공 분야가 디자인
-							쪽이 아님을 상당히 신기해하셨던 기억이 납니다.</p>
-					<!-- If you would like to expand on your experience or provide more details, 
+						<p class="lead text-start text-left mx-2 my-3">인도네시아 발리에서 건축 및
+							디자인 학부의 그림, 사진 수업을 들었습니다. 주변 학생들에게 좋은 영향을 주는 우수 학생으로 전공자들을 제치고
+							유일하게 상을 받았습니다. 수업 담당 교수님이 제 전공을 물어보시더니 전공 분야가 디자인 쪽이 아님을 상당히
+							신기해하셨던 기억이 납니다.</p>
+						<!-- If you would like to expand on your experience or provide more details, 
 					you could consider including any specific projects or tasks that you completed during the course or
 					any challenges you overcame to receive the award. -->
 						<!-- Yes, it would be appropriate to include this achievement in the experience section of your portfolio, 
