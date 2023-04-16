@@ -59,14 +59,6 @@ to generate dynamic content on your web page.  -->
 						<!-- 							<input type="submit" value="Logout"> -->
 					</form>
 				</li>
-				<!-- 				<li class="nav-item mx-3">
-					<form th:action="@{/profile}" method="get">
-						<button type="submit" class="btn btn-primary"
-							style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">
-							정보 수정</button>
-						<input type="submit" value="Logout">
-					</form>
-				</li> -->
 			</ul>
 		</div>
 	</nav>
@@ -96,7 +88,7 @@ to generate dynamic content on your web page.  -->
 						class="page-section-heading text-center text-uppercase text-secondary my-4 text-light">
 						정보 수정</h2>
 
-					<form th:action="@{/profile}" th:object="${user}" method="post">
+					<form th:action="@{/update-profile}" th:object="${user}" method="post">
 					
 						<div class="form-group">
 							<input id="email"

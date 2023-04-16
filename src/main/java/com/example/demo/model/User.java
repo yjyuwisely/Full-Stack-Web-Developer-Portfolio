@@ -28,6 +28,7 @@ public class User {
 	/* @Column(name = "lastname") */
 	private String phone;
 	
+	 @Column(unique = true)
 	private String email;
 	private String password;
 
