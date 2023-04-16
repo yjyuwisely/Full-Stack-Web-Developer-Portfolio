@@ -12,7 +12,6 @@ public class UserRegistrationDto {
 	private String password;
 
 	public UserRegistrationDto() {
-
 	}
 
 	public String getfirstname() {

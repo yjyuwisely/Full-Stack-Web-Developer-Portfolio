@@ -13,6 +13,22 @@ header{
 	font-family: 'Silkscreen', "IBM Plex Sans KR";
 }
 
+h2{
+	font-size:35px !important;
+}
+
+.form-group{
+	margin-bottom:2rem;
+	margin-top:1rem;
+}
+
+section {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .alert{
 	font-size:12px;
 }
@@ -90,17 +106,10 @@ color:white !important;
 }
 
 footer{
+	padding-top:10px;
+	background-color:black;
 	position:fixed; /*이 부분을 고정*/
 	bottom:0; /*하단에 여백 없다.*/
 	width: 100%; /*너비:가로 사이즈를 브라우저에 가득 채운다.*/
-	height: 70px; /*높이*/
-}
-
-h2{
-	font-size:35px !important;
-}
-
-.form-group{
-	margin-bottom:2rem;
-	margin-top:1rem;
+/*  	height: 70px; 높이 */
 }

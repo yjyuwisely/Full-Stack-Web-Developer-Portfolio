@@ -17,18 +17,15 @@ import com.example.demo.service.UserService;
 @EnableWebSecurity // 모든 요청 URL이 스프링 시큐리티의 제어를 받도록 만드는 애너테이션
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-	
 	@Autowired
 	private UserService userService;
 
-	
 	/* 패스워드 암호화 전용, 동일한 메시지도 매번 다르게 암호화 생성, 복호화 불가, 올바르게 암호환 된 것인지만 확인 */
 	@Bean
 	public BCryptPasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
 
-	
 	@Bean
 	public DaoAuthenticationProvider authenticationProvider() {
 		DaoAuthenticationProvider auth = new DaoAuthenticationProvider();
@@ -36,13 +33,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		auth.setPasswordEncoder(passwordEncoder());
 		return auth;
 	}
-
 	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.authenticationProvider(authenticationProvider());
 	}
-
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {

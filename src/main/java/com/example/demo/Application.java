@@ -8,11 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication //combines three other annotations: 
 //@Configuration, @EnableAutoConfiguration, and @ComponentScan.
 public class Application {
-
 	public static void main(String[] args) {		
 		//starts the Spring Boot application by creating an instance of ApplicationContext
 		SpringApplication.run(Application.class, args); 
-
 	}
-
 }
