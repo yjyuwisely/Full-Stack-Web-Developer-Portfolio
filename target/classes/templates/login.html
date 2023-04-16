@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-			xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
-			layout:decorate="~{layouts/layout1}"><!-- use Thymeleaf's functionality, such as dynamic expressions and conditionals, 
+	xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+	layout:decorate="~{layouts/layout1}">
+<!-- use Thymeleaf's functionality, such as dynamic expressions and conditionals, 
 to generate dynamic content on your web page.  -->
 <head>
 <meta charset="utf-8" />
@@ -15,12 +16,12 @@ to generate dynamic content on your web page.  -->
 <link href="/css/login.css" rel="stylesheet" />
 </head>
 <header>
-<!-- create navigation bar (header) -->
+	<!-- create navigation bar (header) -->
 	<!-- Navigation-->
-		<nav class="navbar navbar-expand-lg text-uppercase bs-light "
-			id="mainNav">
-			<!-- fixed-top  -->
-			<!-- 			<div class="navbar-header">
+	<nav class="navbar navbar-expand-lg text-uppercase bs-light "
+		id="mainNav">
+		<!-- fixed-top  -->
+		<!-- 			<div class="navbar-header">
 				navbar-brand 위치
 				<button
 					class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
@@ -30,20 +31,21 @@ to generate dynamic content on your web page.  -->
 					Menu <i class="fas fa-bars"></i>
 				</button>
 			</div> -->
-		</nav>
+	</nav>
 
-		<nav
-			class="navbar navbar-expand-lg bs-light text-uppercase justify-content-center fixed-top"
-			id="mainNav"><!-- fixed-top  -->
-			<div class="collapse navbar-collapse " id="navbarResponsive">
+	<nav
+		class="navbar navbar-expand-lg bs-light text-uppercase justify-content-center fixed-top"
+		id="mainNav">
+		<!-- fixed-top  -->
+		<div class="collapse navbar-collapse " id="navbarResponsive">
 
-				<ul class="navbar-nav" style="font-size:37px;">
-					<li class="nav-item">
-						<!--  mx-3 --> <!-- style="font-size: 20px;" --> <a
-						class="nav-link px-0 px-lg-2 rounded text-light" th:href="@{/}">
-							Yeongjin's Portfolio</a>
-					</li>
-<!-- 				<li class="nav-item mx-3">
+			<ul class="navbar-nav" style="font-size: 37px;">
+				<li class="nav-item">
+					<!--  mx-3 --> <!-- style="font-size: 20px;" --> <a
+					class="nav-link px-0 px-lg-2 rounded text-light" th:href="@{/}">
+						Yeongjin's Portfolio</a>
+				</li>
+				<!-- 				<li class="nav-item mx-3">
 					<form th:action="@{/main}" method="get">
 						<button type="submit" class="btn btn-primary"
 							style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">
@@ -69,15 +71,15 @@ to generate dynamic content on your web page.  -->
 							<input type="submit" value="Logout">
 						</form>
 					</li> -->
-				</ul>
-			</div>
-		</nav>
-</header>		
+			</ul>
+		</div>
+	</nav>
+</header>
 <div layout:fragment="content">
 	<section class="page-section skills" id="login"
 		style="padding-top: 3.5rem; padding-bottom: 5rem;">
 		<div class="container outer justify-content-center"
-			style="width: 350px;">
+			style="width: 500px;">
 			<div class="title-bar">
 				<div>
 					<!-- 레트로 윈도우 창 -->
@@ -93,11 +95,9 @@ to generate dynamic content on your web page.  -->
 					<video id="background-video" autoplay loop muted>
 						<source src="videos/tunnel.mp4" type="video/mp4">
 					</video>
-					<!-- Skills Section Heading-->
 					<h2
-						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">
-						<!-- 로그인 -->
-					</h2>
+						class="page-section-heading text-center text-uppercase text-secondary text-light">
+						로그인</h2>
 
 					<!-- 					<p class="lead text-start text-center"> -->
 					<form th:action="@{/login}" method="post">
@@ -113,14 +113,15 @@ to generate dynamic content on your web page.  -->
 						</div>
 
 						<div class="form-group">
-							<label for="username"> </label> 
+							<!-- <label for="username"> </label>  -->
 							<input type="email"
 								class="form-control bg-black text-white border-0" id="email"
 								name="email" placeholder="이메일" autofocus="autofocus">
 						</div>
 
 						<div class="form-group">
-							<label for="password"> </label> <input type="password"
+							<!-- <label for="password"> </label> -->
+							<input type="password"
 								class="form-control bg-black text-white border-0" id="password"
 								name="password" placeholder="비밀번호" />
 						</div>
@@ -135,21 +136,13 @@ to generate dynamic content on your web page.  -->
 										style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'"
 										value="로그인" />
 									<button class="btn btn_auto text-center" style="height: 30px;">
-										<a th:href="@{/registration}" style="font-family: 'Do Hyeon'; ">
+										<a th:href="@{/registration}" style="font-family: 'Do Hyeon';">
 											회원가입</a>
 									</button>
 								</div>
-
 							</div>
 						</div>
-
 					</form>
-
-					<!-- 				<div class="form-group" style="color: white;">
-					 <span>아직 회원이 아니신가요? 
-					<a th:href="@{/registration}">회원가입</a></span> href="/" 
-				</div> -->
-
 				</div>
 			</div>
 
@@ -167,6 +160,6 @@ to generate dynamic content on your web page.  -->
 
 		</div>
 	</section>
-	</div>
+</div>
 </body>
 </html>

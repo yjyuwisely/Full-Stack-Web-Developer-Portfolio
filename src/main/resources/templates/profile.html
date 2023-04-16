@@ -4,7 +4,7 @@
 to generate dynamic content on your web page.  -->
 <head>
 <meta charset="utf-8" />
-<title>회원정보</title>
+<title>정보 수정</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- CSS 경로 추가 -->
@@ -77,7 +77,7 @@ to generate dynamic content on your web page.  -->
 		style="padding-top: 3.5rem; padding-bottom: 5rem;">
 		<!-- Create HTML registration form -->
 		<div class="container outer justify-content-center"
-			style="width: 350px;">
+			style="width: 500px;">
 			<div class="title-bar">
 				<div>
 					<!-- 레트로 윈도우 창 -->
@@ -92,46 +92,43 @@ to generate dynamic content on your web page.  -->
 					<video id="background-video" autoplay loop muted>
 						<source src="videos/tunnel2.mp4" type="video/mp4">
 					</video>
-
+					<h2
+						class="page-section-heading text-center text-uppercase text-secondary my-4 text-light">
+						정보 수정</h2>
 					<form th:action="@{/profile}" method="post">
-
 						<div class="form-group">
-							<label class="control-label" for="firstName"> <!--  First Name  -->
-							</label> 이름<input id="firstName"
-								class="form-control bg-black text-white border-0" required
-								autofocus="autofocus" placeholder="이름" />
-						</div>
-
-						<div class="form-group">
-							<label class="control-label" for="lastName"> 성</label> <input
-								id="lastName" class="form-control bg-black text-white border-0"
-								required autofocus="autofocus" placeholder="성" />
-						</div>
-
-						<div class="form-group">
-							<label class="control-label" for="email"> 이메일</label> <input
+							<!-- <label class="control-label" for="email"> </label>  --><input
 								id="email" class="form-control bg-black text-white border-0"
 								required autofocus="autofocus" placeholder="이메일" />
 						</div>
-
 						<div class="form-group">
-							<label class="control-label" for="password"> 비밀번호</label> <input
+							<!-- <label class="control-label" for="password"> </label> --> <input
 								id="password" class="form-control bg-black text-white border-0"
 								type="password" required autofocus="autofocus"
 								placeholder="비밀번호" />
 						</div>
+					 <div class="form-group">
+							<!-- <label class="control-label" for="firstName"> <!--  First Name  -->
+							<!-- </label> --> <input id="firstName"
+								class="form-control bg-black text-white border-0" required
+								autofocus="autofocus" placeholder="이름" />
+						</div>
+						<div class="form-group">
+							<!-- <label class="control-label" for="lastName"> </label> --> <input
+								id="lastName" class="form-control bg-black text-white border-0"
+								required autofocus="autofocus" placeholder="휴대폰번호" />
+						</div>
 						<br>
-
 						<!-- when the "수정하기" button is clicked, 
 						it sends a POST request to the server with the updated profile data. -->
 						<!-- 						<form th:action="@{/profile}" method="post"> -->
 						<!-- your form fields go here -->
 						<div class="form-group text-center">
 							<button type="submit" class="btn btn-primary"
-								style="width: 70px; height: 40px; color: black; font-family: 'Do Hyeon'">수정하기</button>
-							<button class="btn btn_auto text-center" style="height: 40px;">
+								style="width: 70px; height: 30px; color: black; font-family: 'Do Hyeon'">수정하기</button>
+<!-- 							<button class="btn btn_auto text-center" style="height: 30px;">
 								<a th:href="@{/main}" style="font-family: 'Do Hyeon';">돌아가기</a>
-							</button>
+							</button> -->
 						</div>
 					</form>
 

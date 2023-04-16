@@ -95,3 +95,12 @@ footer{
 	width: 100%; /*너비:가로 사이즈를 브라우저에 가득 채운다.*/
 	height: 70px; /*높이*/
 }
+
+h2{
+	font-size:35px !important;
+}
+
+.form-group{
+	margin-bottom:2rem;
+	margin-top:1rem;
+}
