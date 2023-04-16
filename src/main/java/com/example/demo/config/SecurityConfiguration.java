@@ -50,7 +50,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 									// "/profile**"
 				// 폴더를 login 없이 허용
 				.antMatchers("/", "/index**", "/assets**", "/registration**", "/js/**", "/css/**", "/assets/images/**",
-						"/videos/**", "/login?error", "/profile**", "/main**")
+						"/videos/**", "/login?error", "/profile**") //"/main**" 뺐다.
 				.permitAll()
 				// 그 외 모든 요청은 인증과정 필요
 				.anyRequest().authenticated().and().formLogin().loginPage("/login") /* 로그인 페이지 URL */

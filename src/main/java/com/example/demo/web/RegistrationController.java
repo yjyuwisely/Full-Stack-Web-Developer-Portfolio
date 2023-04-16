@@ -20,6 +20,7 @@ public class RegistrationController {
 	}
 
 	@ModelAttribute("user")
+	//a type, a method
 	public UserRegistrationDto userRegistrationDto() {
 		return new UserRegistrationDto();
 	}

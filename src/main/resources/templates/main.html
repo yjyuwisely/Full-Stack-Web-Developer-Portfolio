@@ -62,24 +62,23 @@ to generate dynamic content on your web page.  -->
 				<div>
 					<!-- 레트로 윈도우 창 -->
 					<span class="title-bar__title" style="font-size: 14px;">Welcome!</span>
-					<!-- <a th:href="@{/}">User Login Page</a> -->
 				</div>
 			</div>
 
-			<div class="container">
+			<div class="container" >
 				<!-- 컨텐츠 내용 시작 -->
 				<div class="display">
-					<video id="background-video" autoplay loop muted>
-						<source src="videos/tunnel.mp4" type="video/mp4">
+					<video id="background-video" autoplay loop muted >
+						<source src="videos/tunnel.mp4" type="video/mp4" >
 					</video>
-					<!-- Skills Section Heading-->
 					<h2
-						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">
+						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light fs-1">
 						메인 화면</h2>
 					<p class="lead text-start text-light rounded mx-2 my-3"
-						style="text-indent: 1rem; background-color: rgba(0, 0, 0, 0.3); word-break: break-word; text-shadow: 1px 1px 2px black">
-						Welcome, <span th:text="${useremail}"></span>. <br> This is
-						the main page.
+						style="background-color: rgba(0, 0, 0, 0.3); word-break: break-word; text-shadow: 1px 1px 2px black">
+						환영합니다. <br>
+						<span th:text="${email}"></span>님<br>
+						현재 메인 화면입니다.
 					</p>
 					
 				</div>
