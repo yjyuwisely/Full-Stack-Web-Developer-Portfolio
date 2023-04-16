@@ -6,28 +6,28 @@ package com.example.demo.dto;
 //회원 가입 화면으로부터 넘어오는 가입정보를 담을 dto
 public class UserRegistrationDto {
 
-	private String firstname;
-	private String lastname;
+	private String name;
+	private String phone;
 	private String email;
 	private String password;
 
 	public UserRegistrationDto() {
 	}
 
-	public String getfirstname() {
-		return firstname;
+	public String getname() {
+		return name;
 	}
 
-	public void setfirstname(String firstname) {
-		this.firstname = firstname;
+	public void setname(String name) {
+		this.name = name;
 	}
 
-	public String getlastname() {
-		return lastname;
+	public String getphone() {
+		return phone;
 	}
 
-	public void setlastname(String lastname) {
-		this.lastname = lastname;
+	public void setphone(String phone) {
+		this.phone = phone;
 	}
 
 	public String getemail() {

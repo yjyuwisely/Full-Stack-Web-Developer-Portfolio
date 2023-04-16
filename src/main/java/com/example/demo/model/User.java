@@ -21,10 +21,13 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(name = "firstname") 
-	private String firstname;
-	@Column(name = "lastname") 
-	private String lastname;
+	
+	@Column(name = "name") 
+	private String name;
+	
+	/* @Column(name = "lastname") */
+	private String phone;
+	
 	private String email;
 	private String password;
 
@@ -49,9 +52,9 @@ public class User {
 	 */
 	
 	//deleted: Collection<Role> roles
-	public User(String firstname, String lastname, String email, String password) {
-		this.firstname = firstname;
-		this.lastname = lastname;
+	public User(String name, String phone, String email, String password) {
+		this.name = name;
+		this.phone = phone;
 		this.email = email;
 		this.password = password;
 		/* this.roles = roles; */
@@ -65,18 +68,18 @@ public class User {
 		this.id = id;
 	}
 
-	public String getfirstname() {
-		return firstname;
+	public String getname() {
+		return name;
 	}
-	public void setfirstname(String firstname) {
-		this.firstname = firstname;
+	public void setname(String name) {
+		this.name = name;
 	}
 
-	public String getlastname() {
-		return lastname;
+	public String getphone() {
+		return phone;
 	}
-	public void setlastname(String lastname) {
-		this.lastname = lastname;
+	public void setlastname(String phone) {
+		this.phone = phone;
 	}
 
 	public String getemail() {

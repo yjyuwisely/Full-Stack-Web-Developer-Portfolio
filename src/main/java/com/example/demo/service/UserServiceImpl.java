@@ -15,90 +15,82 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.stream.Collectors;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security
-                .core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 @Service
 public class UserServiceImpl implements UserService {
 
-   private UserRepository userRepository;
+	private UserRepository userRepository;
 
-   @Autowired
-   private BCryptPasswordEncoder passwordEncoder;
+	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
 
-   public UserServiceImpl(UserRepository userRepository) {
-      super();
-      this.userRepository = userRepository;
-   }
+	public UserServiceImpl(UserRepository userRepository) {
+		super();
+		this.userRepository = userRepository;
+	}
 
-   @Override
-   public User save(UserRegistrationDto registrationDto) {
-      
-      User user = new User(registrationDto.getfirstname(), 
-                 registrationDto.getlastname(), 
-                  registrationDto.getemail(),
-                   passwordEncoder.encode(registrationDto.getpassword()));
+	@Override
+	public User save(UserRegistrationDto registrationDto) {
 
-      return userRepository.save(user);
-   }
+		User user = new User(registrationDto.getname(), registrationDto.getphone(), registrationDto.getemail(),
+				passwordEncoder.encode(registrationDto.getpassword()));
 
-   @Override
-   public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-       User user = userRepository.findByEmail(email);
-       if (user == null) {
-           throw new UsernameNotFoundException(email);
-       }
-       return new org.springframework.security.core.userdetails.User(user.getemail(),
-               user.getpassword(), Collections.emptyList()); //roles 설정 안 했으므로 emptyList()이다.
-   }
-   
-   @Override
-   public List<User> getAll() {
-      
-      return userRepository.findAll();
-   }
+		return userRepository.save(user);
+	}
+
+	@Override
+	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+		User user = userRepository.findByEmail(email);
+		if (user == null) {
+			throw new UsernameNotFoundException(email);
+		}
+		return new org.springframework.security.core.userdetails.User(user.getemail(), user.getpassword(),
+				Collections.emptyList()); // roles 설정 안 했으므로 emptyList()이다.
+	}
+
+	@Override
+	public List<User> getAll() {
+
+		return userRepository.findAll();
+	}
 }
-/*@Service
-public class UserServiceImpl implements UserService {
+/*
+ * @Service public class UserServiceImpl implements UserService {
+ * 
+ * @Autowired private UserRepository userRepository;
+ * 
+ * @Autowired private BCryptPasswordEncoder passwordEncoder;
+ * 
+ * @Override
+ * 
+ * @Transactional public User save(UserRegistrationDto registrationDto) { User
+ * user = new User(registrationDto.getFirstName(),
+ * registrationDto.getLastName(), registrationDto.getEmail(),
+ * passwordEncoder.encode(registrationDto.getPassword())); return
+ * userRepository.save(user); }
+ * 
+ * @Override public List<User> getAll() { return userRepository.findAll(); }
+ * 
+ * @Override public UserDetails loadUserByUsername(String username) throws
+ * UsernameNotFoundException { User user = userRepository.findByEmail(username);
+ * if (user == null) { throw new
+ * UsernameNotFoundException("Invalid username or password."); }
+ */
 
-    @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
-    private BCryptPasswordEncoder passwordEncoder;
-
-    @Override
-    @Transactional
-    public User save(UserRegistrationDto registrationDto) {
-        User user = new User(registrationDto.getFirstName(),
-                             registrationDto.getLastName(),
-                             registrationDto.getEmail(),
-                             passwordEncoder.encode(registrationDto.getPassword()));
-        return userRepository.save(user);
-    }
-
-    @Override
-    public List<User> getAll() {
-        return userRepository.findAll();
-    }
-
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findByEmail(username);
-        if (user == null) {
-            throw new UsernameNotFoundException("Invalid username or password.");
-        }*/
-        
-        //The getAuthority method will return an empty list, 
-        //which means that the user has no authorities (i.e., roles).
-/*        private List<Object> getAuthority(User user) {
-            return Collections.emptyList();
-        }*/
- //   }        
-/*        List<GrantedAuthority> authorities = new ArrayList<>();
-        authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
-        return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), authorities);
-    }*/
+// The getAuthority method will return an empty list,
+// which means that the user has no authorities (i.e., roles).
+/*
+ * private List<Object> getAuthority(User user) { return
+ * Collections.emptyList(); }
+ */
+// }
+/*
+ * List<GrantedAuthority> authorities = new ArrayList<>(); authorities.add(new
+ * SimpleGrantedAuthority("ROLE_USER")); return new
+ * org.springframework.security.core.userdetails.User(user.getEmail(),
+ * user.getPassword(), authorities); }
+ */
 //}
 /*
  * @Service public class UserServiceImpl implements UserService {
@@ -160,43 +152,43 @@ public class UserServiceImpl implements UserService {
  */
 
 //새로 추가함
-	/*
-	 * private Set<SimpleGrantedAuthority> getAuthority(User user) {
-	 * Set<SimpleGrantedAuthority> authorities = new HashSet<>();
-	 * authorities.add(new SimpleGrantedAuthority(user.getRole().getName())); return
-	 * authorities; }
-	 */
-	/*
-	 * @Override
-	 * 
-	 * @Transactional public User save(UserRegistrationDto registrationDto) { User
-	 * user = new User(registrationDto.getFirstName(),
-	 * registrationDto.getLastName(), registrationDto.getEmail(),
-	 * passwordEncoder.encode(registrationDto.getPassword()), new
-	 * Role("ROLE_USER")); return userRepository.save(user); }
-	 */
-
+/*
+ * private Set<SimpleGrantedAuthority> getAuthority(User user) {
+ * Set<SimpleGrantedAuthority> authorities = new HashSet<>();
+ * authorities.add(new SimpleGrantedAuthority(user.getRole().getName())); return
+ * authorities; }
+ */
+/*
+ * @Override
+ * 
+ * @Transactional public User save(UserRegistrationDto registrationDto) { User
+ * user = new User(registrationDto.getFirstName(),
+ * registrationDto.getLastName(), registrationDto.getEmail(),
+ * passwordEncoder.encode(registrationDto.getPassword()), new
+ * Role("ROLE_USER")); return userRepository.save(user); }
+ */
 
 /*
-* @Override public UserDetails loadUserByUsername(String username) throws
-* UsernameNotFoundException {
-* 
-* User user = userRepository.findByEmail(username); if (user == null) { throw
-* new UsernameNotFoundException("Invalid username or password."); } return new
-* org.springframework.security.core.userdetails.User(user.getEmail(),
-* user.getPassword(), mapRolesToAuthorities(user.getRoles())); }
-*/
-
+ * @Override public UserDetails loadUserByUsername(String username) throws
+ * UsernameNotFoundException {
+ * 
+ * User user = userRepository.findByEmail(username); if (user == null) { throw
+ * new UsernameNotFoundException("Invalid username or password."); } return new
+ * org.springframework.security.core.userdetails.User(user.getEmail(),
+ * user.getPassword(), mapRolesToAuthorities(user.getRoles())); }
+ */
 
 /*
-* private Collection<? extends GrantedAuthority>
-* mapRolesToAuthorities(Collection<Role> roles) {
-* 
-* return roles.stream().map(role -> new
-* SimpleGrantedAuthority(role.getName())).collect(Collectors.toList()); }
-*/
+ * private Collection<? extends GrantedAuthority>
+ * mapRolesToAuthorities(Collection<Role> roles) {
+ * 
+ * return roles.stream().map(role -> new
+ * SimpleGrantedAuthority(role.getName())).collect(Collectors.toList()); }
+ */
 
-/*//겹치니까 지움
+/*
+ * //겹치니까 지움
+ * 
  * @Override public UserDetails loadUserByUsername(String username) throws
  * UsernameNotFoundException { // TODO Auto-generated method stub return null; }
  */

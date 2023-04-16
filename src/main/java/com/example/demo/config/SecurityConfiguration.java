@@ -41,8 +41,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests() // I added: "/","/index**","assets/images/**", "/videos/**","/login?error,
-									// "/profile**"
+		http.authorizeRequests() // I added: "/","/index**","assets/images/**", "/videos/**","/login?error, "/profile**"
 				// 폴더를 login 없이 허용
 				.antMatchers("/", "/index**", "/assets**", "/registration**", "/js/**", "/css/**", "/assets/images/**",
 						"/videos/**", "/login?error", "/profile**") //"/main**" 뺐다.

@@ -2,23 +2,16 @@ package com.example.demo.service;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
-
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Service;
-
 import com.example.demo.dto.UserRegistrationDto;
 import com.example.demo.model.User;
-import com.example.demo.repository.UserRepository;
-
 
   public interface UserService extends UserDetailsService {
   
   User save(UserRegistrationDto registrationDto);
   
-  List<User> getAll(); }
+  List<User> getAll(); 
+  }
  
 
 /*
