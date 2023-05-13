@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"><!-- use Thymeleaf's functionality, such as dynamic expressions and conditionals, 
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- use Thymeleaf's functionality, such as dynamic expressions and conditionals, 
 to generate dynamic content on your web page.  -->
 <head>
 <meta charset="utf-8" />
@@ -66,15 +67,14 @@ to generate dynamic content on your web page.  -->
 		<!-- fixed-top  -->
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 
-			<ul class="navbar-nav fs-5" style="margin-left:10px;">
-			
-				<li class="nav-item mt-0"><a
-					class="navbar-brand fs-3" href="#page-top" 
-					id="TopTitle"> Yeongjin's portfolio</a></li>
-					
+			<ul class="navbar-nav fs-5" style="margin-left: 10px;">
+
+				<li class="nav-item mt-0"><a class="navbar-brand fs-3"
+					href="#page-top" id="TopTitle"> Yeongjin's portfolio</a></li>
+
 				<li class="nav-item my-2 "><a
 					class="nav-link px-0 px-lg-2 rounded text-light " href="#about">
-						자기소개 </a></li>
+						자기소개</a></li>
 
 				<li class="nav-item my-2 "><a
 					class="nav-link px-0 px-lg-2 rounded text-light" href="#skills">
@@ -104,7 +104,7 @@ to generate dynamic content on your web page.  -->
 		<!-- 			</div> -->
 	</nav>
 	<!-- 	</header> -->
-	
+
 	<!-- [1] About 섹션: About Section-->
 	<!-- About: A section where you can talk about yourself, your background, and your interests.
 		& where you introduce yourself and your background. -->
@@ -293,6 +293,36 @@ to generate dynamic content on your web page.  -->
 					<!-- Project Section Heading-->
 					<h2
 						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">프로젝트</h2>
+					<!--  팀 프로젝트 시작 -->
+					<h2
+						class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">프로젝트
+						이름 (미정)</h2>
+					<p
+						style="margin: 0; padding: 0; font-weight: bold; color: white; text-align: center; text-shadow: 1px 1px 2px #5D2FDA;">
+						2023.04-2023.06 (K-디지털 트레이닝 3인 팀 프로젝트)</p>
+					<table>
+						<tr>
+							<td><p class="lead text-start">
+									<img class="masthead-avatar" src="/assets/images/character.png"
+										alt="Project1" height=200px width=200px /></td>
+							<td>
+								<div class="lead text-start rounded text-white mx-2 my-3"
+									style="background-color: rgba(0, 0, 0, 0.4); word-break: break-word;">
+									그린컴퓨터아카데미 울산캠퍼스에서 진행 예정인 팀프로젝트입니다. 4월 17일에서 6월 30일까지 진행 완료 후 적을
+									예정입니다.<br> <br>
+									<ul class="pl-3" style="list-style-type: square;">
+										<li><b>주요 기능</b>: 진행 완료 후 적을 예정입니다.</li>
+										<li class="silkscreen">GitHub: <a
+											href="https://github.com/yjyuwisely/Team-Project-2023"
+											title="깃허브로 이동"> <b>github.com/yjyuwisely/Team-Project-2023</b></a></li>
+										<li class="silkscreen">Frontend: 진행 완료 후 적을 예정입니다.</li>
+										<li class="silkscreen">Backend: 진행 완료 후 적을 예정입니다.</li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+					</table>
+
 					<!--  [3.1] 포트폴리오 시작 -->
 					<h2
 						class="page-section-heading text-center text-uppercase text-secondary py-3 text-light">포트폴리오
@@ -389,8 +419,7 @@ to generate dynamic content on your web page.  -->
 									<p class="lead text-start">
 										울산 울주군 여행 웹사이트를 진행하게 된 계기는 저도 몰랐던 고향의 여러 여행 장소에 대해 자세히 알고
 										싶었었고, 울산에 거주 중임에도 불구하고 저는 울산 시티 투어와 울산 관광 택시가 있는 줄 몰랐기 때문입니다.
-										그래서 사람들에게 울산 여행에 대해 공유하고자 만들게 되었습니다.
-										<br> <br>
+										그래서 사람들에게 울산 여행에 대해 공유하고자 만들게 되었습니다. <br> <br>
 									</p>
 									<ul class="pl-3" style="list-style-type: square;">
 										<li><b>주요 기능</b>: 울산 시티 투어와 울산 관광 택시의 여행 장소와 경로 소개</li>
@@ -404,37 +433,9 @@ to generate dynamic content on your web page.  -->
 							</td>
 						</tr>
 					</table>
-					<!--  포트폴리오 시작 -->
-											<h2
-							class="page-section-heading text-center text-uppercase text-secondary mb-0 text-light">프로젝트
-							이름 (미정)</h2>
-						<p
-							style="margin: 0; padding: 0; font-weight: bold; color: white; text-align: center; text-shadow: 1px 1px 2px #5D2FDA;">
-							2023.04-2023.06 (K-디지털 트레이닝 3인 팀 프로젝트)</p>
-						<table>
-							<tr>
-								<td><p class="lead text-start">
-										<img class="masthead-avatar" src="/assets/images/character.png"
-											alt="Project1" height=200px width=200px />
-								</td>
-								<td>
-									<div class="lead text-start rounded text-white mx-2 my-3"
-										style="background-color: rgba(0, 0, 0, 0.4); word-break: break-word;">
-										그린컴퓨터아카데미 울산캠퍼스에서 진행 예정인 팀프로젝트입니다. 4월 17일에서 6월 30일까지 진행 완료 후 적을 예정입니다.<br> 
-										<br>
-										<ul class="pl-3" style="list-style-type: square;">
-										<li><b>주요 기능</b>: 진행 완료 후 적을 예정입니다. </li>
-										<li class="silkscreen">GitHub: <a href="https://github.com/yjyuwisely/Team-Project-2023" title="깃허브로 이동"> 
-										<b>github.com/yjyuwisely/Team-Project-2023</b></a></li>
-										<li  class="silkscreen">Frontend: 진행 완료 후 적을 예정입니다. </li>
-										<li  class="silkscreen">Backend: 진행 완료 후 적을 예정입니다. </li>
-										</ul>
-									</div>
-								</td>
-							</tr>
-						</table>
-					</div> 
+
 				</div>
+			</div>
 			<a class="navbar-brand  fs-6 text-light text-uppercase"
 				href="#page-top" id="TopTitle"
 				style="float: left; margin-left: 0.3rem; margin-top: 0.5rem;">
